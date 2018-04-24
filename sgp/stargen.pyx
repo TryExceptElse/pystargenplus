@@ -13,6 +13,7 @@ class InvalidStateException(Exception):
     pass
 
 
+# Dictionary mapping c return codes to exception classes
 exception_codes = {
     sgp_SUCCESS: None,
     sgp_INVALID_ARGUMENT: ValueError,
@@ -40,6 +41,7 @@ cdef class System:
         sgp_SystemGeneration_free(&self._system_generation)
 
     def generate(self) -> None:
+        """ Calculates system planets and properties from inputs """
         result: int = sgp_SystemGeneration_generate(&self._system_generation)
         exception = exception_codes[result]
         if exception:
@@ -47,6 +49,12 @@ cdef class System:
 
     @staticmethod
     def generated_property(f):
+        """
+        Decorator for SystemGeneration property methods that require
+        generation to have occured before the property is accessed.
+        If generation has not occurred when the property is accessed,
+        generate() will be called.
+        """
         def wrapper(self, *args, **kwargs):
             if not self.generated:
                 self.generate()
@@ -424,6 +432,8 @@ cdef class PlanetView:
 
 
 """
+planets_record members, for reference:
+
         int             planet_no
         long double     a                   # semi-major axis of solar orbit (in AU)
         long double     e                   # eccentricity of solar orbit

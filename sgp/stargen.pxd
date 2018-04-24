@@ -96,6 +96,7 @@ cdef extern from "structs.h":
         int             do_moons               # Should moons be generated
         bint            generated
 
+
 cdef extern from "sgp.h":
     # return codes
     int sgp_SUCCESS
@@ -106,9 +107,9 @@ cdef extern from "sgp.h":
 
     # functions
 
-    void    sgp_SystemGeneration_init      (sgp_SystemGeneration*)
-    void    sgp_SystemGeneration_free      (sgp_SystemGeneration*)
-    int     sgp_SystemGeneration_generate  (sgp_SystemGeneration*)
+    void    sgp_SystemGeneration_init       (sgp_SystemGeneration*)
+    void    sgp_SystemGeneration_free       (sgp_SystemGeneration*)
+    int     sgp_SystemGeneration_generate   (sgp_SystemGeneration*)
 
     void    sgp_sun_init                    (sun*)
     void    sgp_sun_free                    (sun*)
@@ -134,6 +135,10 @@ cdef class SunConfig:
 
 
 cdef class SystemObjectView:
+    """
+    Abstract class that is extended to provide a view onto an object
+    managed by the System
+    """
     cdef System         _system     # System which owns the viewed object.
     cdef void*          _viewed_ptr  # Pointer to viewed c-struct.
 
@@ -158,7 +163,6 @@ cdef class PlanetView(SystemObjectView):
     cdef PlanetView     wrap(planets_record *c_planet, System system)
 
     cdef planets_record* _get_planet(self)  # Pointer to viewed planet.
-
 
 
 #######################################################################
