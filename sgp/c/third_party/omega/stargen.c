@@ -45,7 +45,6 @@
 #include	"display.h"
 #include	"stargen.h"
 #include	"utils.h"
-#include 	"ring_universe.h"
 
 char *	stargen_revision = "$Revision: 1.47+seb $";
 
