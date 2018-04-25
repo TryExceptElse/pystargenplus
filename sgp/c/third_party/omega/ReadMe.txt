@@ -2,6 +2,7 @@ TryExceptElse: The code in this repository has been left as untouched
 as possible, with only the following changes:
     * display.c : minor print changes made to avoid format-security errors
     * Unused files removed.
+    * stargen.c changed so that static pointer is no longer used for output.
 
 Original readme is as follows.
 ==============================

@@ -36,6 +36,12 @@ class TestSystemGeneration(TestCase):
         self.assertGreater(sun.mass, 0)
         self.assertGreater(sun.luminosity, 0)
 
+    def test_generated_system_has_planets(self):
+        system = System()
+        system.generate()
+        planets = [planet for planet in system.planets]
+        self.assertGreater(len(planets), 0)
+
 
 class TestSunConfig(TestCase):
     def test_sun_must_be_instantiated_with_mass_or_lum(self):

@@ -14,23 +14,26 @@ const double    sgp_default_inner_planet_factor     = 0.3;
 
 const char * const sgp_default_name = "Unnamed";
 
+const planets   sgp_default_planet = {0,0.,0.,0,0,0,0,0,ZEROES,0,NULL,NULL};
+
 
 /* Forward Declarations -------------------------------------------- */
 
 /* Externally declared functions */
 void generate_stellar_system(
-    sun* sun,
-    int use_seed_system,
-    planet_pointer seed_system,
-    char flag_char,
-    int sys_no,
-    char *system_name,
-    long double inner_dust_limit,
-    long double outer_planet_limit,
-    long double ecc_coef,
-    long double inner_planet_factor,
-    int do_gases,
-    int do_moons);
+    planet_pointer *innermost_planet,
+    sun            *sun,
+    int             use_seed_system,
+    planet_pointer  seed_system,
+    char            flag_char,
+    int             sys_no,
+    char           *system_name,
+    long double     inner_dust_limit,
+    long double     outer_planet_limit,
+    long double     ecc_coef,
+    long double     inner_planet_factor,
+    int             do_gases,
+    int             do_moons);
 
 /* Utility */
 char*   sgp_new_str                     (const char *);
@@ -43,6 +46,7 @@ char*   sgp_new_str                     (const char *);
  */
 void sgp_SystemGeneration_init(sgp_SystemGeneration *generation) {
     generation->sun                   = NULL;
+    generation->innermost_planet      = NULL;
     generation->use_seed_system       = 0;
     generation->seed_system           = NULL;
     generation->flag_char             = '?';
@@ -69,11 +73,17 @@ void sgp_SystemGeneration_free(sgp_SystemGeneration *generation) {
     }
     if (generation->seed_system != NULL) {
         sgp_planet_free(generation->seed_system);
+        free(generation->seed_system);
         generation->seed_system = NULL;
     }
     if (generation->system_name != NULL) {
         free(generation->system_name);
         generation->system_name = NULL;
+    }
+    if (generation->innermost_planet != NULL) {
+        sgp_planet_free(generation->innermost_planet);
+        free(generation->innermost_planet);
+        generation->innermost_planet = NULL;
     }
 }
 
@@ -139,6 +149,7 @@ int sgp_SystemGeneration_generate(sgp_SystemGeneration *config) {
         return sgp_INVALID_ARGUMENT;
     }
     generate_stellar_system(
+            &config->innermost_planet,
              config->sun,
              config->use_seed_system,
              config->seed_system,
@@ -183,11 +194,20 @@ void sgp_sun_free(sun *sun) {
 /* planet Functions ------------------------------------------------ */
 
 
+void sgp_planet_init(planets *planet) {
+    *planet = sgp_default_planet;
+}
+
 void sgp_planet_free(planets *planet) {
     for (; planet != NULL; planet = planet->next_planet) {
         if (planet->atmosphere != NULL) {
             free(planet->atmosphere);
             planet->atmosphere = NULL;
+        }
+        if (planet->first_moon != NULL) {
+            sgp_planet_free(planet->first_moon);
+            free(planet->first_moon);
+            planet->first_moon = NULL;
         }
     }
 }

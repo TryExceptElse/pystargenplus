@@ -26,6 +26,7 @@
  */
 typedef struct sgp_SystemGeneration {
      sun*           sun;
+     planet_pointer innermost_planet;
      int 			use_seed_system;
      planet_pointer seed_system;
      char			flag_char;
@@ -51,6 +52,7 @@ int     sgp_SystemGeneration_generate  (sgp_SystemGeneration*);
 void    sgp_sun_init                    (sun*);
 void    sgp_sun_free                    (sun*);
 
+void    sgp_planet_init                 (planets*);
 void    sgp_planet_free                 (planets*);
 
 

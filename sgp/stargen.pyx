@@ -69,7 +69,7 @@ cdef class System:
 
     @generated_property
     def planets(self) -> PlanetView:
-        cdef planets_record* planet = self._system_generation.seed_system
+        cdef planets_record* planet = self._system_generation.innermost_planet
         while (planet != NULL):
             yield PlanetView.wrap(planet, self)
             planet = planet.next_planet

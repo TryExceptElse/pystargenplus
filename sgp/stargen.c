@@ -769,7 +769,7 @@ struct __pyx_obj_3sgp_7stargen___pyx_scope_struct__generated_property;
 struct __pyx_obj_3sgp_7stargen___pyx_scope_struct_1_planets;
 struct __pyx_obj_3sgp_7stargen___pyx_scope_struct_2_view_property;
 
-/* "sgp/stargen.pxd":123
+/* "sgp/stargen.pxd":124
  * 
  * 
  * cdef class System:             # <<<<<<<<<<<<<<
@@ -782,7 +782,7 @@ struct __pyx_obj_3sgp_7stargen_System {
 };
 
 
-/* "sgp/stargen.pxd":127
+/* "sgp/stargen.pxd":128
  * 
  * 
  * cdef class SunConfig:             # <<<<<<<<<<<<<<
@@ -797,12 +797,12 @@ struct __pyx_obj_3sgp_7stargen_SunConfig {
 };
 
 
-/* "sgp/stargen.pxd":137
+/* "sgp/stargen.pxd":138
  * 
  * 
  * cdef class SystemObjectView:             # <<<<<<<<<<<<<<
- *     cdef System         _system     # System which owns the viewed object.
- *     cdef void*          _viewed_ptr  # Pointer to viewed c-struct.
+ *     """
+ *     Abstract class that is extended to provide a view onto an object
  */
 struct __pyx_obj_3sgp_7stargen_SystemObjectView {
   PyObject_HEAD
@@ -812,7 +812,7 @@ struct __pyx_obj_3sgp_7stargen_SystemObjectView {
 };
 
 
-/* "sgp/stargen.pxd":144
+/* "sgp/stargen.pxd":149
  * 
  * 
  * cdef class SunView(SystemObjectView):             # <<<<<<<<<<<<<<
@@ -824,7 +824,7 @@ struct __pyx_obj_3sgp_7stargen_SunView {
 };
 
 
-/* "sgp/stargen.pxd":154
+/* "sgp/stargen.pxd":159
  * 
  * 
  * cdef class PlanetView(SystemObjectView):             # <<<<<<<<<<<<<<
@@ -853,7 +853,7 @@ struct __pyx_obj_3sgp_7stargen___pyx_scope_struct__generated_property {
  * 
  *     @generated_property
  *     def planets(self) -> PlanetView:             # <<<<<<<<<<<<<<
- *         cdef planets_record* planet = self._system_generation.seed_system
+ *         cdef planets_record* planet = self._system_generation.innermost_planet
  *         while (planet != NULL):
  */
 struct __pyx_obj_3sgp_7stargen___pyx_scope_struct_1_planets {
@@ -2629,7 +2629,7 @@ static PyObject *__pyx_gb_3sgp_7stargen_6System_14generator(__pyx_CoroutineObjec
  * 
  *     @generated_property
  *     def planets(self) -> PlanetView:             # <<<<<<<<<<<<<<
- *         cdef planets_record* planet = self._system_generation.seed_system
+ *         cdef planets_record* planet = self._system_generation.innermost_planet
  *         while (planet != NULL):
  */
 
@@ -2701,16 +2701,16 @@ static PyObject *__pyx_gb_3sgp_7stargen_6System_14generator(__pyx_CoroutineObjec
   /* "sgp/stargen.pyx":72
  *     @generated_property
  *     def planets(self) -> PlanetView:
- *         cdef planets_record* planet = self._system_generation.seed_system             # <<<<<<<<<<<<<<
+ *         cdef planets_record* planet = self._system_generation.innermost_planet             # <<<<<<<<<<<<<<
  *         while (planet != NULL):
  *             yield PlanetView.wrap(planet, self)
  */
-  __pyx_t_1 = __pyx_cur_scope->__pyx_v_self->_system_generation.seed_system;
+  __pyx_t_1 = __pyx_cur_scope->__pyx_v_self->_system_generation.innermost_planet;
   __pyx_cur_scope->__pyx_v_planet = __pyx_t_1;
 
   /* "sgp/stargen.pyx":73
  *     def planets(self) -> PlanetView:
- *         cdef planets_record* planet = self._system_generation.seed_system
+ *         cdef planets_record* planet = self._system_generation.innermost_planet
  *         while (planet != NULL):             # <<<<<<<<<<<<<<
  *             yield PlanetView.wrap(planet, self)
  *             planet = planet.next_planet
@@ -2720,7 +2720,7 @@ static PyObject *__pyx_gb_3sgp_7stargen_6System_14generator(__pyx_CoroutineObjec
     if (!__pyx_t_2) break;
 
     /* "sgp/stargen.pyx":74
- *         cdef planets_record* planet = self._system_generation.seed_system
+ *         cdef planets_record* planet = self._system_generation.innermost_planet
  *         while (planet != NULL):
  *             yield PlanetView.wrap(planet, self)             # <<<<<<<<<<<<<<
  *             planet = planet.next_planet
@@ -2755,7 +2755,7 @@ static PyObject *__pyx_gb_3sgp_7stargen_6System_14generator(__pyx_CoroutineObjec
  * 
  *     @generated_property
  *     def planets(self) -> PlanetView:             # <<<<<<<<<<<<<<
- *         cdef planets_record* planet = self._system_generation.seed_system
+ *         cdef planets_record* planet = self._system_generation.innermost_planet
  *         while (planet != NULL):
  */
 
@@ -9033,7 +9033,7 @@ static PyTypeObject __pyx_type_3sgp_7stargen_SystemObjectView = {
   0, /*tp_setattro*/
   0, /*tp_as_buffer*/
   Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_VERSION_TAG|Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_HAVE_NEWBUFFER|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC, /*tp_flags*/
-  0, /*tp_doc*/
+  "\n    Abstract class that is extended to provide a view onto an object\n    managed by the System\n    ", /*tp_doc*/
   __pyx_tp_traverse_3sgp_7stargen_SystemObjectView, /*tp_traverse*/
   __pyx_tp_clear_3sgp_7stargen_SystemObjectView, /*tp_clear*/
   0, /*tp_richcompare*/
@@ -10421,7 +10421,7 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
  * 
  *     @generated_property             # <<<<<<<<<<<<<<
  *     def planets(self) -> PlanetView:
- *         cdef planets_record* planet = self._system_generation.seed_system
+ *         cdef planets_record* planet = self._system_generation.innermost_planet
  */
   __pyx_t_3 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_System, __pyx_n_s_generated_property); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 70, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -10430,7 +10430,7 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
  * 
  *     @generated_property
  *     def planets(self) -> PlanetView:             # <<<<<<<<<<<<<<
- *         cdef planets_record* planet = self._system_generation.seed_system
+ *         cdef planets_record* planet = self._system_generation.innermost_planet
  *         while (planet != NULL):
  */
   __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_System, __pyx_n_s_planets); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 71, __pyx_L1_error)

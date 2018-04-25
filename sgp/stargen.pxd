@@ -83,6 +83,7 @@ cdef extern from "structs.h":
 
     cdef struct sgp_SystemGeneration:
         sun            *sun
+        planets_record *innermost_planet
         int             use_seed_system
         planets_record *seed_system
         char            flag_char
