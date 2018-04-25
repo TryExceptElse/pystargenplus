@@ -68,6 +68,7 @@ void sgp_SystemGeneration_free(sgp_SystemGeneration *generation) {
         return;
     }
     if (generation->sun != NULL) {
+        sgp_sun_free(generation->sun);
         free(generation->sun);
         generation->sun = NULL;
     }
@@ -111,13 +112,12 @@ int sgp_SystemGeneration_generate(sgp_SystemGeneration *config) {
         fprintf(stderr, "sgp_SystemGeneration_generate() : "
             "Passed sun was NULL.");
         return sgp_NULL_PTR_ERROR;
-    } else {
-        if (config->sun->mass == 0.0 && config->sun->luminosity == 0.0) {
-            fprintf(stderr, "sgp_SystemGeneration_generate() : "
-                "Either mass or luminosity (or both) must be assigned to sun "
-                "before generation.");
-            return sgp_INVALID_ARGUMENT;
-        }
+    }
+    if (config->sun->mass == 0.0 && config->sun->luminosity == 0.0) {
+        fprintf(stderr, "sgp_SystemGeneration_generate() : "
+            "Either mass or luminosity (or both) must be assigned to sun "
+            "before generation.");
+        return sgp_INVALID_ARGUMENT;
     }
     if (config->sys_no < 0) {
         fprintf(stderr, "sgp_SystemGeneration_generate() : "
@@ -199,7 +199,9 @@ void sgp_planet_init(planets *planet) {
 }
 
 void sgp_planet_free(planets *planet) {
-    for (; planet != NULL; planet = planet->next_planet) {
+    planets * const first = planet;
+    planets *previous;
+    while (planet != NULL) {
         if (planet->atmosphere != NULL) {
             free(planet->atmosphere);
             planet->atmosphere = NULL;
@@ -208,6 +210,11 @@ void sgp_planet_free(planets *planet) {
             sgp_planet_free(planet->first_moon);
             free(planet->first_moon);
             planet->first_moon = NULL;
+        }
+        previous = planet;
+        planet = planet->next_planet;
+        if (previous != first) {
+            free(previous);
         }
     }
 }
