@@ -16,6 +16,10 @@ const char * const sgp_default_name = "Unnamed";
 
 const planets   sgp_default_planet = {0,0.,0.,0,0,0,0,0,ZEROES,0,NULL,NULL};
 
+extern long flag_seed;
+
+volatile int concurrency_lock = 0;
+
 
 /* Forward Declarations -------------------------------------------- */
 
@@ -35,6 +39,8 @@ void generate_stellar_system(
     int             do_gases,
     int             do_moons);
 
+void init(void);
+
 /* Utility */
 char*   sgp_new_str                     (const char *);
 
@@ -47,6 +53,7 @@ char*   sgp_new_str                     (const char *);
 void sgp_SystemGeneration_init(sgp_SystemGeneration *generation) {
     generation->sun                   = NULL;
     generation->innermost_planet      = NULL;
+    generation->rng_seed              = 0;
     generation->use_seed_system       = 0;
     generation->seed_system           = NULL;
     generation->flag_char             = '?';
@@ -92,6 +99,7 @@ void sgp_SystemGeneration_free(sgp_SystemGeneration *generation) {
  * Generates a stellar system from information passed in passed config
  */
 int sgp_SystemGeneration_generate(sgp_SystemGeneration *config) {
+    /* Validate input ---------------------------------------------- */
     if (config->generated) {
         fprintf(stderr, "sgp_SystemGeneration_generate() : "
             "SystemGeneration has already been generated.\n");
@@ -148,6 +156,16 @@ int sgp_SystemGeneration_generate(sgp_SystemGeneration *config) {
             (double)config->inner_planet_factor);
         return sgp_INVALID_ARGUMENT;
     }
+
+    /* Get Lock and init ------------------------------------------- */
+    if (concurrency_lock) {
+        return sgp_LOCK_ERROR;
+    }
+    concurrency_lock = 1;
+    flag_seed = config->rng_seed;
+    init();
+
+    /* Generate ---------------------------------------------------- */
     generate_stellar_system(
             &config->innermost_planet,
              config->sun,
@@ -163,6 +181,10 @@ int sgp_SystemGeneration_generate(sgp_SystemGeneration *config) {
              config->do_gases,
              config->do_moons
     );
+
+    /* Finish ------------------------------------------------------ */
+    concurrency_lock = 0;
+
     config->generated = 1;
     return sgp_SUCCESS;
 }

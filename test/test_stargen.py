@@ -51,6 +51,17 @@ class TestSystemGeneration(TestCase):
             [[moon for moon in planet.moons] for planet in system.planets])]
         self.assertGreater(len(moons), 0)
 
+    def test_systems_generated_with_same_seed_are_identical(self):
+        system_a = System(rng_seed=24, do_moons=True)
+        system_a.generate()
+        system_b = System(rng_seed=24, do_moons=True)
+        system_b.generate()
+        planets_a = [i for i in system_a.planets]
+        planets_b = [i for i in system_b.planets]
+        self.assertEqual(planets_a[0].mass, planets_b[0].mass)
+        self.assertEqual(planets_a[1].mass, planets_b[1].mass)
+        self.assertEqual(planets_a[2].mass, planets_b[2].mass)
+
 
 class TestSunConfig(TestCase):
     def test_sun_must_be_instantiated_with_mass_or_lum(self):

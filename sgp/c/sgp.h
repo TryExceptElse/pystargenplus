@@ -11,6 +11,7 @@
 #define sgp_UNINITIALIZED_INPUT 0x0002
 #define sgp_NULL_PTR_ERROR      0x0003
 #define sgp_INVALID_STATE       0x0004
+#define sgp_LOCK_ERROR          0x0005
 
 
 /* ----------------------------------------------------------------- */
@@ -27,6 +28,7 @@
 typedef struct sgp_SystemGeneration {
      sun*           sun;
      planet_pointer innermost_planet;
+     long           rng_seed;
      int 			use_seed_system;
      planet_pointer seed_system;
      char			flag_char;
