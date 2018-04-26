@@ -205,6 +205,11 @@ cdef class PlanetView:
 
     @view_property
     def mass(self) -> double:
+        """ mass (in kg) """
+        return self._get_planet().mass * SOLAR_MASS_IN_KILOGRAMS
+
+    @view_property
+    def solar_masses(self) -> double:
         """ mass (in solar masses) """
         return self._get_planet().mass
 
@@ -215,13 +220,13 @@ cdef class PlanetView:
 
     @view_property
     def dust_mass(self) -> double:
-        """ mass, ignoring gas """
-        return self._get_planet().dust_mass
+        """ mass, ignoring gas (kg) """
+        return self._get_planet().dust_mass * SOLAR_MASS_IN_KILOGRAMS
 
     @view_property
     def gas_mass(self) -> double:
-        """ mass, ignoring dust """
-        return self._get_planet().gas_mass
+        """ mass, ignoring dust (kg) """
+        return self._get_planet().gas_mass * SOLAR_MASS_IN_KILOGRAMS
 
     @view_property
     def imf(self) -> double:
@@ -255,11 +260,21 @@ cdef class PlanetView:
 
     @view_property
     def core_radius(self) -> double:
+        """ radius of the rocky core (in m) """
+        return self._get_planet().core_radius * 1000
+
+    @view_property
+    def core_radius_km(self) -> double:
         """ radius of the rocky core (in km) """
         return self._get_planet().core_radius
 
     @view_property
     def radius(self) -> double:
+        """ equatorial radius (in m) """
+        return self._get_planet().radius * 1000
+
+    @view_property
+    def radius_km(self) -> double:
         """ equatorial radius (in km) """
         return self._get_planet().radius
 
@@ -272,19 +287,34 @@ cdef class PlanetView:
         return self._get_planet().orbit_zone
 
     @view_property
-    def density(self) -> double:
+    def density_gcc(self) -> double:
         """ density (in g/cc) """
         return self._get_planet().density
 
     @view_property
-    def orb_period(self) -> double:
+    def density(self) -> double:
+        """ density (in kg/m^3) """
+        return self._get_planet().density * 1000
+
+    @view_property
+    def orb_period_days(self) -> double:
         """ length of the local year (days) """
         return self._get_planet().orb_period
 
     @view_property
-    def day(self) -> double:
+    def orb_period(self) -> double:
+        """ length of the local year (seconds) """
+        return self._get_planet().orb_period * 24 * 60 * 60
+
+    @view_property
+    def day_h(self) -> double:
         """ length of the local day (hours) """
         return self._get_planet().day
+
+    @view_property
+    def day(self) -> double:
+        """ length of the local day (seconds) """
+        return self._get_planet().day * 3600
 
     @view_property
     def resonant_period(self) -> bint:

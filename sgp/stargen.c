@@ -5,6 +5,7 @@
     "distutils": {
         "depends": [
             "sgp/c/sgp.h",
+            "sgp/c/third_party/omega/const.h",
             "sgp/c/third_party/omega/structs.h"
         ],
         "extra_compile_args": [
@@ -548,6 +549,7 @@ static CYTHON_INLINE float __PYX_NAN() {
 
 #define __PYX_HAVE__sgp__stargen
 #define __PYX_HAVE_API__sgp__stargen
+#include "const.h"
 #include "structs.h"
 #include "sgp.h"
 #include <string.h>
@@ -769,7 +771,7 @@ struct __pyx_obj_3sgp_7stargen___pyx_scope_struct__generated_property;
 struct __pyx_obj_3sgp_7stargen___pyx_scope_struct_1_planets;
 struct __pyx_obj_3sgp_7stargen___pyx_scope_struct_2_view_property;
 
-/* "sgp/stargen.pxd":124
+/* "sgp/stargen.pxd":128
  * 
  * 
  * cdef class System:             # <<<<<<<<<<<<<<
@@ -782,7 +784,7 @@ struct __pyx_obj_3sgp_7stargen_System {
 };
 
 
-/* "sgp/stargen.pxd":128
+/* "sgp/stargen.pxd":132
  * 
  * 
  * cdef class SunConfig:             # <<<<<<<<<<<<<<
@@ -797,7 +799,7 @@ struct __pyx_obj_3sgp_7stargen_SunConfig {
 };
 
 
-/* "sgp/stargen.pxd":138
+/* "sgp/stargen.pxd":142
  * 
  * 
  * cdef class SystemObjectView:             # <<<<<<<<<<<<<<
@@ -812,7 +814,7 @@ struct __pyx_obj_3sgp_7stargen_SystemObjectView {
 };
 
 
-/* "sgp/stargen.pxd":149
+/* "sgp/stargen.pxd":153
  * 
  * 
  * cdef class SunView(SystemObjectView):             # <<<<<<<<<<<<<<
@@ -824,7 +826,7 @@ struct __pyx_obj_3sgp_7stargen_SunView {
 };
 
 
-/* "sgp/stargen.pxd":159
+/* "sgp/stargen.pxd":163
  * 
  * 
  * cdef class PlanetView(SystemObjectView):             # <<<<<<<<<<<<<<
@@ -1497,6 +1499,7 @@ static const char __pyx_k_self[] = "self";
 static const char __pyx_k_send[] = "send";
 static const char __pyx_k_test[] = "__test__";
 static const char __pyx_k_close[] = "close";
+static const char __pyx_k_day_h[] = "day_h";
 static const char __pyx_k_gases[] = "gases";
 static const char __pyx_k_throw[] = "throw";
 static const char __pyx_k_albedo[] = "albedo";
@@ -1534,6 +1537,7 @@ static const char __pyx_k_ice_cover[] = "ice_cover";
 static const char __pyx_k_metaclass[] = "__metaclass__";
 static const char __pyx_k_planet_no[] = "planet_no";
 static const char __pyx_k_pyx_state[] = "__pyx_state";
+static const char __pyx_k_radius_km[] = "radius_km";
 static const char __pyx_k_reduce_ex[] = "__reduce_ex__";
 static const char __pyx_k_surf_grav[] = "surf_grav";
 static const char __pyx_k_surf_temp[] = "surf_temp";
@@ -1551,6 +1555,7 @@ static const char __pyx_k_surf_accel[] = "surf_accel";
 static const char __pyx_k_PickleError[] = "PickleError";
 static const char __pyx_k_cloud_cover[] = "cloud_cover";
 static const char __pyx_k_core_radius[] = "core_radius";
+static const char __pyx_k_density_gcc[] = "density_gcc";
 static const char __pyx_k_hydrosphere[] = "hydrosphere";
 static const char __pyx_k_planet_type[] = "planet_type";
 static const char __pyx_k_r_ecosphere[] = "r_ecosphere";
@@ -1560,6 +1565,7 @@ static const char __pyx_k_greenhs_rise[] = "greenhs_rise";
 static const char __pyx_k_molec_weight[] = "molec_weight";
 static const char __pyx_k_pyx_checksum[] = "__pyx_checksum";
 static const char __pyx_k_rms_velocity[] = "rms_velocity";
+static const char __pyx_k_solar_masses[] = "solar_masses";
 static const char __pyx_k_staticmethod[] = "staticmethod";
 static const char __pyx_k_stringsource[] = "stringsource";
 static const char __pyx_k_No_system_set[] = "No system set: ";
@@ -1567,9 +1573,11 @@ static const char __pyx_k_reduce_cython[] = "__reduce_cython__";
 static const char __pyx_k_surf_pressure[] = "surf_pressure";
 static const char __pyx_k_view_property[] = "_view_property";
 static const char __pyx_k_System_planets[] = "System.planets";
+static const char __pyx_k_core_radius_km[] = "core_radius_km";
 static const char __pyx_k_estimated_temp[] = "estimated_temp";
 static const char __pyx_k_exception_codes[] = "exception_codes";
 static const char __pyx_k_exospheric_temp[] = "exospheric_temp";
+static const char __pyx_k_orb_period_days[] = "orb_period_days";
 static const char __pyx_k_pyx_PickleError[] = "__pyx_PickleError";
 static const char __pyx_k_resonant_period[] = "resonant_period";
 static const char __pyx_k_setstate_cython[] = "__setstate_cython__";
@@ -1621,8 +1629,11 @@ static PyObject *__pyx_n_s_cline_in_traceback;
 static PyObject *__pyx_n_s_close;
 static PyObject *__pyx_n_s_cloud_cover;
 static PyObject *__pyx_n_s_core_radius;
+static PyObject *__pyx_n_s_core_radius_km;
 static PyObject *__pyx_n_s_day;
+static PyObject *__pyx_n_s_day_h;
 static PyObject *__pyx_n_s_density;
+static PyObject *__pyx_n_s_density_gcc;
 static PyObject *__pyx_n_s_dict;
 static PyObject *__pyx_n_s_doc;
 static PyObject *__pyx_n_s_dust_mass;
@@ -1668,6 +1679,7 @@ static PyObject *__pyx_n_s_new;
 static PyObject *__pyx_n_s_next;
 static PyObject *__pyx_kp_s_no_default___reduce___due_to_non;
 static PyObject *__pyx_n_s_orb_period;
+static PyObject *__pyx_n_s_orb_period_days;
 static PyObject *__pyx_n_s_orbit_zone;
 static PyObject *__pyx_n_s_pickle;
 static PyObject *__pyx_n_s_planet_no;
@@ -1685,6 +1697,7 @@ static PyObject *__pyx_n_s_pyx_vtable;
 static PyObject *__pyx_n_s_qualname;
 static PyObject *__pyx_n_s_r_ecosphere;
 static PyObject *__pyx_n_s_radius;
+static PyObject *__pyx_n_s_radius_km;
 static PyObject *__pyx_n_s_reduce;
 static PyObject *__pyx_n_s_reduce_cython;
 static PyObject *__pyx_n_s_reduce_ex;
@@ -1698,6 +1711,7 @@ static PyObject *__pyx_n_s_setstate;
 static PyObject *__pyx_n_s_setstate_cython;
 static PyObject *__pyx_n_s_sgp_stargen;
 static PyObject *__pyx_kp_s_sgp_stargen_pyx;
+static PyObject *__pyx_n_s_solar_masses;
 static PyObject *__pyx_n_s_staticmethod;
 static PyObject *__pyx_kp_s_stringsource;
 static PyObject *__pyx_n_s_sun;
@@ -1756,51 +1770,57 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_4a(struct __pyx_obj_3sgp_7s
 static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_6e(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_8axial_tilt(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_10mass(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_12gas_giant(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_14dust_mass(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_16gas_mass(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_18imf(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_20ice_mass_fraction(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_22rmf(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_24rock_mass_fraction(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_26moon_a(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_28moon_e(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_30core_radius(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_32radius(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_34orbit_zone(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_36density(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_38orb_period(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_40day(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_42resonant_period(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_44esc_velocity(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_46surf_accel(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_48surf_grav(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_50rms_velocity(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_52molec_weight(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_54volatile_gas_inventory(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_56surf_pressure_mb(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_58surf_pressure_atm(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_60surf_pressure(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_62greenhouse_effect(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_64boil_point(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_66albedo(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_68exospheric_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_70estimated_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_72estimated_terr_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_74surf_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_76greenhs_rise(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_78high_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_80low_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_82max_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_84min_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_86hydrosphere(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_88cloud_cover(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_90ice_cover(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static struct __pyx_obj_3sgp_7stargen_SunView *__pyx_pf_3sgp_7stargen_10PlanetView_92sun(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_94gases(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_96planet_type(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_98__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_100__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_12solar_masses(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_14gas_giant(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_16dust_mass(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_18gas_mass(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_20imf(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_22ice_mass_fraction(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_24rmf(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_26rock_mass_fraction(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_28moon_a(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_30moon_e(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_32core_radius(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_34core_radius_km(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_36radius(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_38radius_km(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_40orbit_zone(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_42density_gcc(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_44density(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_46orb_period_days(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_48orb_period(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_50day_h(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_52day(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_54resonant_period(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_56esc_velocity(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_58surf_accel(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_60surf_grav(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_62rms_velocity(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_64molec_weight(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_66volatile_gas_inventory(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_68surf_pressure_mb(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_70surf_pressure_atm(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_72surf_pressure(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_74greenhouse_effect(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_76boil_point(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_78albedo(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_80exospheric_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_82estimated_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_84estimated_terr_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_86surf_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_88greenhs_rise(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_90high_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_92low_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_94max_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_96min_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_98hydrosphere(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_100cloud_cover(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_102ice_cover(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static struct __pyx_obj_3sgp_7stargen_SunView *__pyx_pf_3sgp_7stargen_10PlanetView_104sun(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_106gases(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_108planet_type(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_110__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_112__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
 static PyObject *__pyx_pf_3sgp_7stargen_2__pyx_unpickle_SunConfig(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
 static PyObject *__pyx_tp_new_3sgp_7stargen_System(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_3sgp_7stargen_SunConfig(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
@@ -5438,13 +5458,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_8axial_tilt(struct __pyx_ob
  * 
  *     @view_property
  *     def mass(self) -> double:             # <<<<<<<<<<<<<<
- *         """ mass (in solar masses) """
- *         return self._get_planet().mass
+ *         """ mass (in kg) """
+ *         return self._get_planet().mass * SOLAR_MASS_IN_KILOGRAMS
  */
 
 /* Python wrapper */
 static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_11mass(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_10mass[] = " mass (in solar masses) ";
+static char __pyx_doc_3sgp_7stargen_10PlanetView_10mass[] = " mass (in kg) ";
 static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_11mass(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
@@ -5464,13 +5484,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_10mass(struct __pyx_obj_3sg
 
   /* "sgp/stargen.pyx":209
  *     def mass(self) -> double:
- *         """ mass (in solar masses) """
- *         return self._get_planet().mass             # <<<<<<<<<<<<<<
+ *         """ mass (in kg) """
+ *         return self._get_planet().mass * SOLAR_MASS_IN_KILOGRAMS             # <<<<<<<<<<<<<<
  * 
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->mass); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 209, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble((((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->mass * SOLAR_MASS_IN_KILOGRAMS)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 209, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -5480,8 +5500,8 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_10mass(struct __pyx_obj_3sg
  * 
  *     @view_property
  *     def mass(self) -> double:             # <<<<<<<<<<<<<<
- *         """ mass (in solar masses) """
- *         return self._get_planet().mass
+ *         """ mass (in kg) """
+ *         return self._get_planet().mass * SOLAR_MASS_IN_KILOGRAMS
  */
 
   /* function exit code */
@@ -5498,32 +5518,93 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_10mass(struct __pyx_obj_3sg
 /* "sgp/stargen.pyx":212
  * 
  *     @view_property
- *     def gas_giant(self) -> bint:             # <<<<<<<<<<<<<<
- *         """ TRUE if the planet is a gas giant """
- *         return self._get_planet().gas_giant
+ *     def solar_masses(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ mass (in solar masses) """
+ *         return self._get_planet().mass
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_13gas_giant(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_12gas_giant[] = " TRUE if the planet is a gas giant ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_13gas_giant(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_13solar_masses(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_12solar_masses[] = " mass (in solar masses) ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_13solar_masses(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("gas_giant (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_12gas_giant(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __Pyx_RefNannySetupContext("solar_masses (wrapper)", 0);
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_12solar_masses(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_12gas_giant(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_12solar_masses(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  __Pyx_RefNannySetupContext("solar_masses", 0);
+
+  /* "sgp/stargen.pyx":214
+ *     def solar_masses(self) -> double:
+ *         """ mass (in solar masses) """
+ *         return self._get_planet().mass             # <<<<<<<<<<<<<<
+ * 
+ *     @view_property
+ */
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->mass); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 214, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* "sgp/stargen.pyx":212
+ * 
+ *     @view_property
+ *     def solar_masses(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ mass (in solar masses) """
+ *         return self._get_planet().mass
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("sgp.stargen.PlanetView.solar_masses", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "sgp/stargen.pyx":217
+ * 
+ *     @view_property
+ *     def gas_giant(self) -> bint:             # <<<<<<<<<<<<<<
+ *         """ TRUE if the planet is a gas giant """
+ *         return self._get_planet().gas_giant
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_15gas_giant(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_14gas_giant[] = " TRUE if the planet is a gas giant ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_15gas_giant(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("gas_giant (wrapper)", 0);
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_14gas_giant(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_14gas_giant(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("gas_giant", 0);
 
-  /* "sgp/stargen.pyx":214
+  /* "sgp/stargen.pyx":219
  *     def gas_giant(self) -> bint:
  *         """ TRUE if the planet is a gas giant """
  *         return self._get_planet().gas_giant             # <<<<<<<<<<<<<<
@@ -5531,13 +5612,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_12gas_giant(struct __pyx_ob
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->gas_giant); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 214, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->gas_giant); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 219, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":212
+  /* "sgp/stargen.pyx":217
  * 
  *     @view_property
  *     def gas_giant(self) -> bint:             # <<<<<<<<<<<<<<
@@ -5556,54 +5637,54 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_12gas_giant(struct __pyx_ob
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":217
+/* "sgp/stargen.pyx":222
  * 
  *     @view_property
  *     def dust_mass(self) -> double:             # <<<<<<<<<<<<<<
- *         """ mass, ignoring gas """
- *         return self._get_planet().dust_mass
+ *         """ mass, ignoring gas (kg) """
+ *         return self._get_planet().dust_mass * SOLAR_MASS_IN_KILOGRAMS
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_15dust_mass(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_14dust_mass[] = " mass, ignoring gas ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_15dust_mass(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_17dust_mass(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_16dust_mass[] = " mass, ignoring gas (kg) ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_17dust_mass(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("dust_mass (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_14dust_mass(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_16dust_mass(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_14dust_mass(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_16dust_mass(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("dust_mass", 0);
 
-  /* "sgp/stargen.pyx":219
+  /* "sgp/stargen.pyx":224
  *     def dust_mass(self) -> double:
- *         """ mass, ignoring gas """
- *         return self._get_planet().dust_mass             # <<<<<<<<<<<<<<
+ *         """ mass, ignoring gas (kg) """
+ *         return self._get_planet().dust_mass * SOLAR_MASS_IN_KILOGRAMS             # <<<<<<<<<<<<<<
  * 
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->dust_mass); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 219, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble((((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->dust_mass * SOLAR_MASS_IN_KILOGRAMS)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 224, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":217
+  /* "sgp/stargen.pyx":222
  * 
  *     @view_property
  *     def dust_mass(self) -> double:             # <<<<<<<<<<<<<<
- *         """ mass, ignoring gas """
- *         return self._get_planet().dust_mass
+ *         """ mass, ignoring gas (kg) """
+ *         return self._get_planet().dust_mass * SOLAR_MASS_IN_KILOGRAMS
  */
 
   /* function exit code */
@@ -5617,54 +5698,54 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_14dust_mass(struct __pyx_ob
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":222
+/* "sgp/stargen.pyx":227
  * 
  *     @view_property
  *     def gas_mass(self) -> double:             # <<<<<<<<<<<<<<
- *         """ mass, ignoring dust """
- *         return self._get_planet().gas_mass
+ *         """ mass, ignoring dust (kg) """
+ *         return self._get_planet().gas_mass * SOLAR_MASS_IN_KILOGRAMS
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_17gas_mass(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_16gas_mass[] = " mass, ignoring dust ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_17gas_mass(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_19gas_mass(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_18gas_mass[] = " mass, ignoring dust (kg) ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_19gas_mass(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("gas_mass (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_16gas_mass(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_18gas_mass(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_16gas_mass(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_18gas_mass(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("gas_mass", 0);
 
-  /* "sgp/stargen.pyx":224
+  /* "sgp/stargen.pyx":229
  *     def gas_mass(self) -> double:
- *         """ mass, ignoring dust """
- *         return self._get_planet().gas_mass             # <<<<<<<<<<<<<<
+ *         """ mass, ignoring dust (kg) """
+ *         return self._get_planet().gas_mass * SOLAR_MASS_IN_KILOGRAMS             # <<<<<<<<<<<<<<
  * 
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->gas_mass); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 224, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble((((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->gas_mass * SOLAR_MASS_IN_KILOGRAMS)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 229, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":222
+  /* "sgp/stargen.pyx":227
  * 
  *     @view_property
  *     def gas_mass(self) -> double:             # <<<<<<<<<<<<<<
- *         """ mass, ignoring dust """
- *         return self._get_planet().gas_mass
+ *         """ mass, ignoring dust (kg) """
+ *         return self._get_planet().gas_mass * SOLAR_MASS_IN_KILOGRAMS
  */
 
   /* function exit code */
@@ -5678,7 +5759,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_16gas_mass(struct __pyx_obj
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":227
+/* "sgp/stargen.pyx":232
  * 
  *     @view_property
  *     def imf(self) -> double:             # <<<<<<<<<<<<<<
@@ -5687,26 +5768,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_16gas_mass(struct __pyx_obj
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_19imf(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_18imf[] = " ice mass fraction ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_19imf(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_21imf(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_20imf[] = " ice mass fraction ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_21imf(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("imf (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_18imf(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_20imf(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_18imf(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_20imf(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("imf", 0);
 
-  /* "sgp/stargen.pyx":229
+  /* "sgp/stargen.pyx":234
  *     def imf(self) -> double:
  *         """ ice mass fraction """
  *         return self._get_planet().imf             # <<<<<<<<<<<<<<
@@ -5714,13 +5795,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_18imf(struct __pyx_obj_3sgp
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->imf); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 229, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->imf); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 234, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":227
+  /* "sgp/stargen.pyx":232
  * 
  *     @view_property
  *     def imf(self) -> double:             # <<<<<<<<<<<<<<
@@ -5739,7 +5820,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_18imf(struct __pyx_obj_3sgp
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":232
+/* "sgp/stargen.pyx":237
  * 
  *     @view_property
  *     def ice_mass_fraction(self) -> double:             # <<<<<<<<<<<<<<
@@ -5748,26 +5829,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_18imf(struct __pyx_obj_3sgp
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_21ice_mass_fraction(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_20ice_mass_fraction[] = " ice mass fraction ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_21ice_mass_fraction(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_23ice_mass_fraction(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_22ice_mass_fraction[] = " ice mass fraction ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_23ice_mass_fraction(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("ice_mass_fraction (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_20ice_mass_fraction(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_22ice_mass_fraction(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_20ice_mass_fraction(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_22ice_mass_fraction(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("ice_mass_fraction", 0);
 
-  /* "sgp/stargen.pyx":234
+  /* "sgp/stargen.pyx":239
  *     def ice_mass_fraction(self) -> double:
  *         """ ice mass fraction """
  *         return self.imf             # <<<<<<<<<<<<<<
@@ -5775,13 +5856,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_20ice_mass_fraction(struct 
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_imf); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 234, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_imf); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 239, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":232
+  /* "sgp/stargen.pyx":237
  * 
  *     @view_property
  *     def ice_mass_fraction(self) -> double:             # <<<<<<<<<<<<<<
@@ -5800,7 +5881,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_20ice_mass_fraction(struct 
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":237
+/* "sgp/stargen.pyx":242
  * 
  *     @view_property
  *     def rmf(self) -> double:             # <<<<<<<<<<<<<<
@@ -5809,26 +5890,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_20ice_mass_fraction(struct 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_23rmf(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_22rmf[] = " rock mass fraction ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_23rmf(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_25rmf(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_24rmf[] = " rock mass fraction ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_25rmf(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("rmf (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_22rmf(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_24rmf(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_22rmf(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_24rmf(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("rmf", 0);
 
-  /* "sgp/stargen.pyx":239
+  /* "sgp/stargen.pyx":244
  *     def rmf(self) -> double:
  *         """ rock mass fraction """
  *         return self._get_planet().rmf             # <<<<<<<<<<<<<<
@@ -5836,13 +5917,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_22rmf(struct __pyx_obj_3sgp
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->rmf); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 239, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->rmf); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 244, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":237
+  /* "sgp/stargen.pyx":242
  * 
  *     @view_property
  *     def rmf(self) -> double:             # <<<<<<<<<<<<<<
@@ -5861,7 +5942,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_22rmf(struct __pyx_obj_3sgp
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":242
+/* "sgp/stargen.pyx":247
  * 
  *     @view_property
  *     def rock_mass_fraction(self) -> double:             # <<<<<<<<<<<<<<
@@ -5870,26 +5951,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_22rmf(struct __pyx_obj_3sgp
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_25rock_mass_fraction(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_24rock_mass_fraction[] = " rock mass fraction ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_25rock_mass_fraction(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_27rock_mass_fraction(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_26rock_mass_fraction[] = " rock mass fraction ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_27rock_mass_fraction(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("rock_mass_fraction (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_24rock_mass_fraction(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_26rock_mass_fraction(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_24rock_mass_fraction(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_26rock_mass_fraction(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("rock_mass_fraction", 0);
 
-  /* "sgp/stargen.pyx":244
+  /* "sgp/stargen.pyx":249
  *     def rock_mass_fraction(self) -> double:
  *         """ rock mass fraction """
  *         return self.rmf             # <<<<<<<<<<<<<<
@@ -5897,13 +5978,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_24rock_mass_fraction(struct
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_rmf); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 244, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_rmf); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 249, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":242
+  /* "sgp/stargen.pyx":247
  * 
  *     @view_property
  *     def rock_mass_fraction(self) -> double:             # <<<<<<<<<<<<<<
@@ -5922,7 +6003,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_24rock_mass_fraction(struct
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":247
+/* "sgp/stargen.pyx":252
  * 
  *     @view_property
  *     def moon_a(self) -> double:             # <<<<<<<<<<<<<<
@@ -5931,26 +6012,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_24rock_mass_fraction(struct
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_27moon_a(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_26moon_a[] = " semi-major axis of lunar orbit (in AU) ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_27moon_a(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_29moon_a(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_28moon_a[] = " semi-major axis of lunar orbit (in AU) ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_29moon_a(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("moon_a (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_26moon_a(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_28moon_a(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_26moon_a(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_28moon_a(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("moon_a", 0);
 
-  /* "sgp/stargen.pyx":249
+  /* "sgp/stargen.pyx":254
  *     def moon_a(self) -> double:
  *         """ semi-major axis of lunar orbit (in AU) """
  *         return self._get_planet().moon_a             # <<<<<<<<<<<<<<
@@ -5958,13 +6039,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_26moon_a(struct __pyx_obj_3
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->moon_a); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 249, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->moon_a); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 254, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":247
+  /* "sgp/stargen.pyx":252
  * 
  *     @view_property
  *     def moon_a(self) -> double:             # <<<<<<<<<<<<<<
@@ -5983,7 +6064,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_26moon_a(struct __pyx_obj_3
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":252
+/* "sgp/stargen.pyx":257
  * 
  *     @view_property
  *     def moon_e(self) -> double:             # <<<<<<<<<<<<<<
@@ -5992,26 +6073,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_26moon_a(struct __pyx_obj_3
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_29moon_e(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_28moon_e[] = " eccentricity of lunar orbit ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_29moon_e(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_31moon_e(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_30moon_e[] = " eccentricity of lunar orbit ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_31moon_e(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("moon_e (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_28moon_e(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_30moon_e(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_28moon_e(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_30moon_e(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("moon_e", 0);
 
-  /* "sgp/stargen.pyx":254
+  /* "sgp/stargen.pyx":259
  *     def moon_e(self) -> double:
  *         """ eccentricity of lunar orbit """
  *         return self._get_planet().moon_e             # <<<<<<<<<<<<<<
@@ -6019,13 +6100,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_28moon_e(struct __pyx_obj_3
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->moon_e); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 254, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->moon_e); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 259, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":252
+  /* "sgp/stargen.pyx":257
  * 
  *     @view_property
  *     def moon_e(self) -> double:             # <<<<<<<<<<<<<<
@@ -6044,54 +6125,54 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_28moon_e(struct __pyx_obj_3
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":257
+/* "sgp/stargen.pyx":262
  * 
  *     @view_property
  *     def core_radius(self) -> double:             # <<<<<<<<<<<<<<
- *         """ radius of the rocky core (in km) """
- *         return self._get_planet().core_radius
+ *         """ radius of the rocky core (in m) """
+ *         return self._get_planet().core_radius * 1000
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_31core_radius(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_30core_radius[] = " radius of the rocky core (in km) ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_31core_radius(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_33core_radius(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_32core_radius[] = " radius of the rocky core (in m) ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_33core_radius(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("core_radius (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_30core_radius(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_32core_radius(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_30core_radius(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_32core_radius(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("core_radius", 0);
 
-  /* "sgp/stargen.pyx":259
+  /* "sgp/stargen.pyx":264
  *     def core_radius(self) -> double:
- *         """ radius of the rocky core (in km) """
- *         return self._get_planet().core_radius             # <<<<<<<<<<<<<<
+ *         """ radius of the rocky core (in m) """
+ *         return self._get_planet().core_radius * 1000             # <<<<<<<<<<<<<<
  * 
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->core_radius); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 259, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble((((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->core_radius * 1000.0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 264, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":257
+  /* "sgp/stargen.pyx":262
  * 
  *     @view_property
  *     def core_radius(self) -> double:             # <<<<<<<<<<<<<<
- *         """ radius of the rocky core (in km) """
- *         return self._get_planet().core_radius
+ *         """ radius of the rocky core (in m) """
+ *         return self._get_planet().core_radius * 1000
  */
 
   /* function exit code */
@@ -6105,54 +6186,115 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_30core_radius(struct __pyx_
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":262
+/* "sgp/stargen.pyx":267
  * 
  *     @view_property
- *     def radius(self) -> double:             # <<<<<<<<<<<<<<
- *         """ equatorial radius (in km) """
- *         return self._get_planet().radius
+ *     def core_radius_km(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ radius of the rocky core (in km) """
+ *         return self._get_planet().core_radius
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_33radius(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_32radius[] = " equatorial radius (in km) ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_33radius(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_35core_radius_km(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_34core_radius_km[] = " radius of the rocky core (in km) ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_35core_radius_km(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("radius (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_32radius(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __Pyx_RefNannySetupContext("core_radius_km (wrapper)", 0);
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_34core_radius_km(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_32radius(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_34core_radius_km(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
-  __Pyx_RefNannySetupContext("radius", 0);
+  __Pyx_RefNannySetupContext("core_radius_km", 0);
 
-  /* "sgp/stargen.pyx":264
- *     def radius(self) -> double:
- *         """ equatorial radius (in km) """
- *         return self._get_planet().radius             # <<<<<<<<<<<<<<
+  /* "sgp/stargen.pyx":269
+ *     def core_radius_km(self) -> double:
+ *         """ radius of the rocky core (in km) """
+ *         return self._get_planet().core_radius             # <<<<<<<<<<<<<<
  * 
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->radius); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 264, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->core_radius); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 269, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":262
+  /* "sgp/stargen.pyx":267
+ * 
+ *     @view_property
+ *     def core_radius_km(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ radius of the rocky core (in km) """
+ *         return self._get_planet().core_radius
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("sgp.stargen.PlanetView.core_radius_km", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "sgp/stargen.pyx":272
  * 
  *     @view_property
  *     def radius(self) -> double:             # <<<<<<<<<<<<<<
- *         """ equatorial radius (in km) """
- *         return self._get_planet().radius
+ *         """ equatorial radius (in m) """
+ *         return self._get_planet().radius * 1000
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_37radius(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_36radius[] = " equatorial radius (in m) ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_37radius(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("radius (wrapper)", 0);
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_36radius(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_36radius(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  __Pyx_RefNannySetupContext("radius", 0);
+
+  /* "sgp/stargen.pyx":274
+ *     def radius(self) -> double:
+ *         """ equatorial radius (in m) """
+ *         return self._get_planet().radius * 1000             # <<<<<<<<<<<<<<
+ * 
+ *     @view_property
+ */
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = PyFloat_FromDouble((((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->radius * 1000.0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 274, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* "sgp/stargen.pyx":272
+ * 
+ *     @view_property
+ *     def radius(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ equatorial radius (in m) """
+ *         return self._get_planet().radius * 1000
  */
 
   /* function exit code */
@@ -6166,7 +6308,68 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_32radius(struct __pyx_obj_3
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":267
+/* "sgp/stargen.pyx":277
+ * 
+ *     @view_property
+ *     def radius_km(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ equatorial radius (in km) """
+ *         return self._get_planet().radius
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_39radius_km(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_38radius_km[] = " equatorial radius (in km) ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_39radius_km(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("radius_km (wrapper)", 0);
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_38radius_km(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_38radius_km(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  __Pyx_RefNannySetupContext("radius_km", 0);
+
+  /* "sgp/stargen.pyx":279
+ *     def radius_km(self) -> double:
+ *         """ equatorial radius (in km) """
+ *         return self._get_planet().radius             # <<<<<<<<<<<<<<
+ * 
+ *     @view_property
+ */
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->radius); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 279, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* "sgp/stargen.pyx":277
+ * 
+ *     @view_property
+ *     def radius_km(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ equatorial radius (in km) """
+ *         return self._get_planet().radius
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("sgp.stargen.PlanetView.radius_km", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "sgp/stargen.pyx":282
  * 
  *     @view_property
  *     def orbit_zone(self) -> int:             # <<<<<<<<<<<<<<
@@ -6175,26 +6378,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_32radius(struct __pyx_obj_3
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_35orbit_zone(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_34orbit_zone[] = "\n        Gets the 'zone' of the planet.\n        May be 1, 2, or 3.\n        ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_35orbit_zone(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_41orbit_zone(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_40orbit_zone[] = "\n        Gets the 'zone' of the planet.\n        May be 1, 2, or 3.\n        ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_41orbit_zone(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("orbit_zone (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_34orbit_zone(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_40orbit_zone(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_34orbit_zone(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_40orbit_zone(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("orbit_zone", 0);
 
-  /* "sgp/stargen.pyx":272
+  /* "sgp/stargen.pyx":287
  *         May be 1, 2, or 3.
  *         """
  *         return self._get_planet().orbit_zone             # <<<<<<<<<<<<<<
@@ -6202,13 +6405,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_34orbit_zone(struct __pyx_o
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->orbit_zone); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 272, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->orbit_zone); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 287, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":267
+  /* "sgp/stargen.pyx":282
  * 
  *     @view_property
  *     def orbit_zone(self) -> int:             # <<<<<<<<<<<<<<
@@ -6227,54 +6430,115 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_34orbit_zone(struct __pyx_o
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":275
+/* "sgp/stargen.pyx":290
  * 
  *     @view_property
- *     def density(self) -> double:             # <<<<<<<<<<<<<<
+ *     def density_gcc(self) -> double:             # <<<<<<<<<<<<<<
  *         """ density (in g/cc) """
  *         return self._get_planet().density
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_37density(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_36density[] = " density (in g/cc) ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_37density(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_43density_gcc(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_42density_gcc[] = " density (in g/cc) ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_43density_gcc(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("density (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_36density(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __Pyx_RefNannySetupContext("density_gcc (wrapper)", 0);
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_42density_gcc(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_36density(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_42density_gcc(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
-  __Pyx_RefNannySetupContext("density", 0);
+  __Pyx_RefNannySetupContext("density_gcc", 0);
 
-  /* "sgp/stargen.pyx":277
- *     def density(self) -> double:
+  /* "sgp/stargen.pyx":292
+ *     def density_gcc(self) -> double:
  *         """ density (in g/cc) """
  *         return self._get_planet().density             # <<<<<<<<<<<<<<
  * 
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->density); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 277, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->density); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 292, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":275
+  /* "sgp/stargen.pyx":290
+ * 
+ *     @view_property
+ *     def density_gcc(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ density (in g/cc) """
+ *         return self._get_planet().density
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("sgp.stargen.PlanetView.density_gcc", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "sgp/stargen.pyx":295
  * 
  *     @view_property
  *     def density(self) -> double:             # <<<<<<<<<<<<<<
- *         """ density (in g/cc) """
- *         return self._get_planet().density
+ *         """ density (in kg/m^3) """
+ *         return self._get_planet().density * 1000
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_45density(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_44density[] = " density (in kg/m^3) ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_45density(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("density (wrapper)", 0);
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_44density(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_44density(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  __Pyx_RefNannySetupContext("density", 0);
+
+  /* "sgp/stargen.pyx":297
+ *     def density(self) -> double:
+ *         """ density (in kg/m^3) """
+ *         return self._get_planet().density * 1000             # <<<<<<<<<<<<<<
+ * 
+ *     @view_property
+ */
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = PyFloat_FromDouble((((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->density * 1000.0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 297, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* "sgp/stargen.pyx":295
+ * 
+ *     @view_property
+ *     def density(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ density (in kg/m^3) """
+ *         return self._get_planet().density * 1000
  */
 
   /* function exit code */
@@ -6288,54 +6552,115 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_36density(struct __pyx_obj_
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":280
+/* "sgp/stargen.pyx":300
  * 
  *     @view_property
- *     def orb_period(self) -> double:             # <<<<<<<<<<<<<<
+ *     def orb_period_days(self) -> double:             # <<<<<<<<<<<<<<
  *         """ length of the local year (days) """
  *         return self._get_planet().orb_period
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_39orb_period(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_38orb_period[] = " length of the local year (days) ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_39orb_period(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_47orb_period_days(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_46orb_period_days[] = " length of the local year (days) ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_47orb_period_days(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("orb_period (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_38orb_period(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __Pyx_RefNannySetupContext("orb_period_days (wrapper)", 0);
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_46orb_period_days(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_38orb_period(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_46orb_period_days(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
-  __Pyx_RefNannySetupContext("orb_period", 0);
+  __Pyx_RefNannySetupContext("orb_period_days", 0);
 
-  /* "sgp/stargen.pyx":282
- *     def orb_period(self) -> double:
+  /* "sgp/stargen.pyx":302
+ *     def orb_period_days(self) -> double:
  *         """ length of the local year (days) """
  *         return self._get_planet().orb_period             # <<<<<<<<<<<<<<
  * 
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->orb_period); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 282, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->orb_period); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 302, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":280
+  /* "sgp/stargen.pyx":300
+ * 
+ *     @view_property
+ *     def orb_period_days(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ length of the local year (days) """
+ *         return self._get_planet().orb_period
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("sgp.stargen.PlanetView.orb_period_days", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "sgp/stargen.pyx":305
  * 
  *     @view_property
  *     def orb_period(self) -> double:             # <<<<<<<<<<<<<<
- *         """ length of the local year (days) """
- *         return self._get_planet().orb_period
+ *         """ length of the local year (seconds) """
+ *         return self._get_planet().orb_period * 24 * 60 * 60
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_49orb_period(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_48orb_period[] = " length of the local year (seconds) ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_49orb_period(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("orb_period (wrapper)", 0);
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_48orb_period(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_48orb_period(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  __Pyx_RefNannySetupContext("orb_period", 0);
+
+  /* "sgp/stargen.pyx":307
+ *     def orb_period(self) -> double:
+ *         """ length of the local year (seconds) """
+ *         return self._get_planet().orb_period * 24 * 60 * 60             # <<<<<<<<<<<<<<
+ * 
+ *     @view_property
+ */
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = PyFloat_FromDouble((((((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->orb_period * 24.0) * 60.0) * 60.0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 307, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* "sgp/stargen.pyx":305
+ * 
+ *     @view_property
+ *     def orb_period(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ length of the local year (seconds) """
+ *         return self._get_planet().orb_period * 24 * 60 * 60
  */
 
   /* function exit code */
@@ -6349,54 +6674,115 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_38orb_period(struct __pyx_o
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":285
+/* "sgp/stargen.pyx":310
  * 
  *     @view_property
- *     def day(self) -> double:             # <<<<<<<<<<<<<<
+ *     def day_h(self) -> double:             # <<<<<<<<<<<<<<
  *         """ length of the local day (hours) """
  *         return self._get_planet().day
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_41day(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_40day[] = " length of the local day (hours) ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_41day(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_51day_h(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_50day_h[] = " length of the local day (hours) ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_51day_h(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("day (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_40day(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __Pyx_RefNannySetupContext("day_h (wrapper)", 0);
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_50day_h(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_40day(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_50day_h(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
-  __Pyx_RefNannySetupContext("day", 0);
+  __Pyx_RefNannySetupContext("day_h", 0);
 
-  /* "sgp/stargen.pyx":287
- *     def day(self) -> double:
+  /* "sgp/stargen.pyx":312
+ *     def day_h(self) -> double:
  *         """ length of the local day (hours) """
  *         return self._get_planet().day             # <<<<<<<<<<<<<<
  * 
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->day); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 287, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->day); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 312, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":285
+  /* "sgp/stargen.pyx":310
+ * 
+ *     @view_property
+ *     def day_h(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ length of the local day (hours) """
+ *         return self._get_planet().day
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("sgp.stargen.PlanetView.day_h", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "sgp/stargen.pyx":315
  * 
  *     @view_property
  *     def day(self) -> double:             # <<<<<<<<<<<<<<
- *         """ length of the local day (hours) """
- *         return self._get_planet().day
+ *         """ length of the local day (seconds) """
+ *         return self._get_planet().day * 3600
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_53day(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_52day[] = " length of the local day (seconds) ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_53day(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("day (wrapper)", 0);
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_52day(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_52day(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  __Pyx_RefNannySetupContext("day", 0);
+
+  /* "sgp/stargen.pyx":317
+ *     def day(self) -> double:
+ *         """ length of the local day (seconds) """
+ *         return self._get_planet().day * 3600             # <<<<<<<<<<<<<<
+ * 
+ *     @view_property
+ */
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = PyFloat_FromDouble((((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->day * 3600.0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 317, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_r = __pyx_t_1;
+  __pyx_t_1 = 0;
+  goto __pyx_L0;
+
+  /* "sgp/stargen.pyx":315
+ * 
+ *     @view_property
+ *     def day(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ length of the local day (seconds) """
+ *         return self._get_planet().day * 3600
  */
 
   /* function exit code */
@@ -6410,7 +6796,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_40day(struct __pyx_obj_3sgp
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":290
+/* "sgp/stargen.pyx":320
  * 
  *     @view_property
  *     def resonant_period(self) -> bint:             # <<<<<<<<<<<<<<
@@ -6419,26 +6805,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_40day(struct __pyx_obj_3sgp
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_43resonant_period(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_42resonant_period[] = " TRUE if in resonant rotation ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_43resonant_period(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_55resonant_period(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_54resonant_period[] = " TRUE if in resonant rotation ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_55resonant_period(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("resonant_period (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_42resonant_period(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_54resonant_period(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_42resonant_period(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_54resonant_period(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("resonant_period", 0);
 
-  /* "sgp/stargen.pyx":292
+  /* "sgp/stargen.pyx":322
  *     def resonant_period(self) -> bint:
  *         """ TRUE if in resonant rotation """
  *         return self._get_planet().resonant_period             # <<<<<<<<<<<<<<
@@ -6446,13 +6832,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_42resonant_period(struct __
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->resonant_period); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 292, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->resonant_period); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 322, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":290
+  /* "sgp/stargen.pyx":320
  * 
  *     @view_property
  *     def resonant_period(self) -> bint:             # <<<<<<<<<<<<<<
@@ -6471,7 +6857,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_42resonant_period(struct __
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":295
+/* "sgp/stargen.pyx":325
  * 
  *     @view_property
  *     def esc_velocity(self) -> double:             # <<<<<<<<<<<<<<
@@ -6480,26 +6866,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_42resonant_period(struct __
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_45esc_velocity(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_44esc_velocity[] = " units of m/sec ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_45esc_velocity(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_57esc_velocity(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_56esc_velocity[] = " units of m/sec ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_57esc_velocity(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("esc_velocity (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_44esc_velocity(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_56esc_velocity(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_44esc_velocity(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_56esc_velocity(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("esc_velocity", 0);
 
-  /* "sgp/stargen.pyx":298
+  /* "sgp/stargen.pyx":328
  *         """ units of m/sec """
  *         # for uncertain reasons, the original c-code uses cm/s
  *         return self._get_planet().esc_velocity / 100             # <<<<<<<<<<<<<<
@@ -6507,13 +6893,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_44esc_velocity(struct __pyx
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble((((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->esc_velocity / 100.0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 298, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble((((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->esc_velocity / 100.0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 328, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":295
+  /* "sgp/stargen.pyx":325
  * 
  *     @view_property
  *     def esc_velocity(self) -> double:             # <<<<<<<<<<<<<<
@@ -6532,7 +6918,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_44esc_velocity(struct __pyx
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":301
+/* "sgp/stargen.pyx":331
  * 
  *     @view_property
  *     def surf_accel(self) -> double:             # <<<<<<<<<<<<<<
@@ -6541,26 +6927,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_44esc_velocity(struct __pyx
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_47surf_accel(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_46surf_accel[] = " units of m/sec2 ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_47surf_accel(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_59surf_accel(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_58surf_accel[] = " units of m/sec2 ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_59surf_accel(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("surf_accel (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_46surf_accel(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_58surf_accel(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_46surf_accel(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_58surf_accel(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("surf_accel", 0);
 
-  /* "sgp/stargen.pyx":304
+  /* "sgp/stargen.pyx":334
  *         """ units of m/sec2 """
  *         # for uncertain reasons, the original c-code uses cm/s
  *         return self._get_planet().surf_accel / 100             # <<<<<<<<<<<<<<
@@ -6568,13 +6954,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_46surf_accel(struct __pyx_o
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble((((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->surf_accel / 100.0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 304, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble((((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->surf_accel / 100.0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 334, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":301
+  /* "sgp/stargen.pyx":331
  * 
  *     @view_property
  *     def surf_accel(self) -> double:             # <<<<<<<<<<<<<<
@@ -6593,7 +6979,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_46surf_accel(struct __pyx_o
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":307
+/* "sgp/stargen.pyx":337
  * 
  *     @view_property
  *     def surf_grav(self) -> double:             # <<<<<<<<<<<<<<
@@ -6602,26 +6988,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_46surf_accel(struct __pyx_o
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_49surf_grav(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_48surf_grav[] = " units of Earth gravities ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_49surf_grav(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_61surf_grav(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_60surf_grav[] = " units of Earth gravities ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_61surf_grav(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("surf_grav (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_48surf_grav(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_60surf_grav(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_48surf_grav(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_60surf_grav(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("surf_grav", 0);
 
-  /* "sgp/stargen.pyx":309
+  /* "sgp/stargen.pyx":339
  *     def surf_grav(self) -> double:
  *         """ units of Earth gravities """
  *         return self._get_planet().surf_grav             # <<<<<<<<<<<<<<
@@ -6629,13 +7015,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_48surf_grav(struct __pyx_ob
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->surf_grav); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 309, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->surf_grav); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 339, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":307
+  /* "sgp/stargen.pyx":337
  * 
  *     @view_property
  *     def surf_grav(self) -> double:             # <<<<<<<<<<<<<<
@@ -6654,7 +7040,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_48surf_grav(struct __pyx_ob
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":312
+/* "sgp/stargen.pyx":342
  * 
  *     @view_property
  *     def rms_velocity(self) -> double:             # <<<<<<<<<<<<<<
@@ -6663,26 +7049,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_48surf_grav(struct __pyx_ob
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_51rms_velocity(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_50rms_velocity[] = " units of m/sec ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_51rms_velocity(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_63rms_velocity(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_62rms_velocity[] = " units of m/sec ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_63rms_velocity(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("rms_velocity (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_50rms_velocity(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_62rms_velocity(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_50rms_velocity(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_62rms_velocity(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("rms_velocity", 0);
 
-  /* "sgp/stargen.pyx":315
+  /* "sgp/stargen.pyx":345
  *         """ units of m/sec """
  *         # for uncertain reasons, the original c-code uses cm/s
  *         return self._get_planet().rms_velocity / 100             # <<<<<<<<<<<<<<
@@ -6690,13 +7076,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_50rms_velocity(struct __pyx
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble((((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->rms_velocity / 100.0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 315, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble((((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->rms_velocity / 100.0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 345, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":312
+  /* "sgp/stargen.pyx":342
  * 
  *     @view_property
  *     def rms_velocity(self) -> double:             # <<<<<<<<<<<<<<
@@ -6715,7 +7101,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_50rms_velocity(struct __pyx
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":318
+/* "sgp/stargen.pyx":348
  * 
  *     @view_property
  *     def molec_weight(self) -> double:             # <<<<<<<<<<<<<<
@@ -6724,26 +7110,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_50rms_velocity(struct __pyx
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_53molec_weight(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_52molec_weight[] = " smallest molecular weight retained ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_53molec_weight(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_65molec_weight(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_64molec_weight[] = " smallest molecular weight retained ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_65molec_weight(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("molec_weight (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_52molec_weight(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_64molec_weight(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_52molec_weight(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_64molec_weight(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("molec_weight", 0);
 
-  /* "sgp/stargen.pyx":320
+  /* "sgp/stargen.pyx":350
  *     def molec_weight(self) -> double:
  *         """ smallest molecular weight retained """
  *         return self._get_planet().molec_weight             # <<<<<<<<<<<<<<
@@ -6751,13 +7137,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_52molec_weight(struct __pyx
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->molec_weight); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 320, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->molec_weight); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 350, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":318
+  /* "sgp/stargen.pyx":348
  * 
  *     @view_property
  *     def molec_weight(self) -> double:             # <<<<<<<<<<<<<<
@@ -6776,7 +7162,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_52molec_weight(struct __pyx
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":323
+/* "sgp/stargen.pyx":353
  * 
  *     @view_property
  *     def volatile_gas_inventory(self) -> double:             # <<<<<<<<<<<<<<
@@ -6785,25 +7171,25 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_52molec_weight(struct __pyx
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_55volatile_gas_inventory(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_55volatile_gas_inventory(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_67volatile_gas_inventory(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_67volatile_gas_inventory(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("volatile_gas_inventory (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_54volatile_gas_inventory(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_66volatile_gas_inventory(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_54volatile_gas_inventory(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_66volatile_gas_inventory(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("volatile_gas_inventory", 0);
 
-  /* "sgp/stargen.pyx":324
+  /* "sgp/stargen.pyx":354
  *     @view_property
  *     def volatile_gas_inventory(self) -> double:
  *         return self._get_planet().volatile_gas_inventory             # <<<<<<<<<<<<<<
@@ -6811,13 +7197,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_54volatile_gas_inventory(st
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->volatile_gas_inventory); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 324, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->volatile_gas_inventory); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 354, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":323
+  /* "sgp/stargen.pyx":353
  * 
  *     @view_property
  *     def volatile_gas_inventory(self) -> double:             # <<<<<<<<<<<<<<
@@ -6836,7 +7222,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_54volatile_gas_inventory(st
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":327
+/* "sgp/stargen.pyx":357
  * 
  *     @view_property
  *     def surf_pressure_mb(self) -> double:             # <<<<<<<<<<<<<<
@@ -6845,26 +7231,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_54volatile_gas_inventory(st
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_57surf_pressure_mb(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_56surf_pressure_mb[] = " units of millibars (mb) ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_57surf_pressure_mb(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_69surf_pressure_mb(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_68surf_pressure_mb[] = " units of millibars (mb) ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_69surf_pressure_mb(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("surf_pressure_mb (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_56surf_pressure_mb(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_68surf_pressure_mb(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_56surf_pressure_mb(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_68surf_pressure_mb(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("surf_pressure_mb", 0);
 
-  /* "sgp/stargen.pyx":330
+  /* "sgp/stargen.pyx":360
  *         """ units of millibars (mb) """
  *         # for unknown reasons, original c-code uses millibars
  *         return self._get_planet().surf_pressure             # <<<<<<<<<<<<<<
@@ -6872,13 +7258,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_56surf_pressure_mb(struct _
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->surf_pressure); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 330, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->surf_pressure); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 360, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":327
+  /* "sgp/stargen.pyx":357
  * 
  *     @view_property
  *     def surf_pressure_mb(self) -> double:             # <<<<<<<<<<<<<<
@@ -6897,7 +7283,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_56surf_pressure_mb(struct _
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":333
+/* "sgp/stargen.pyx":363
  * 
  *     @view_property
  *     def surf_pressure_atm(self) -> double:             # <<<<<<<<<<<<<<
@@ -6906,26 +7292,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_56surf_pressure_mb(struct _
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_59surf_pressure_atm(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_58surf_pressure_atm[] = " units of atm (atm) ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_59surf_pressure_atm(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_71surf_pressure_atm(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_70surf_pressure_atm[] = " units of atm (atm) ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_71surf_pressure_atm(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("surf_pressure_atm (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_58surf_pressure_atm(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_70surf_pressure_atm(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_58surf_pressure_atm(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_70surf_pressure_atm(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("surf_pressure_atm", 0);
 
-  /* "sgp/stargen.pyx":336
+  /* "sgp/stargen.pyx":366
  *         """ units of atm (atm) """
  *         # for unknown reasons, original c-code uses millibars
  *         return self._get_planet().surf_pressure * 0.000986923             # <<<<<<<<<<<<<<
@@ -6933,13 +7319,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_58surf_pressure_atm(struct 
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble((((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->surf_pressure * 0.000986923)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 336, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble((((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->surf_pressure * 0.000986923)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 366, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":333
+  /* "sgp/stargen.pyx":363
  * 
  *     @view_property
  *     def surf_pressure_atm(self) -> double:             # <<<<<<<<<<<<<<
@@ -6958,7 +7344,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_58surf_pressure_atm(struct 
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":339
+/* "sgp/stargen.pyx":369
  * 
  *     @view_property
  *     def surf_pressure(self) -> double:             # <<<<<<<<<<<<<<
@@ -6967,26 +7353,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_58surf_pressure_atm(struct 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_61surf_pressure(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_60surf_pressure[] = " units of pascals (p) ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_61surf_pressure(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_73surf_pressure(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_72surf_pressure[] = " units of pascals (p) ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_73surf_pressure(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("surf_pressure (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_60surf_pressure(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_72surf_pressure(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_60surf_pressure(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_72surf_pressure(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("surf_pressure", 0);
 
-  /* "sgp/stargen.pyx":342
+  /* "sgp/stargen.pyx":372
  *         """ units of pascals (p) """
  *         # for unknown reasons, original c-code uses millibars
  *         return self._get_planet().surf_pressure * 100             # <<<<<<<<<<<<<<
@@ -6994,13 +7380,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_60surf_pressure(struct __py
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble((((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->surf_pressure * 100.0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 342, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble((((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->surf_pressure * 100.0)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 372, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":339
+  /* "sgp/stargen.pyx":369
  * 
  *     @view_property
  *     def surf_pressure(self) -> double:             # <<<<<<<<<<<<<<
@@ -7019,7 +7405,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_60surf_pressure(struct __py
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":345
+/* "sgp/stargen.pyx":375
  * 
  *     @view_property
  *     def greenhouse_effect(self) -> bint:             # <<<<<<<<<<<<<<
@@ -7028,26 +7414,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_60surf_pressure(struct __py
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_63greenhouse_effect(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_62greenhouse_effect[] = " runaway greenhouse effect? ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_63greenhouse_effect(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_75greenhouse_effect(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_74greenhouse_effect[] = " runaway greenhouse effect? ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_75greenhouse_effect(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("greenhouse_effect (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_62greenhouse_effect(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_74greenhouse_effect(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_62greenhouse_effect(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_74greenhouse_effect(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("greenhouse_effect", 0);
 
-  /* "sgp/stargen.pyx":347
+  /* "sgp/stargen.pyx":377
  *     def greenhouse_effect(self) -> bint:
  *         """ runaway greenhouse effect? """
  *         return self._get_planet().greenhouse_effect             # <<<<<<<<<<<<<<
@@ -7055,13 +7441,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_62greenhouse_effect(struct 
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->greenhouse_effect); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 347, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->greenhouse_effect); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 377, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":345
+  /* "sgp/stargen.pyx":375
  * 
  *     @view_property
  *     def greenhouse_effect(self) -> bint:             # <<<<<<<<<<<<<<
@@ -7080,7 +7466,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_62greenhouse_effect(struct 
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":350
+/* "sgp/stargen.pyx":380
  * 
  *     @view_property
  *     def boil_point(self) -> double:             # <<<<<<<<<<<<<<
@@ -7089,26 +7475,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_62greenhouse_effect(struct 
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_65boil_point(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_64boil_point[] = " the boiling point of water (Kelvin) ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_65boil_point(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_77boil_point(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_76boil_point[] = " the boiling point of water (Kelvin) ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_77boil_point(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("boil_point (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_64boil_point(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_76boil_point(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_64boil_point(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_76boil_point(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("boil_point", 0);
 
-  /* "sgp/stargen.pyx":352
+  /* "sgp/stargen.pyx":382
  *     def boil_point(self) -> double:
  *         """ the boiling point of water (Kelvin) """
  *         return self._get_planet().boil_point             # <<<<<<<<<<<<<<
@@ -7116,13 +7502,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_64boil_point(struct __pyx_o
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->boil_point); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 352, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->boil_point); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 382, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":350
+  /* "sgp/stargen.pyx":380
  * 
  *     @view_property
  *     def boil_point(self) -> double:             # <<<<<<<<<<<<<<
@@ -7141,7 +7527,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_64boil_point(struct __pyx_o
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":355
+/* "sgp/stargen.pyx":385
  * 
  *     @view_property
  *     def albedo(self) -> double:             # <<<<<<<<<<<<<<
@@ -7150,26 +7536,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_64boil_point(struct __pyx_o
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_67albedo(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_66albedo[] = " albedo of the planet ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_67albedo(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_79albedo(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_78albedo[] = " albedo of the planet ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_79albedo(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("albedo (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_66albedo(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_78albedo(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_66albedo(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_78albedo(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("albedo", 0);
 
-  /* "sgp/stargen.pyx":357
+  /* "sgp/stargen.pyx":387
  *     def albedo(self) -> double:
  *         """ albedo of the planet """
  *         return self._get_planet().albedo             # <<<<<<<<<<<<<<
@@ -7177,13 +7563,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_66albedo(struct __pyx_obj_3
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->albedo); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 357, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->albedo); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 387, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":355
+  /* "sgp/stargen.pyx":385
  * 
  *     @view_property
  *     def albedo(self) -> double:             # <<<<<<<<<<<<<<
@@ -7202,7 +7588,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_66albedo(struct __pyx_obj_3
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":360
+/* "sgp/stargen.pyx":390
  * 
  *     @view_property
  *     def exospheric_temp(self) -> double:             # <<<<<<<<<<<<<<
@@ -7211,26 +7597,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_66albedo(struct __pyx_obj_3
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_69exospheric_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_68exospheric_temp[] = " units of degrees Kelvin ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_69exospheric_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_81exospheric_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_80exospheric_temp[] = " units of degrees Kelvin ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_81exospheric_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("exospheric_temp (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_68exospheric_temp(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_80exospheric_temp(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_68exospheric_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_80exospheric_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("exospheric_temp", 0);
 
-  /* "sgp/stargen.pyx":362
+  /* "sgp/stargen.pyx":392
  *     def exospheric_temp(self) -> double:
  *         """ units of degrees Kelvin """
  *         return self._get_planet().exospheric_temp             # <<<<<<<<<<<<<<
@@ -7238,13 +7624,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_68exospheric_temp(struct __
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->exospheric_temp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 362, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->exospheric_temp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 392, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":360
+  /* "sgp/stargen.pyx":390
  * 
  *     @view_property
  *     def exospheric_temp(self) -> double:             # <<<<<<<<<<<<<<
@@ -7263,7 +7649,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_68exospheric_temp(struct __
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":365
+/* "sgp/stargen.pyx":395
  * 
  *     @view_property
  *     def estimated_temp(self) -> double:             # <<<<<<<<<<<<<<
@@ -7272,26 +7658,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_68exospheric_temp(struct __
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_71estimated_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_70estimated_temp[] = " quick non-iterative estimate (K) ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_71estimated_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_83estimated_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_82estimated_temp[] = " quick non-iterative estimate (K) ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_83estimated_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("estimated_temp (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_70estimated_temp(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_82estimated_temp(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_70estimated_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_82estimated_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("estimated_temp", 0);
 
-  /* "sgp/stargen.pyx":367
+  /* "sgp/stargen.pyx":397
  *     def estimated_temp(self) -> double:
  *         """ quick non-iterative estimate (K) """
  *         return self._get_planet().estimated_temp             # <<<<<<<<<<<<<<
@@ -7299,13 +7685,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_70estimated_temp(struct __p
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->estimated_temp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 367, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->estimated_temp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 397, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":365
+  /* "sgp/stargen.pyx":395
  * 
  *     @view_property
  *     def estimated_temp(self) -> double:             # <<<<<<<<<<<<<<
@@ -7324,7 +7710,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_70estimated_temp(struct __p
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":370
+/* "sgp/stargen.pyx":400
  * 
  *     @view_property
  *     def estimated_terr_temp(self) -> double:             # <<<<<<<<<<<<<<
@@ -7333,26 +7719,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_70estimated_temp(struct __p
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_73estimated_terr_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_72estimated_terr_temp[] = " for terrestrial moons and similar ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_73estimated_terr_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_85estimated_terr_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_84estimated_terr_temp[] = " for terrestrial moons and similar ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_85estimated_terr_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("estimated_terr_temp (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_72estimated_terr_temp(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_84estimated_terr_temp(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_72estimated_terr_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_84estimated_terr_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("estimated_terr_temp", 0);
 
-  /* "sgp/stargen.pyx":372
+  /* "sgp/stargen.pyx":402
  *     def estimated_terr_temp(self) -> double:
  *         """ for terrestrial moons and similar """
  *         return self._get_planet().estimated_terr_temp             # <<<<<<<<<<<<<<
@@ -7360,13 +7746,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_72estimated_terr_temp(struc
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->estimated_terr_temp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 372, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->estimated_terr_temp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 402, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":370
+  /* "sgp/stargen.pyx":400
  * 
  *     @view_property
  *     def estimated_terr_temp(self) -> double:             # <<<<<<<<<<<<<<
@@ -7385,7 +7771,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_72estimated_terr_temp(struc
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":375
+/* "sgp/stargen.pyx":405
  * 
  *     @view_property
  *     def surf_temp(self) -> double:             # <<<<<<<<<<<<<<
@@ -7394,26 +7780,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_72estimated_terr_temp(struc
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_75surf_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_74surf_temp[] = " surface temperature in Kelvin ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_75surf_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_87surf_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_86surf_temp[] = " surface temperature in Kelvin ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_87surf_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("surf_temp (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_74surf_temp(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_86surf_temp(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_74surf_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_86surf_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("surf_temp", 0);
 
-  /* "sgp/stargen.pyx":377
+  /* "sgp/stargen.pyx":407
  *     def surf_temp(self) -> double:
  *         """ surface temperature in Kelvin """
  *         return self._get_planet().surf_temp             # <<<<<<<<<<<<<<
@@ -7421,13 +7807,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_74surf_temp(struct __pyx_ob
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->surf_temp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 377, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->surf_temp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 407, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":375
+  /* "sgp/stargen.pyx":405
  * 
  *     @view_property
  *     def surf_temp(self) -> double:             # <<<<<<<<<<<<<<
@@ -7446,7 +7832,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_74surf_temp(struct __pyx_ob
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":380
+/* "sgp/stargen.pyx":410
  * 
  *     @view_property
  *     def greenhs_rise(self) -> double:             # <<<<<<<<<<<<<<
@@ -7455,26 +7841,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_74surf_temp(struct __pyx_ob
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_77greenhs_rise(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_76greenhs_rise[] = " Temperature rise due to greenhouse ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_77greenhs_rise(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_89greenhs_rise(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_88greenhs_rise[] = " Temperature rise due to greenhouse ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_89greenhs_rise(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("greenhs_rise (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_76greenhs_rise(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_88greenhs_rise(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_76greenhs_rise(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_88greenhs_rise(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("greenhs_rise", 0);
 
-  /* "sgp/stargen.pyx":382
+  /* "sgp/stargen.pyx":412
  *     def greenhs_rise(self) -> double:
  *         """ Temperature rise due to greenhouse """
  *         return self._get_planet().greenhs_rise             # <<<<<<<<<<<<<<
@@ -7482,13 +7868,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_76greenhs_rise(struct __pyx
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->greenhs_rise); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 382, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->greenhs_rise); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 412, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":380
+  /* "sgp/stargen.pyx":410
  * 
  *     @view_property
  *     def greenhs_rise(self) -> double:             # <<<<<<<<<<<<<<
@@ -7507,7 +7893,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_76greenhs_rise(struct __pyx
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":385
+/* "sgp/stargen.pyx":415
  * 
  *     @view_property
  *     def high_temp(self) -> double:             # <<<<<<<<<<<<<<
@@ -7516,26 +7902,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_76greenhs_rise(struct __pyx
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_79high_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_78high_temp[] = " Day-time temperature ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_79high_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_91high_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_90high_temp[] = " Day-time temperature ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_91high_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("high_temp (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_78high_temp(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_90high_temp(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_78high_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_90high_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("high_temp", 0);
 
-  /* "sgp/stargen.pyx":387
+  /* "sgp/stargen.pyx":417
  *     def high_temp(self) -> double:
  *         """ Day-time temperature """
  *         return self._get_planet().high_temp             # <<<<<<<<<<<<<<
@@ -7543,13 +7929,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_78high_temp(struct __pyx_ob
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->high_temp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 387, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->high_temp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 417, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":385
+  /* "sgp/stargen.pyx":415
  * 
  *     @view_property
  *     def high_temp(self) -> double:             # <<<<<<<<<<<<<<
@@ -7568,7 +7954,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_78high_temp(struct __pyx_ob
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":390
+/* "sgp/stargen.pyx":420
  * 
  *     @view_property
  *     def low_temp(self) -> double:             # <<<<<<<<<<<<<<
@@ -7577,26 +7963,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_78high_temp(struct __pyx_ob
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_81low_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_80low_temp[] = " Night-time temperature ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_81low_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_93low_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_92low_temp[] = " Night-time temperature ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_93low_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("low_temp (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_80low_temp(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_92low_temp(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_80low_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_92low_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("low_temp", 0);
 
-  /* "sgp/stargen.pyx":392
+  /* "sgp/stargen.pyx":422
  *     def low_temp(self) -> double:
  *         """ Night-time temperature """
  *         return self._get_planet().low_temp             # <<<<<<<<<<<<<<
@@ -7604,13 +7990,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_80low_temp(struct __pyx_obj
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->low_temp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 392, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->low_temp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 422, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":390
+  /* "sgp/stargen.pyx":420
  * 
  *     @view_property
  *     def low_temp(self) -> double:             # <<<<<<<<<<<<<<
@@ -7629,7 +8015,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_80low_temp(struct __pyx_obj
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":395
+/* "sgp/stargen.pyx":425
  * 
  *     @view_property
  *     def max_temp(self) -> double:             # <<<<<<<<<<<<<<
@@ -7638,26 +8024,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_80low_temp(struct __pyx_obj
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_83max_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_82max_temp[] = " Summer/Day ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_83max_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_95max_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_94max_temp[] = " Summer/Day ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_95max_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("max_temp (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_82max_temp(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_94max_temp(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_82max_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_94max_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("max_temp", 0);
 
-  /* "sgp/stargen.pyx":397
+  /* "sgp/stargen.pyx":427
  *     def max_temp(self) -> double:
  *         """ Summer/Day """
  *         return self._get_planet().max_temp             # <<<<<<<<<<<<<<
@@ -7665,13 +8051,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_82max_temp(struct __pyx_obj
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->max_temp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 397, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->max_temp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 427, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":395
+  /* "sgp/stargen.pyx":425
  * 
  *     @view_property
  *     def max_temp(self) -> double:             # <<<<<<<<<<<<<<
@@ -7690,7 +8076,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_82max_temp(struct __pyx_obj
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":400
+/* "sgp/stargen.pyx":430
  * 
  *     @view_property
  *     def min_temp(self) -> double:             # <<<<<<<<<<<<<<
@@ -7699,26 +8085,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_82max_temp(struct __pyx_obj
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_85min_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_84min_temp[] = " Winter/Night ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_85min_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_97min_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_96min_temp[] = " Winter/Night ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_97min_temp(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("min_temp (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_84min_temp(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_96min_temp(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_84min_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_96min_temp(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("min_temp", 0);
 
-  /* "sgp/stargen.pyx":402
+  /* "sgp/stargen.pyx":432
  *     def min_temp(self) -> double:
  *         """ Winter/Night """
  *         return self._get_planet().min_temp             # <<<<<<<<<<<<<<
@@ -7726,13 +8112,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_84min_temp(struct __pyx_obj
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->min_temp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 402, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->min_temp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 432, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":400
+  /* "sgp/stargen.pyx":430
  * 
  *     @view_property
  *     def min_temp(self) -> double:             # <<<<<<<<<<<<<<
@@ -7751,7 +8137,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_84min_temp(struct __pyx_obj
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":405
+/* "sgp/stargen.pyx":435
  * 
  *     @view_property
  *     def hydrosphere(self) -> double:             # <<<<<<<<<<<<<<
@@ -7760,26 +8146,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_84min_temp(struct __pyx_obj
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_87hydrosphere(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_86hydrosphere[] = " fraction of surface covered ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_87hydrosphere(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_99hydrosphere(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_98hydrosphere[] = " fraction of surface covered ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_99hydrosphere(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("hydrosphere (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_86hydrosphere(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_98hydrosphere(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_86hydrosphere(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_98hydrosphere(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("hydrosphere", 0);
 
-  /* "sgp/stargen.pyx":407
+  /* "sgp/stargen.pyx":437
  *     def hydrosphere(self) -> double:
  *         """ fraction of surface covered """
  *         return self._get_planet().hydrosphere             # <<<<<<<<<<<<<<
@@ -7787,13 +8173,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_86hydrosphere(struct __pyx_
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->hydrosphere); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 407, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->hydrosphere); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 437, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":405
+  /* "sgp/stargen.pyx":435
  * 
  *     @view_property
  *     def hydrosphere(self) -> double:             # <<<<<<<<<<<<<<
@@ -7812,7 +8198,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_86hydrosphere(struct __pyx_
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":410
+/* "sgp/stargen.pyx":440
  * 
  *     @view_property
  *     def cloud_cover(self) -> double:             # <<<<<<<<<<<<<<
@@ -7821,26 +8207,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_86hydrosphere(struct __pyx_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_89cloud_cover(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_88cloud_cover[] = " fraction of surface covered ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_89cloud_cover(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_101cloud_cover(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_100cloud_cover[] = " fraction of surface covered ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_101cloud_cover(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("cloud_cover (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_88cloud_cover(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_100cloud_cover(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_88cloud_cover(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_100cloud_cover(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("cloud_cover", 0);
 
-  /* "sgp/stargen.pyx":412
+  /* "sgp/stargen.pyx":442
  *     def cloud_cover(self) -> double:
  *         """ fraction of surface covered """
  *         return self._get_planet().cloud_cover             # <<<<<<<<<<<<<<
@@ -7848,13 +8234,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_88cloud_cover(struct __pyx_
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->cloud_cover); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 412, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->cloud_cover); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 442, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":410
+  /* "sgp/stargen.pyx":440
  * 
  *     @view_property
  *     def cloud_cover(self) -> double:             # <<<<<<<<<<<<<<
@@ -7873,7 +8259,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_88cloud_cover(struct __pyx_
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":415
+/* "sgp/stargen.pyx":445
  * 
  *     @view_property
  *     def ice_cover(self) -> double:             # <<<<<<<<<<<<<<
@@ -7882,26 +8268,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_88cloud_cover(struct __pyx_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_91ice_cover(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_90ice_cover[] = " fraction of surface covered ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_91ice_cover(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_103ice_cover(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_102ice_cover[] = " fraction of surface covered ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_103ice_cover(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("ice_cover (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_90ice_cover(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_102ice_cover(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_90ice_cover(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_102ice_cover(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("ice_cover", 0);
 
-  /* "sgp/stargen.pyx":417
+  /* "sgp/stargen.pyx":447
  *     def ice_cover(self) -> double:
  *         """ fraction of surface covered """
  *         return self._get_planet().ice_cover             # <<<<<<<<<<<<<<
@@ -7909,13 +8295,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_90ice_cover(struct __pyx_ob
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->ice_cover); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 417, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->ice_cover); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 447, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":415
+  /* "sgp/stargen.pyx":445
  * 
  *     @view_property
  *     def ice_cover(self) -> double:             # <<<<<<<<<<<<<<
@@ -7934,7 +8320,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_90ice_cover(struct __pyx_ob
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":420
+/* "sgp/stargen.pyx":450
  * 
  *     @view_property
  *     def sun(self) -> SunView:             # <<<<<<<<<<<<<<
@@ -7943,26 +8329,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_90ice_cover(struct __pyx_ob
  */
 
 /* Python wrapper */
-static struct __pyx_obj_3sgp_7stargen_SunView *__pyx_pw_3sgp_7stargen_10PlanetView_93sun(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static struct __pyx_obj_3sgp_7stargen_SunView *__pyx_pw_3sgp_7stargen_10PlanetView_93sun(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static struct __pyx_obj_3sgp_7stargen_SunView *__pyx_pw_3sgp_7stargen_10PlanetView_105sun(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static struct __pyx_obj_3sgp_7stargen_SunView *__pyx_pw_3sgp_7stargen_10PlanetView_105sun(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   struct __pyx_obj_3sgp_7stargen_SunView *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("sun (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_92sun(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_104sun(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static struct __pyx_obj_3sgp_7stargen_SunView *__pyx_pf_3sgp_7stargen_10PlanetView_92sun(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static struct __pyx_obj_3sgp_7stargen_SunView *__pyx_pf_3sgp_7stargen_10PlanetView_104sun(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   struct __pyx_obj_3sgp_7stargen_SunView *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   __Pyx_RefNannySetupContext("sun", 0);
 
-  /* "sgp/stargen.pyx":421
+  /* "sgp/stargen.pyx":451
  *     @view_property
  *     def sun(self) -> SunView:
  *         return SunView.wrap(self._get_planet().sun, self._system)             # <<<<<<<<<<<<<<
@@ -7972,14 +8358,14 @@ static struct __pyx_obj_3sgp_7stargen_SunView *__pyx_pf_3sgp_7stargen_10PlanetVi
   __Pyx_XDECREF(((PyObject *)__pyx_r));
   __pyx_t_1 = ((PyObject *)__pyx_v_self->__pyx_base._system);
   __Pyx_INCREF(__pyx_t_1);
-  __pyx_t_2 = ((PyObject *)__pyx_f_3sgp_7stargen_7SunView_wrap(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->sun, ((struct __pyx_obj_3sgp_7stargen_System *)__pyx_t_1))); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 421, __pyx_L1_error)
+  __pyx_t_2 = ((PyObject *)__pyx_f_3sgp_7stargen_7SunView_wrap(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->sun, ((struct __pyx_obj_3sgp_7stargen_System *)__pyx_t_1))); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 451, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_r = ((struct __pyx_obj_3sgp_7stargen_SunView *)__pyx_t_2);
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":420
+  /* "sgp/stargen.pyx":450
  * 
  *     @view_property
  *     def sun(self) -> SunView:             # <<<<<<<<<<<<<<
@@ -7999,7 +8385,7 @@ static struct __pyx_obj_3sgp_7stargen_SunView *__pyx_pf_3sgp_7stargen_10PlanetVi
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":424
+/* "sgp/stargen.pyx":454
  * 
  *     @view_property
  *     def gases(self) -> int:             # <<<<<<<<<<<<<<
@@ -8008,26 +8394,26 @@ static struct __pyx_obj_3sgp_7stargen_SunView *__pyx_pf_3sgp_7stargen_10PlanetVi
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_95gases(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_94gases[] = " Count of gases in the atmosphere: ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_95gases(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_107gases(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_106gases[] = " Count of gases in the atmosphere: ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_107gases(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("gases (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_94gases(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_106gases(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_94gases(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_106gases(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("gases", 0);
 
-  /* "sgp/stargen.pyx":426
+  /* "sgp/stargen.pyx":456
  *     def gases(self) -> int:
  *         """ Count of gases in the atmosphere: """
  *         return self._get_planet().gases             # <<<<<<<<<<<<<<
@@ -8035,13 +8421,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_94gases(struct __pyx_obj_3s
  *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->gases); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 426, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->gases); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 456, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":424
+  /* "sgp/stargen.pyx":454
  * 
  *     @view_property
  *     def gases(self) -> int:             # <<<<<<<<<<<<<<
@@ -8060,7 +8446,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_94gases(struct __pyx_obj_3s
   return __pyx_r;
 }
 
-/* "sgp/stargen.pyx":429
+/* "sgp/stargen.pyx":459
  * 
  *     @view_property
  *     def planet_type(self) -> planet_type:             # <<<<<<<<<<<<<<
@@ -8069,26 +8455,26 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_94gases(struct __pyx_obj_3s
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_97planet_type(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_96planet_type[] = " Type code ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_97planet_type(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_109planet_type(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_108planet_type[] = " Type code ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_109planet_type(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("planet_type (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_96planet_type(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_108planet_type(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_96planet_type(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_108planet_type(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("planet_type", 0);
 
-  /* "sgp/stargen.pyx":431
+  /* "sgp/stargen.pyx":461
  *     def planet_type(self) -> planet_type:
  *         """ Type code """
  *         return self._get_planet().type             # <<<<<<<<<<<<<<
@@ -8096,13 +8482,13 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_96planet_type(struct __pyx_
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_enum__planet_type(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->type); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 431, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_enum__planet_type(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->type); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 461, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "sgp/stargen.pyx":429
+  /* "sgp/stargen.pyx":459
  * 
  *     @view_property
  *     def planet_type(self) -> planet_type:             # <<<<<<<<<<<<<<
@@ -8128,19 +8514,19 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_96planet_type(struct __pyx_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_99__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_99__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_111__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_111__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__reduce_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_98__reduce_cython__(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_110__reduce_cython__(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_98__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_110__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -8182,19 +8568,19 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_98__reduce_cython__(CYTHON_
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_101__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_101__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_113__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_113__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__setstate_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_100__setstate_cython__(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_112__setstate_cython__(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_100__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_112__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -9166,51 +9552,57 @@ static PyMethodDef __pyx_methods_3sgp_7stargen_PlanetView[] = {
   {"e", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_7e, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_6e},
   {"axial_tilt", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_9axial_tilt, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_8axial_tilt},
   {"mass", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_11mass, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_10mass},
-  {"gas_giant", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_13gas_giant, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_12gas_giant},
-  {"dust_mass", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_15dust_mass, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_14dust_mass},
-  {"gas_mass", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_17gas_mass, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_16gas_mass},
-  {"imf", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_19imf, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_18imf},
-  {"ice_mass_fraction", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_21ice_mass_fraction, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_20ice_mass_fraction},
-  {"rmf", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_23rmf, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_22rmf},
-  {"rock_mass_fraction", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_25rock_mass_fraction, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_24rock_mass_fraction},
-  {"moon_a", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_27moon_a, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_26moon_a},
-  {"moon_e", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_29moon_e, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_28moon_e},
-  {"core_radius", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_31core_radius, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_30core_radius},
-  {"radius", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_33radius, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_32radius},
-  {"orbit_zone", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_35orbit_zone, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_34orbit_zone},
-  {"density", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_37density, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_36density},
-  {"orb_period", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_39orb_period, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_38orb_period},
-  {"day", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_41day, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_40day},
-  {"resonant_period", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_43resonant_period, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_42resonant_period},
-  {"esc_velocity", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_45esc_velocity, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_44esc_velocity},
-  {"surf_accel", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_47surf_accel, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_46surf_accel},
-  {"surf_grav", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_49surf_grav, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_48surf_grav},
-  {"rms_velocity", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_51rms_velocity, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_50rms_velocity},
-  {"molec_weight", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_53molec_weight, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_52molec_weight},
-  {"volatile_gas_inventory", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_55volatile_gas_inventory, METH_NOARGS, 0},
-  {"surf_pressure_mb", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_57surf_pressure_mb, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_56surf_pressure_mb},
-  {"surf_pressure_atm", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_59surf_pressure_atm, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_58surf_pressure_atm},
-  {"surf_pressure", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_61surf_pressure, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_60surf_pressure},
-  {"greenhouse_effect", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_63greenhouse_effect, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_62greenhouse_effect},
-  {"boil_point", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_65boil_point, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_64boil_point},
-  {"albedo", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_67albedo, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_66albedo},
-  {"exospheric_temp", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_69exospheric_temp, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_68exospheric_temp},
-  {"estimated_temp", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_71estimated_temp, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_70estimated_temp},
-  {"estimated_terr_temp", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_73estimated_terr_temp, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_72estimated_terr_temp},
-  {"surf_temp", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_75surf_temp, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_74surf_temp},
-  {"greenhs_rise", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_77greenhs_rise, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_76greenhs_rise},
-  {"high_temp", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_79high_temp, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_78high_temp},
-  {"low_temp", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_81low_temp, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_80low_temp},
-  {"max_temp", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_83max_temp, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_82max_temp},
-  {"min_temp", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_85min_temp, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_84min_temp},
-  {"hydrosphere", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_87hydrosphere, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_86hydrosphere},
-  {"cloud_cover", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_89cloud_cover, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_88cloud_cover},
-  {"ice_cover", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_91ice_cover, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_90ice_cover},
-  {"sun", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_93sun, METH_NOARGS, 0},
-  {"gases", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_95gases, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_94gases},
-  {"planet_type", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_97planet_type, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_96planet_type},
-  {"__reduce_cython__", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_99__reduce_cython__, METH_NOARGS, 0},
-  {"__setstate_cython__", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_101__setstate_cython__, METH_O, 0},
+  {"solar_masses", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_13solar_masses, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_12solar_masses},
+  {"gas_giant", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_15gas_giant, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_14gas_giant},
+  {"dust_mass", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_17dust_mass, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_16dust_mass},
+  {"gas_mass", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_19gas_mass, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_18gas_mass},
+  {"imf", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_21imf, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_20imf},
+  {"ice_mass_fraction", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_23ice_mass_fraction, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_22ice_mass_fraction},
+  {"rmf", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_25rmf, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_24rmf},
+  {"rock_mass_fraction", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_27rock_mass_fraction, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_26rock_mass_fraction},
+  {"moon_a", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_29moon_a, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_28moon_a},
+  {"moon_e", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_31moon_e, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_30moon_e},
+  {"core_radius", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_33core_radius, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_32core_radius},
+  {"core_radius_km", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_35core_radius_km, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_34core_radius_km},
+  {"radius", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_37radius, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_36radius},
+  {"radius_km", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_39radius_km, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_38radius_km},
+  {"orbit_zone", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_41orbit_zone, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_40orbit_zone},
+  {"density_gcc", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_43density_gcc, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_42density_gcc},
+  {"density", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_45density, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_44density},
+  {"orb_period_days", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_47orb_period_days, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_46orb_period_days},
+  {"orb_period", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_49orb_period, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_48orb_period},
+  {"day_h", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_51day_h, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_50day_h},
+  {"day", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_53day, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_52day},
+  {"resonant_period", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_55resonant_period, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_54resonant_period},
+  {"esc_velocity", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_57esc_velocity, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_56esc_velocity},
+  {"surf_accel", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_59surf_accel, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_58surf_accel},
+  {"surf_grav", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_61surf_grav, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_60surf_grav},
+  {"rms_velocity", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_63rms_velocity, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_62rms_velocity},
+  {"molec_weight", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_65molec_weight, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_64molec_weight},
+  {"volatile_gas_inventory", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_67volatile_gas_inventory, METH_NOARGS, 0},
+  {"surf_pressure_mb", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_69surf_pressure_mb, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_68surf_pressure_mb},
+  {"surf_pressure_atm", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_71surf_pressure_atm, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_70surf_pressure_atm},
+  {"surf_pressure", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_73surf_pressure, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_72surf_pressure},
+  {"greenhouse_effect", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_75greenhouse_effect, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_74greenhouse_effect},
+  {"boil_point", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_77boil_point, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_76boil_point},
+  {"albedo", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_79albedo, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_78albedo},
+  {"exospheric_temp", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_81exospheric_temp, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_80exospheric_temp},
+  {"estimated_temp", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_83estimated_temp, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_82estimated_temp},
+  {"estimated_terr_temp", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_85estimated_terr_temp, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_84estimated_terr_temp},
+  {"surf_temp", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_87surf_temp, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_86surf_temp},
+  {"greenhs_rise", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_89greenhs_rise, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_88greenhs_rise},
+  {"high_temp", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_91high_temp, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_90high_temp},
+  {"low_temp", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_93low_temp, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_92low_temp},
+  {"max_temp", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_95max_temp, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_94max_temp},
+  {"min_temp", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_97min_temp, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_96min_temp},
+  {"hydrosphere", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_99hydrosphere, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_98hydrosphere},
+  {"cloud_cover", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_101cloud_cover, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_100cloud_cover},
+  {"ice_cover", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_103ice_cover, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_102ice_cover},
+  {"sun", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_105sun, METH_NOARGS, 0},
+  {"gases", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_107gases, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_106gases},
+  {"planet_type", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_109planet_type, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_108planet_type},
+  {"__reduce_cython__", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_111__reduce_cython__, METH_NOARGS, 0},
+  {"__setstate_cython__", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_113__setstate_cython__, METH_O, 0},
   {0, 0, 0, 0}
 };
 
@@ -9640,8 +10032,11 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_close, __pyx_k_close, sizeof(__pyx_k_close), 0, 0, 1, 1},
   {&__pyx_n_s_cloud_cover, __pyx_k_cloud_cover, sizeof(__pyx_k_cloud_cover), 0, 0, 1, 1},
   {&__pyx_n_s_core_radius, __pyx_k_core_radius, sizeof(__pyx_k_core_radius), 0, 0, 1, 1},
+  {&__pyx_n_s_core_radius_km, __pyx_k_core_radius_km, sizeof(__pyx_k_core_radius_km), 0, 0, 1, 1},
   {&__pyx_n_s_day, __pyx_k_day, sizeof(__pyx_k_day), 0, 0, 1, 1},
+  {&__pyx_n_s_day_h, __pyx_k_day_h, sizeof(__pyx_k_day_h), 0, 0, 1, 1},
   {&__pyx_n_s_density, __pyx_k_density, sizeof(__pyx_k_density), 0, 0, 1, 1},
+  {&__pyx_n_s_density_gcc, __pyx_k_density_gcc, sizeof(__pyx_k_density_gcc), 0, 0, 1, 1},
   {&__pyx_n_s_dict, __pyx_k_dict, sizeof(__pyx_k_dict), 0, 0, 1, 1},
   {&__pyx_n_s_doc, __pyx_k_doc, sizeof(__pyx_k_doc), 0, 0, 1, 1},
   {&__pyx_n_s_dust_mass, __pyx_k_dust_mass, sizeof(__pyx_k_dust_mass), 0, 0, 1, 1},
@@ -9687,6 +10082,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_next, __pyx_k_next, sizeof(__pyx_k_next), 0, 0, 1, 1},
   {&__pyx_kp_s_no_default___reduce___due_to_non, __pyx_k_no_default___reduce___due_to_non, sizeof(__pyx_k_no_default___reduce___due_to_non), 0, 0, 1, 0},
   {&__pyx_n_s_orb_period, __pyx_k_orb_period, sizeof(__pyx_k_orb_period), 0, 0, 1, 1},
+  {&__pyx_n_s_orb_period_days, __pyx_k_orb_period_days, sizeof(__pyx_k_orb_period_days), 0, 0, 1, 1},
   {&__pyx_n_s_orbit_zone, __pyx_k_orbit_zone, sizeof(__pyx_k_orbit_zone), 0, 0, 1, 1},
   {&__pyx_n_s_pickle, __pyx_k_pickle, sizeof(__pyx_k_pickle), 0, 0, 1, 1},
   {&__pyx_n_s_planet_no, __pyx_k_planet_no, sizeof(__pyx_k_planet_no), 0, 0, 1, 1},
@@ -9704,6 +10100,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_qualname, __pyx_k_qualname, sizeof(__pyx_k_qualname), 0, 0, 1, 1},
   {&__pyx_n_s_r_ecosphere, __pyx_k_r_ecosphere, sizeof(__pyx_k_r_ecosphere), 0, 0, 1, 1},
   {&__pyx_n_s_radius, __pyx_k_radius, sizeof(__pyx_k_radius), 0, 0, 1, 1},
+  {&__pyx_n_s_radius_km, __pyx_k_radius_km, sizeof(__pyx_k_radius_km), 0, 0, 1, 1},
   {&__pyx_n_s_reduce, __pyx_k_reduce, sizeof(__pyx_k_reduce), 0, 0, 1, 1},
   {&__pyx_n_s_reduce_cython, __pyx_k_reduce_cython, sizeof(__pyx_k_reduce_cython), 0, 0, 1, 1},
   {&__pyx_n_s_reduce_ex, __pyx_k_reduce_ex, sizeof(__pyx_k_reduce_ex), 0, 0, 1, 1},
@@ -9717,6 +10114,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_setstate_cython, __pyx_k_setstate_cython, sizeof(__pyx_k_setstate_cython), 0, 0, 1, 1},
   {&__pyx_n_s_sgp_stargen, __pyx_k_sgp_stargen, sizeof(__pyx_k_sgp_stargen), 0, 0, 1, 1},
   {&__pyx_kp_s_sgp_stargen_pyx, __pyx_k_sgp_stargen_pyx, sizeof(__pyx_k_sgp_stargen_pyx), 0, 0, 1, 0},
+  {&__pyx_n_s_solar_masses, __pyx_k_solar_masses, sizeof(__pyx_k_solar_masses), 0, 0, 1, 1},
   {&__pyx_n_s_staticmethod, __pyx_k_staticmethod, sizeof(__pyx_k_staticmethod), 0, 0, 1, 1},
   {&__pyx_kp_s_stringsource, __pyx_k_stringsource, sizeof(__pyx_k_stringsource), 0, 0, 1, 0},
   {&__pyx_n_s_sun, __pyx_k_sun, sizeof(__pyx_k_sun), 0, 0, 1, 1},
@@ -11261,7 +11659,7 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
  * 
  *     @view_property             # <<<<<<<<<<<<<<
  *     def mass(self) -> double:
- *         """ mass (in solar masses) """
+ *         """ mass (in kg) """
  */
   __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 206, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -11270,8 +11668,8 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
  * 
  *     @view_property
  *     def mass(self) -> double:             # <<<<<<<<<<<<<<
- *         """ mass (in solar masses) """
- *         return self._get_planet().mass
+ *         """ mass (in kg) """
+ *         return self._get_planet().mass * SOLAR_MASS_IN_KILOGRAMS
  */
   __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_mass); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 207, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
@@ -11326,11 +11724,11 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
   /* "sgp/stargen.pyx":211
- *         return self._get_planet().mass
+ *         return self._get_planet().mass * SOLAR_MASS_IN_KILOGRAMS
  * 
  *     @view_property             # <<<<<<<<<<<<<<
- *     def gas_giant(self) -> bint:
- *         """ TRUE if the planet is a gas giant """
+ *     def solar_masses(self) -> double:
+ *         """ mass (in solar masses) """
  */
   __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 211, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -11338,11 +11736,11 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
   /* "sgp/stargen.pyx":212
  * 
  *     @view_property
- *     def gas_giant(self) -> bint:             # <<<<<<<<<<<<<<
- *         """ TRUE if the planet is a gas giant """
- *         return self._get_planet().gas_giant
+ *     def solar_masses(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ mass (in solar masses) """
+ *         return self._get_planet().mass
  */
-  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_gas_giant); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 212, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_solar_masses); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 212, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -11390,16 +11788,16 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_gas_giant, __pyx_t_1) < 0) __PYX_ERR(0, 212, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_solar_masses, __pyx_t_1) < 0) __PYX_ERR(0, 212, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
   /* "sgp/stargen.pyx":216
- *         return self._get_planet().gas_giant
+ *         return self._get_planet().mass
  * 
  *     @view_property             # <<<<<<<<<<<<<<
- *     def dust_mass(self) -> double:
- *         """ mass, ignoring gas """
+ *     def gas_giant(self) -> bint:
+ *         """ TRUE if the planet is a gas giant """
  */
   __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 216, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -11407,11 +11805,11 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
   /* "sgp/stargen.pyx":217
  * 
  *     @view_property
- *     def dust_mass(self) -> double:             # <<<<<<<<<<<<<<
- *         """ mass, ignoring gas """
- *         return self._get_planet().dust_mass
+ *     def gas_giant(self) -> bint:             # <<<<<<<<<<<<<<
+ *         """ TRUE if the planet is a gas giant """
+ *         return self._get_planet().gas_giant
  */
-  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_dust_mass); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 217, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_gas_giant); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 217, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -11459,16 +11857,16 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_dust_mass, __pyx_t_1) < 0) __PYX_ERR(0, 217, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_gas_giant, __pyx_t_1) < 0) __PYX_ERR(0, 217, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
   /* "sgp/stargen.pyx":221
- *         return self._get_planet().dust_mass
+ *         return self._get_planet().gas_giant
  * 
  *     @view_property             # <<<<<<<<<<<<<<
- *     def gas_mass(self) -> double:
- *         """ mass, ignoring dust """
+ *     def dust_mass(self) -> double:
+ *         """ mass, ignoring gas (kg) """
  */
   __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 221, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -11476,11 +11874,11 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
   /* "sgp/stargen.pyx":222
  * 
  *     @view_property
- *     def gas_mass(self) -> double:             # <<<<<<<<<<<<<<
- *         """ mass, ignoring dust """
- *         return self._get_planet().gas_mass
+ *     def dust_mass(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ mass, ignoring gas (kg) """
+ *         return self._get_planet().dust_mass * SOLAR_MASS_IN_KILOGRAMS
  */
-  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_gas_mass); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 222, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_dust_mass); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 222, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_2 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -11528,16 +11926,16 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_gas_mass, __pyx_t_1) < 0) __PYX_ERR(0, 222, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_dust_mass, __pyx_t_1) < 0) __PYX_ERR(0, 222, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
   /* "sgp/stargen.pyx":226
- *         return self._get_planet().gas_mass
+ *         return self._get_planet().dust_mass * SOLAR_MASS_IN_KILOGRAMS
  * 
  *     @view_property             # <<<<<<<<<<<<<<
- *     def imf(self) -> double:
- *         """ ice mass fraction """
+ *     def gas_mass(self) -> double:
+ *         """ mass, ignoring dust (kg) """
  */
   __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 226, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -11545,11 +11943,11 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
   /* "sgp/stargen.pyx":227
  * 
  *     @view_property
- *     def imf(self) -> double:             # <<<<<<<<<<<<<<
- *         """ ice mass fraction """
- *         return self._get_planet().imf
+ *     def gas_mass(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ mass, ignoring dust (kg) """
+ *         return self._get_planet().gas_mass * SOLAR_MASS_IN_KILOGRAMS
  */
-  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_imf); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 227, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_gas_mass); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 227, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -11597,15 +11995,15 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_imf, __pyx_t_1) < 0) __PYX_ERR(0, 227, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_gas_mass, __pyx_t_1) < 0) __PYX_ERR(0, 227, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
   /* "sgp/stargen.pyx":231
- *         return self._get_planet().imf
+ *         return self._get_planet().gas_mass * SOLAR_MASS_IN_KILOGRAMS
  * 
  *     @view_property             # <<<<<<<<<<<<<<
- *     def ice_mass_fraction(self) -> double:
+ *     def imf(self) -> double:
  *         """ ice mass fraction """
  */
   __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 231, __pyx_L1_error)
@@ -11614,11 +12012,11 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
   /* "sgp/stargen.pyx":232
  * 
  *     @view_property
- *     def ice_mass_fraction(self) -> double:             # <<<<<<<<<<<<<<
+ *     def imf(self) -> double:             # <<<<<<<<<<<<<<
  *         """ ice mass fraction """
- *         return self.imf
+ *         return self._get_planet().imf
  */
-  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_ice_mass_fraction); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 232, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_imf); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 232, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -11666,16 +12064,16 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_ice_mass_fraction, __pyx_t_1) < 0) __PYX_ERR(0, 232, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_imf, __pyx_t_1) < 0) __PYX_ERR(0, 232, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
   /* "sgp/stargen.pyx":236
- *         return self.imf
+ *         return self._get_planet().imf
  * 
  *     @view_property             # <<<<<<<<<<<<<<
- *     def rmf(self) -> double:
- *         """ rock mass fraction """
+ *     def ice_mass_fraction(self) -> double:
+ *         """ ice mass fraction """
  */
   __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 236, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -11683,11 +12081,11 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
   /* "sgp/stargen.pyx":237
  * 
  *     @view_property
- *     def rmf(self) -> double:             # <<<<<<<<<<<<<<
- *         """ rock mass fraction """
- *         return self._get_planet().rmf
+ *     def ice_mass_fraction(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ ice mass fraction """
+ *         return self.imf
  */
-  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_rmf); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 237, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_ice_mass_fraction); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 237, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_2 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -11735,15 +12133,15 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_rmf, __pyx_t_1) < 0) __PYX_ERR(0, 237, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_ice_mass_fraction, __pyx_t_1) < 0) __PYX_ERR(0, 237, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
   /* "sgp/stargen.pyx":241
- *         return self._get_planet().rmf
+ *         return self.imf
  * 
  *     @view_property             # <<<<<<<<<<<<<<
- *     def rock_mass_fraction(self) -> double:
+ *     def rmf(self) -> double:
  *         """ rock mass fraction """
  */
   __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 241, __pyx_L1_error)
@@ -11752,11 +12150,11 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
   /* "sgp/stargen.pyx":242
  * 
  *     @view_property
- *     def rock_mass_fraction(self) -> double:             # <<<<<<<<<<<<<<
+ *     def rmf(self) -> double:             # <<<<<<<<<<<<<<
  *         """ rock mass fraction """
- *         return self.rmf
+ *         return self._get_planet().rmf
  */
-  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_rock_mass_fraction); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 242, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_rmf); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 242, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -11804,16 +12202,16 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_rock_mass_fraction, __pyx_t_1) < 0) __PYX_ERR(0, 242, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_rmf, __pyx_t_1) < 0) __PYX_ERR(0, 242, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
   /* "sgp/stargen.pyx":246
- *         return self.rmf
+ *         return self._get_planet().rmf
  * 
  *     @view_property             # <<<<<<<<<<<<<<
- *     def moon_a(self) -> double:
- *         """ semi-major axis of lunar orbit (in AU) """
+ *     def rock_mass_fraction(self) -> double:
+ *         """ rock mass fraction """
  */
   __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 246, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -11821,11 +12219,11 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
   /* "sgp/stargen.pyx":247
  * 
  *     @view_property
- *     def moon_a(self) -> double:             # <<<<<<<<<<<<<<
- *         """ semi-major axis of lunar orbit (in AU) """
- *         return self._get_planet().moon_a
+ *     def rock_mass_fraction(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ rock mass fraction """
+ *         return self.rmf
  */
-  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_moon_a); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 247, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_rock_mass_fraction); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 247, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -11873,16 +12271,16 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_moon_a, __pyx_t_1) < 0) __PYX_ERR(0, 247, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_rock_mass_fraction, __pyx_t_1) < 0) __PYX_ERR(0, 247, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
   /* "sgp/stargen.pyx":251
- *         return self._get_planet().moon_a
+ *         return self.rmf
  * 
  *     @view_property             # <<<<<<<<<<<<<<
- *     def moon_e(self) -> double:
- *         """ eccentricity of lunar orbit """
+ *     def moon_a(self) -> double:
+ *         """ semi-major axis of lunar orbit (in AU) """
  */
   __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 251, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -11890,11 +12288,11 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
   /* "sgp/stargen.pyx":252
  * 
  *     @view_property
- *     def moon_e(self) -> double:             # <<<<<<<<<<<<<<
- *         """ eccentricity of lunar orbit """
- *         return self._get_planet().moon_e
+ *     def moon_a(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ semi-major axis of lunar orbit (in AU) """
+ *         return self._get_planet().moon_a
  */
-  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_moon_e); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 252, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_moon_a); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 252, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_2 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -11942,16 +12340,16 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_moon_e, __pyx_t_1) < 0) __PYX_ERR(0, 252, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_moon_a, __pyx_t_1) < 0) __PYX_ERR(0, 252, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
   /* "sgp/stargen.pyx":256
- *         return self._get_planet().moon_e
+ *         return self._get_planet().moon_a
  * 
  *     @view_property             # <<<<<<<<<<<<<<
- *     def core_radius(self) -> double:
- *         """ radius of the rocky core (in km) """
+ *     def moon_e(self) -> double:
+ *         """ eccentricity of lunar orbit """
  */
   __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 256, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -11959,11 +12357,11 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
   /* "sgp/stargen.pyx":257
  * 
  *     @view_property
- *     def core_radius(self) -> double:             # <<<<<<<<<<<<<<
- *         """ radius of the rocky core (in km) """
- *         return self._get_planet().core_radius
+ *     def moon_e(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ eccentricity of lunar orbit """
+ *         return self._get_planet().moon_e
  */
-  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_core_radius); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 257, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_moon_e); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 257, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -12011,16 +12409,16 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_core_radius, __pyx_t_1) < 0) __PYX_ERR(0, 257, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_moon_e, __pyx_t_1) < 0) __PYX_ERR(0, 257, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
   /* "sgp/stargen.pyx":261
- *         return self._get_planet().core_radius
+ *         return self._get_planet().moon_e
  * 
  *     @view_property             # <<<<<<<<<<<<<<
- *     def radius(self) -> double:
- *         """ equatorial radius (in km) """
+ *     def core_radius(self) -> double:
+ *         """ radius of the rocky core (in m) """
  */
   __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 261, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -12028,11 +12426,11 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
   /* "sgp/stargen.pyx":262
  * 
  *     @view_property
- *     def radius(self) -> double:             # <<<<<<<<<<<<<<
- *         """ equatorial radius (in km) """
- *         return self._get_planet().radius
+ *     def core_radius(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ radius of the rocky core (in m) """
+ *         return self._get_planet().core_radius * 1000
  */
-  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_radius); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 262, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_core_radius); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 262, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -12080,16 +12478,16 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_radius, __pyx_t_1) < 0) __PYX_ERR(0, 262, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_core_radius, __pyx_t_1) < 0) __PYX_ERR(0, 262, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
   /* "sgp/stargen.pyx":266
- *         return self._get_planet().radius
+ *         return self._get_planet().core_radius * 1000
  * 
  *     @view_property             # <<<<<<<<<<<<<<
- *     def orbit_zone(self) -> int:
- *         """
+ *     def core_radius_km(self) -> double:
+ *         """ radius of the rocky core (in km) """
  */
   __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 266, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -12097,11 +12495,11 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
   /* "sgp/stargen.pyx":267
  * 
  *     @view_property
- *     def orbit_zone(self) -> int:             # <<<<<<<<<<<<<<
- *         """
- *         Gets the 'zone' of the planet.
+ *     def core_radius_km(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ radius of the rocky core (in km) """
+ *         return self._get_planet().core_radius
  */
-  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_orbit_zone); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 267, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_core_radius_km); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 267, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_2 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -12149,28 +12547,28 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_orbit_zone, __pyx_t_1) < 0) __PYX_ERR(0, 267, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_core_radius_km, __pyx_t_1) < 0) __PYX_ERR(0, 267, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
-  /* "sgp/stargen.pyx":274
- *         return self._get_planet().orbit_zone
+  /* "sgp/stargen.pyx":271
+ *         return self._get_planet().core_radius
  * 
  *     @view_property             # <<<<<<<<<<<<<<
- *     def density(self) -> double:
- *         """ density (in g/cc) """
+ *     def radius(self) -> double:
+ *         """ equatorial radius (in m) """
  */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 274, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 271, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "sgp/stargen.pyx":275
+  /* "sgp/stargen.pyx":272
  * 
  *     @view_property
- *     def density(self) -> double:             # <<<<<<<<<<<<<<
- *         """ density (in g/cc) """
- *         return self._get_planet().density
+ *     def radius(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ equatorial radius (in m) """
+ *         return self._get_planet().radius * 1000
  */
-  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_density); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 275, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_radius); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 272, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -12183,14 +12581,14 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   if (!__pyx_t_5) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 274, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_4};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 274, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 271, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -12199,47 +12597,47 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_4};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 274, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 271, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     } else
     #endif
     {
-      __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 274, __pyx_L1_error)
+      __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 271, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_5); __pyx_t_5 = NULL;
       __Pyx_GIVEREF(__pyx_t_4);
       PyTuple_SET_ITEM(__pyx_t_2, 0+1, __pyx_t_4);
       __pyx_t_4 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 274, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 271, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_density, __pyx_t_1) < 0) __PYX_ERR(0, 275, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_radius, __pyx_t_1) < 0) __PYX_ERR(0, 272, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
-  /* "sgp/stargen.pyx":279
- *         return self._get_planet().density
+  /* "sgp/stargen.pyx":276
+ *         return self._get_planet().radius * 1000
  * 
  *     @view_property             # <<<<<<<<<<<<<<
- *     def orb_period(self) -> double:
- *         """ length of the local year (days) """
+ *     def radius_km(self) -> double:
+ *         """ equatorial radius (in km) """
  */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 279, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 276, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "sgp/stargen.pyx":280
+  /* "sgp/stargen.pyx":277
  * 
  *     @view_property
- *     def orb_period(self) -> double:             # <<<<<<<<<<<<<<
- *         """ length of the local year (days) """
- *         return self._get_planet().orb_period
+ *     def radius_km(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ equatorial radius (in km) """
+ *         return self._get_planet().radius
  */
-  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_orb_period); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 280, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_radius_km); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 277, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -12252,14 +12650,14 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   if (!__pyx_t_4) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 279, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 276, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_2};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 279, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 276, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -12268,47 +12666,47 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_2};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 279, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 276, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     } else
     #endif
     {
-      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 279, __pyx_L1_error)
+      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 276, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __pyx_t_4 = NULL;
       __Pyx_GIVEREF(__pyx_t_2);
       PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_2);
       __pyx_t_2 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 279, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 276, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_orb_period, __pyx_t_1) < 0) __PYX_ERR(0, 280, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_radius_km, __pyx_t_1) < 0) __PYX_ERR(0, 277, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
-  /* "sgp/stargen.pyx":284
- *         return self._get_planet().orb_period
+  /* "sgp/stargen.pyx":281
+ *         return self._get_planet().radius
  * 
  *     @view_property             # <<<<<<<<<<<<<<
- *     def day(self) -> double:
- *         """ length of the local day (hours) """
+ *     def orbit_zone(self) -> int:
+ *         """
  */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 284, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 281, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "sgp/stargen.pyx":285
+  /* "sgp/stargen.pyx":282
  * 
  *     @view_property
- *     def day(self) -> double:             # <<<<<<<<<<<<<<
- *         """ length of the local day (hours) """
- *         return self._get_planet().day
+ *     def orbit_zone(self) -> int:             # <<<<<<<<<<<<<<
+ *         """
+ *         Gets the 'zone' of the planet.
  */
-  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_day); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 285, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_orbit_zone); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 282, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_2 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -12321,14 +12719,14 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   if (!__pyx_t_2) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 284, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 281, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_2, __pyx_t_5};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 284, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 281, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -12337,35 +12735,35 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_2, __pyx_t_5};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 284, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 281, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     } else
     #endif
     {
-      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 284, __pyx_L1_error)
+      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 281, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GIVEREF(__pyx_t_2); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2); __pyx_t_2 = NULL;
       __Pyx_GIVEREF(__pyx_t_5);
       PyTuple_SET_ITEM(__pyx_t_4, 0+1, __pyx_t_5);
       __pyx_t_5 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 284, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 281, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_day, __pyx_t_1) < 0) __PYX_ERR(0, 285, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_orbit_zone, __pyx_t_1) < 0) __PYX_ERR(0, 282, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
   /* "sgp/stargen.pyx":289
- *         return self._get_planet().day
+ *         return self._get_planet().orbit_zone
  * 
  *     @view_property             # <<<<<<<<<<<<<<
- *     def resonant_period(self) -> bint:
- *         """ TRUE if in resonant rotation """
+ *     def density_gcc(self) -> double:
+ *         """ density (in g/cc) """
  */
   __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 289, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -12373,11 +12771,11 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
   /* "sgp/stargen.pyx":290
  * 
  *     @view_property
- *     def resonant_period(self) -> bint:             # <<<<<<<<<<<<<<
- *         """ TRUE if in resonant rotation """
- *         return self._get_planet().resonant_period
+ *     def density_gcc(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ density (in g/cc) """
+ *         return self._get_planet().density
  */
-  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_resonant_period); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 290, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_density_gcc); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 290, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -12425,16 +12823,16 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_resonant_period, __pyx_t_1) < 0) __PYX_ERR(0, 290, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_density_gcc, __pyx_t_1) < 0) __PYX_ERR(0, 290, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
   /* "sgp/stargen.pyx":294
- *         return self._get_planet().resonant_period
+ *         return self._get_planet().density
  * 
  *     @view_property             # <<<<<<<<<<<<<<
- *     def esc_velocity(self) -> double:
- *         """ units of m/sec """
+ *     def density(self) -> double:
+ *         """ density (in kg/m^3) """
  */
   __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 294, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -12442,11 +12840,11 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
   /* "sgp/stargen.pyx":295
  * 
  *     @view_property
- *     def esc_velocity(self) -> double:             # <<<<<<<<<<<<<<
- *         """ units of m/sec """
- *         # for uncertain reasons, the original c-code uses cm/s
+ *     def density(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ density (in kg/m^3) """
+ *         return self._get_planet().density * 1000
  */
-  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_esc_velocity); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 295, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_density); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 295, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -12494,28 +12892,442 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_esc_velocity, __pyx_t_1) < 0) __PYX_ERR(0, 295, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_density, __pyx_t_1) < 0) __PYX_ERR(0, 295, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
+  /* "sgp/stargen.pyx":299
+ *         return self._get_planet().density * 1000
+ * 
+ *     @view_property             # <<<<<<<<<<<<<<
+ *     def orb_period_days(self) -> double:
+ *         """ length of the local year (days) """
+ */
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 299, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+
   /* "sgp/stargen.pyx":300
+ * 
+ *     @view_property
+ *     def orb_period_days(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ length of the local year (days) """
+ *         return self._get_planet().orb_period
+ */
+  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_orb_period_days); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 300, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_2 = NULL;
+  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
+    __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_3);
+    if (likely(__pyx_t_2)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+      __Pyx_INCREF(__pyx_t_2);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_3, function);
+    }
+  }
+  if (!__pyx_t_2) {
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 299, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __Pyx_GOTREF(__pyx_t_1);
+  } else {
+    #if CYTHON_FAST_PYCALL
+    if (PyFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_2, __pyx_t_5};
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 299, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    } else
+    #endif
+    #if CYTHON_FAST_PYCCALL
+    if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_2, __pyx_t_5};
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 299, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    } else
+    #endif
+    {
+      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 299, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_GIVEREF(__pyx_t_2); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2); __pyx_t_2 = NULL;
+      __Pyx_GIVEREF(__pyx_t_5);
+      PyTuple_SET_ITEM(__pyx_t_4, 0+1, __pyx_t_5);
+      __pyx_t_5 = 0;
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 299, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    }
+  }
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_orb_period_days, __pyx_t_1) < 0) __PYX_ERR(0, 300, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
+
+  /* "sgp/stargen.pyx":304
+ *         return self._get_planet().orb_period
+ * 
+ *     @view_property             # <<<<<<<<<<<<<<
+ *     def orb_period(self) -> double:
+ *         """ length of the local year (seconds) """
+ */
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 304, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+
+  /* "sgp/stargen.pyx":305
+ * 
+ *     @view_property
+ *     def orb_period(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ length of the local year (seconds) """
+ *         return self._get_planet().orb_period * 24 * 60 * 60
+ */
+  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_orb_period); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 305, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_5 = NULL;
+  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
+    __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_3);
+    if (likely(__pyx_t_5)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+      __Pyx_INCREF(__pyx_t_5);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_3, function);
+    }
+  }
+  if (!__pyx_t_5) {
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 304, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    __Pyx_GOTREF(__pyx_t_1);
+  } else {
+    #if CYTHON_FAST_PYCALL
+    if (PyFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_4};
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 304, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    } else
+    #endif
+    #if CYTHON_FAST_PYCCALL
+    if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_4};
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 304, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    } else
+    #endif
+    {
+      __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 304, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_5); __pyx_t_5 = NULL;
+      __Pyx_GIVEREF(__pyx_t_4);
+      PyTuple_SET_ITEM(__pyx_t_2, 0+1, __pyx_t_4);
+      __pyx_t_4 = 0;
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 304, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    }
+  }
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_orb_period, __pyx_t_1) < 0) __PYX_ERR(0, 305, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
+
+  /* "sgp/stargen.pyx":309
+ *         return self._get_planet().orb_period * 24 * 60 * 60
+ * 
+ *     @view_property             # <<<<<<<<<<<<<<
+ *     def day_h(self) -> double:
+ *         """ length of the local day (hours) """
+ */
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 309, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+
+  /* "sgp/stargen.pyx":310
+ * 
+ *     @view_property
+ *     def day_h(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ length of the local day (hours) """
+ *         return self._get_planet().day
+ */
+  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_day_h); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 310, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_4 = NULL;
+  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
+    __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_3);
+    if (likely(__pyx_t_4)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+      __Pyx_INCREF(__pyx_t_4);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_3, function);
+    }
+  }
+  if (!__pyx_t_4) {
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 309, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_GOTREF(__pyx_t_1);
+  } else {
+    #if CYTHON_FAST_PYCALL
+    if (PyFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_2};
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 309, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    } else
+    #endif
+    #if CYTHON_FAST_PYCCALL
+    if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_2};
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 309, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    } else
+    #endif
+    {
+      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 309, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_5);
+      __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __pyx_t_4 = NULL;
+      __Pyx_GIVEREF(__pyx_t_2);
+      PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_2);
+      __pyx_t_2 = 0;
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 309, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    }
+  }
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_day_h, __pyx_t_1) < 0) __PYX_ERR(0, 310, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
+
+  /* "sgp/stargen.pyx":314
+ *         return self._get_planet().day
+ * 
+ *     @view_property             # <<<<<<<<<<<<<<
+ *     def day(self) -> double:
+ *         """ length of the local day (seconds) """
+ */
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 314, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+
+  /* "sgp/stargen.pyx":315
+ * 
+ *     @view_property
+ *     def day(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ length of the local day (seconds) """
+ *         return self._get_planet().day * 3600
+ */
+  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_day); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 315, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_2 = NULL;
+  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
+    __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_3);
+    if (likely(__pyx_t_2)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+      __Pyx_INCREF(__pyx_t_2);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_3, function);
+    }
+  }
+  if (!__pyx_t_2) {
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 314, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __Pyx_GOTREF(__pyx_t_1);
+  } else {
+    #if CYTHON_FAST_PYCALL
+    if (PyFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_2, __pyx_t_5};
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 314, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    } else
+    #endif
+    #if CYTHON_FAST_PYCCALL
+    if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_2, __pyx_t_5};
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 314, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    } else
+    #endif
+    {
+      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 314, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_GIVEREF(__pyx_t_2); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2); __pyx_t_2 = NULL;
+      __Pyx_GIVEREF(__pyx_t_5);
+      PyTuple_SET_ITEM(__pyx_t_4, 0+1, __pyx_t_5);
+      __pyx_t_5 = 0;
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 314, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    }
+  }
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_day, __pyx_t_1) < 0) __PYX_ERR(0, 315, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
+
+  /* "sgp/stargen.pyx":319
+ *         return self._get_planet().day * 3600
+ * 
+ *     @view_property             # <<<<<<<<<<<<<<
+ *     def resonant_period(self) -> bint:
+ *         """ TRUE if in resonant rotation """
+ */
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 319, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+
+  /* "sgp/stargen.pyx":320
+ * 
+ *     @view_property
+ *     def resonant_period(self) -> bint:             # <<<<<<<<<<<<<<
+ *         """ TRUE if in resonant rotation """
+ *         return self._get_planet().resonant_period
+ */
+  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_resonant_period); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 320, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_5 = NULL;
+  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
+    __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_3);
+    if (likely(__pyx_t_5)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+      __Pyx_INCREF(__pyx_t_5);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_3, function);
+    }
+  }
+  if (!__pyx_t_5) {
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 319, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    __Pyx_GOTREF(__pyx_t_1);
+  } else {
+    #if CYTHON_FAST_PYCALL
+    if (PyFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_4};
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 319, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    } else
+    #endif
+    #if CYTHON_FAST_PYCCALL
+    if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_4};
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 319, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    } else
+    #endif
+    {
+      __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 319, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_5); __pyx_t_5 = NULL;
+      __Pyx_GIVEREF(__pyx_t_4);
+      PyTuple_SET_ITEM(__pyx_t_2, 0+1, __pyx_t_4);
+      __pyx_t_4 = 0;
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 319, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    }
+  }
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_resonant_period, __pyx_t_1) < 0) __PYX_ERR(0, 320, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
+
+  /* "sgp/stargen.pyx":324
+ *         return self._get_planet().resonant_period
+ * 
+ *     @view_property             # <<<<<<<<<<<<<<
+ *     def esc_velocity(self) -> double:
+ *         """ units of m/sec """
+ */
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 324, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+
+  /* "sgp/stargen.pyx":325
+ * 
+ *     @view_property
+ *     def esc_velocity(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ units of m/sec """
+ *         # for uncertain reasons, the original c-code uses cm/s
+ */
+  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_esc_velocity); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 325, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_4 = NULL;
+  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
+    __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_3);
+    if (likely(__pyx_t_4)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+      __Pyx_INCREF(__pyx_t_4);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_3, function);
+    }
+  }
+  if (!__pyx_t_4) {
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 324, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_GOTREF(__pyx_t_1);
+  } else {
+    #if CYTHON_FAST_PYCALL
+    if (PyFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_2};
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 324, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    } else
+    #endif
+    #if CYTHON_FAST_PYCCALL
+    if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_2};
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 324, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    } else
+    #endif
+    {
+      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 324, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_5);
+      __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __pyx_t_4 = NULL;
+      __Pyx_GIVEREF(__pyx_t_2);
+      PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_2);
+      __pyx_t_2 = 0;
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 324, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    }
+  }
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_esc_velocity, __pyx_t_1) < 0) __PYX_ERR(0, 325, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
+
+  /* "sgp/stargen.pyx":330
  *         return self._get_planet().esc_velocity / 100
  * 
  *     @view_property             # <<<<<<<<<<<<<<
  *     def surf_accel(self) -> double:
  *         """ units of m/sec2 """
  */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 300, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 330, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "sgp/stargen.pyx":301
+  /* "sgp/stargen.pyx":331
  * 
  *     @view_property
  *     def surf_accel(self) -> double:             # <<<<<<<<<<<<<<
  *         """ units of m/sec2 """
  *         # for uncertain reasons, the original c-code uses cm/s
  */
-  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_surf_accel); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 301, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_surf_accel); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 331, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_2 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -12528,14 +13340,14 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   if (!__pyx_t_2) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 300, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 330, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_2, __pyx_t_5};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 300, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 330, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -12544,47 +13356,47 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_2, __pyx_t_5};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 300, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 330, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     } else
     #endif
     {
-      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 300, __pyx_L1_error)
+      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 330, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GIVEREF(__pyx_t_2); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2); __pyx_t_2 = NULL;
       __Pyx_GIVEREF(__pyx_t_5);
       PyTuple_SET_ITEM(__pyx_t_4, 0+1, __pyx_t_5);
       __pyx_t_5 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 300, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 330, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_surf_accel, __pyx_t_1) < 0) __PYX_ERR(0, 301, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_surf_accel, __pyx_t_1) < 0) __PYX_ERR(0, 331, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
-  /* "sgp/stargen.pyx":306
+  /* "sgp/stargen.pyx":336
  *         return self._get_planet().surf_accel / 100
  * 
  *     @view_property             # <<<<<<<<<<<<<<
  *     def surf_grav(self) -> double:
  *         """ units of Earth gravities """
  */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 306, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 336, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "sgp/stargen.pyx":307
+  /* "sgp/stargen.pyx":337
  * 
  *     @view_property
  *     def surf_grav(self) -> double:             # <<<<<<<<<<<<<<
  *         """ units of Earth gravities """
  *         return self._get_planet().surf_grav
  */
-  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_surf_grav); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 307, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_surf_grav); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 337, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -12597,14 +13409,14 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   if (!__pyx_t_5) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 306, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 336, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_4};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 306, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 336, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -12613,47 +13425,47 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_4};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 306, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 336, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     } else
     #endif
     {
-      __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 306, __pyx_L1_error)
+      __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 336, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_5); __pyx_t_5 = NULL;
       __Pyx_GIVEREF(__pyx_t_4);
       PyTuple_SET_ITEM(__pyx_t_2, 0+1, __pyx_t_4);
       __pyx_t_4 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 306, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 336, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_surf_grav, __pyx_t_1) < 0) __PYX_ERR(0, 307, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_surf_grav, __pyx_t_1) < 0) __PYX_ERR(0, 337, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
-  /* "sgp/stargen.pyx":311
+  /* "sgp/stargen.pyx":341
  *         return self._get_planet().surf_grav
  * 
  *     @view_property             # <<<<<<<<<<<<<<
  *     def rms_velocity(self) -> double:
  *         """ units of m/sec """
  */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 311, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 341, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "sgp/stargen.pyx":312
+  /* "sgp/stargen.pyx":342
  * 
  *     @view_property
  *     def rms_velocity(self) -> double:             # <<<<<<<<<<<<<<
  *         """ units of m/sec """
  *         # for uncertain reasons, the original c-code uses cm/s
  */
-  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_rms_velocity); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 312, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_rms_velocity); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 342, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -12666,14 +13478,14 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   if (!__pyx_t_4) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 311, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 341, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_2};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 311, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 341, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -12682,47 +13494,47 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_2};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 311, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 341, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     } else
     #endif
     {
-      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 311, __pyx_L1_error)
+      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 341, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __pyx_t_4 = NULL;
       __Pyx_GIVEREF(__pyx_t_2);
       PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_2);
       __pyx_t_2 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 311, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 341, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_rms_velocity, __pyx_t_1) < 0) __PYX_ERR(0, 312, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_rms_velocity, __pyx_t_1) < 0) __PYX_ERR(0, 342, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
-  /* "sgp/stargen.pyx":317
+  /* "sgp/stargen.pyx":347
  *         return self._get_planet().rms_velocity / 100
  * 
  *     @view_property             # <<<<<<<<<<<<<<
  *     def molec_weight(self) -> double:
  *         """ smallest molecular weight retained """
  */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 317, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 347, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "sgp/stargen.pyx":318
+  /* "sgp/stargen.pyx":348
  * 
  *     @view_property
  *     def molec_weight(self) -> double:             # <<<<<<<<<<<<<<
  *         """ smallest molecular weight retained """
  *         return self._get_planet().molec_weight
  */
-  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_molec_weight); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 318, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_molec_weight); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 348, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_2 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -12735,14 +13547,14 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   if (!__pyx_t_2) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 317, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 347, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_2, __pyx_t_5};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 317, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 347, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -12751,47 +13563,47 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_2, __pyx_t_5};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 317, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 347, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     } else
     #endif
     {
-      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 317, __pyx_L1_error)
+      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 347, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GIVEREF(__pyx_t_2); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2); __pyx_t_2 = NULL;
       __Pyx_GIVEREF(__pyx_t_5);
       PyTuple_SET_ITEM(__pyx_t_4, 0+1, __pyx_t_5);
       __pyx_t_5 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 317, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 347, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_molec_weight, __pyx_t_1) < 0) __PYX_ERR(0, 318, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_molec_weight, __pyx_t_1) < 0) __PYX_ERR(0, 348, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
-  /* "sgp/stargen.pyx":322
+  /* "sgp/stargen.pyx":352
  *         return self._get_planet().molec_weight
  * 
  *     @view_property             # <<<<<<<<<<<<<<
  *     def volatile_gas_inventory(self) -> double:
  *         return self._get_planet().volatile_gas_inventory
  */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 322, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 352, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "sgp/stargen.pyx":323
+  /* "sgp/stargen.pyx":353
  * 
  *     @view_property
  *     def volatile_gas_inventory(self) -> double:             # <<<<<<<<<<<<<<
  *         return self._get_planet().volatile_gas_inventory
  * 
  */
-  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_volatile_gas_inventory); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 323, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_volatile_gas_inventory); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 353, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -12804,14 +13616,14 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   if (!__pyx_t_5) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 322, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 352, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_4};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 322, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 352, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -12820,47 +13632,47 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_4};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 322, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 352, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     } else
     #endif
     {
-      __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 322, __pyx_L1_error)
+      __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 352, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_5); __pyx_t_5 = NULL;
       __Pyx_GIVEREF(__pyx_t_4);
       PyTuple_SET_ITEM(__pyx_t_2, 0+1, __pyx_t_4);
       __pyx_t_4 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 322, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 352, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_volatile_gas_inventory, __pyx_t_1) < 0) __PYX_ERR(0, 323, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_volatile_gas_inventory, __pyx_t_1) < 0) __PYX_ERR(0, 353, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
-  /* "sgp/stargen.pyx":326
+  /* "sgp/stargen.pyx":356
  *         return self._get_planet().volatile_gas_inventory
  * 
  *     @view_property             # <<<<<<<<<<<<<<
  *     def surf_pressure_mb(self) -> double:
  *         """ units of millibars (mb) """
  */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 326, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 356, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "sgp/stargen.pyx":327
+  /* "sgp/stargen.pyx":357
  * 
  *     @view_property
  *     def surf_pressure_mb(self) -> double:             # <<<<<<<<<<<<<<
  *         """ units of millibars (mb) """
  *         # for unknown reasons, original c-code uses millibars
  */
-  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_surf_pressure_mb); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 327, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_surf_pressure_mb); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 357, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -12873,14 +13685,14 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   if (!__pyx_t_4) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 326, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 356, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_2};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 326, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 356, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -12889,47 +13701,47 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_2};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 326, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 356, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     } else
     #endif
     {
-      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 326, __pyx_L1_error)
+      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 356, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __pyx_t_4 = NULL;
       __Pyx_GIVEREF(__pyx_t_2);
       PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_2);
       __pyx_t_2 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 326, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 356, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_surf_pressure_mb, __pyx_t_1) < 0) __PYX_ERR(0, 327, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_surf_pressure_mb, __pyx_t_1) < 0) __PYX_ERR(0, 357, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
-  /* "sgp/stargen.pyx":332
+  /* "sgp/stargen.pyx":362
  *         return self._get_planet().surf_pressure
  * 
  *     @view_property             # <<<<<<<<<<<<<<
  *     def surf_pressure_atm(self) -> double:
  *         """ units of atm (atm) """
  */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 332, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 362, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "sgp/stargen.pyx":333
+  /* "sgp/stargen.pyx":363
  * 
  *     @view_property
  *     def surf_pressure_atm(self) -> double:             # <<<<<<<<<<<<<<
  *         """ units of atm (atm) """
  *         # for unknown reasons, original c-code uses millibars
  */
-  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_surf_pressure_atm); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 333, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_surf_pressure_atm); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 363, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_2 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -12942,14 +13754,14 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   if (!__pyx_t_2) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 332, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 362, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_2, __pyx_t_5};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 332, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 362, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -12958,47 +13770,47 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_2, __pyx_t_5};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 332, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 362, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     } else
     #endif
     {
-      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 332, __pyx_L1_error)
+      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 362, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GIVEREF(__pyx_t_2); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2); __pyx_t_2 = NULL;
       __Pyx_GIVEREF(__pyx_t_5);
       PyTuple_SET_ITEM(__pyx_t_4, 0+1, __pyx_t_5);
       __pyx_t_5 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 332, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 362, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_surf_pressure_atm, __pyx_t_1) < 0) __PYX_ERR(0, 333, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_surf_pressure_atm, __pyx_t_1) < 0) __PYX_ERR(0, 363, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
-  /* "sgp/stargen.pyx":338
+  /* "sgp/stargen.pyx":368
  *         return self._get_planet().surf_pressure * 0.000986923
  * 
  *     @view_property             # <<<<<<<<<<<<<<
  *     def surf_pressure(self) -> double:
  *         """ units of pascals (p) """
  */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 338, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 368, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "sgp/stargen.pyx":339
+  /* "sgp/stargen.pyx":369
  * 
  *     @view_property
  *     def surf_pressure(self) -> double:             # <<<<<<<<<<<<<<
  *         """ units of pascals (p) """
  *         # for unknown reasons, original c-code uses millibars
  */
-  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_surf_pressure); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 339, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_surf_pressure); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 369, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -13011,14 +13823,14 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   if (!__pyx_t_5) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 338, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 368, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_4};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 338, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 368, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -13027,449 +13839,35 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_4};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 338, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 368, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     } else
     #endif
     {
-      __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 338, __pyx_L1_error)
+      __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 368, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_5); __pyx_t_5 = NULL;
       __Pyx_GIVEREF(__pyx_t_4);
       PyTuple_SET_ITEM(__pyx_t_2, 0+1, __pyx_t_4);
       __pyx_t_4 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 338, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 368, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_surf_pressure, __pyx_t_1) < 0) __PYX_ERR(0, 339, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_surf_pressure, __pyx_t_1) < 0) __PYX_ERR(0, 369, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
-  /* "sgp/stargen.pyx":344
+  /* "sgp/stargen.pyx":374
  *         return self._get_planet().surf_pressure * 100
  * 
  *     @view_property             # <<<<<<<<<<<<<<
  *     def greenhouse_effect(self) -> bint:
  *         """ runaway greenhouse effect? """
- */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 344, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-
-  /* "sgp/stargen.pyx":345
- * 
- *     @view_property
- *     def greenhouse_effect(self) -> bint:             # <<<<<<<<<<<<<<
- *         """ runaway greenhouse effect? """
- *         return self._get_planet().greenhouse_effect
- */
-  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_greenhouse_effect); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 345, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = NULL;
-  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
-    __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_3);
-    if (likely(__pyx_t_4)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-      __Pyx_INCREF(__pyx_t_4);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_3, function);
-    }
-  }
-  if (!__pyx_t_4) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 344, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __Pyx_GOTREF(__pyx_t_1);
-  } else {
-    #if CYTHON_FAST_PYCALL
-    if (PyFunction_Check(__pyx_t_3)) {
-      PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_2};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 344, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    } else
-    #endif
-    #if CYTHON_FAST_PYCCALL
-    if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
-      PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_2};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 344, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    } else
-    #endif
-    {
-      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 344, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_5);
-      __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __pyx_t_4 = NULL;
-      __Pyx_GIVEREF(__pyx_t_2);
-      PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_2);
-      __pyx_t_2 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 344, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    }
-  }
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_greenhouse_effect, __pyx_t_1) < 0) __PYX_ERR(0, 345, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
-
-  /* "sgp/stargen.pyx":349
- *         return self._get_planet().greenhouse_effect
- * 
- *     @view_property             # <<<<<<<<<<<<<<
- *     def boil_point(self) -> double:
- *         """ the boiling point of water (Kelvin) """
- */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 349, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-
-  /* "sgp/stargen.pyx":350
- * 
- *     @view_property
- *     def boil_point(self) -> double:             # <<<<<<<<<<<<<<
- *         """ the boiling point of water (Kelvin) """
- *         return self._get_planet().boil_point
- */
-  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_boil_point); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 350, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_2 = NULL;
-  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
-    __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_3);
-    if (likely(__pyx_t_2)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-      __Pyx_INCREF(__pyx_t_2);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_3, function);
-    }
-  }
-  if (!__pyx_t_2) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 349, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __Pyx_GOTREF(__pyx_t_1);
-  } else {
-    #if CYTHON_FAST_PYCALL
-    if (PyFunction_Check(__pyx_t_3)) {
-      PyObject *__pyx_temp[2] = {__pyx_t_2, __pyx_t_5};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 349, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    } else
-    #endif
-    #if CYTHON_FAST_PYCCALL
-    if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
-      PyObject *__pyx_temp[2] = {__pyx_t_2, __pyx_t_5};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 349, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    } else
-    #endif
-    {
-      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 349, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      __Pyx_GIVEREF(__pyx_t_2); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2); __pyx_t_2 = NULL;
-      __Pyx_GIVEREF(__pyx_t_5);
-      PyTuple_SET_ITEM(__pyx_t_4, 0+1, __pyx_t_5);
-      __pyx_t_5 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 349, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    }
-  }
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_boil_point, __pyx_t_1) < 0) __PYX_ERR(0, 350, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
-
-  /* "sgp/stargen.pyx":354
- *         return self._get_planet().boil_point
- * 
- *     @view_property             # <<<<<<<<<<<<<<
- *     def albedo(self) -> double:
- *         """ albedo of the planet """
- */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 354, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-
-  /* "sgp/stargen.pyx":355
- * 
- *     @view_property
- *     def albedo(self) -> double:             # <<<<<<<<<<<<<<
- *         """ albedo of the planet """
- *         return self._get_planet().albedo
- */
-  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_albedo); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 355, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = NULL;
-  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
-    __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_3);
-    if (likely(__pyx_t_5)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-      __Pyx_INCREF(__pyx_t_5);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_3, function);
-    }
-  }
-  if (!__pyx_t_5) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 354, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __Pyx_GOTREF(__pyx_t_1);
-  } else {
-    #if CYTHON_FAST_PYCALL
-    if (PyFunction_Check(__pyx_t_3)) {
-      PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_4};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 354, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    } else
-    #endif
-    #if CYTHON_FAST_PYCCALL
-    if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
-      PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_4};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 354, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    } else
-    #endif
-    {
-      __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 354, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_5); __pyx_t_5 = NULL;
-      __Pyx_GIVEREF(__pyx_t_4);
-      PyTuple_SET_ITEM(__pyx_t_2, 0+1, __pyx_t_4);
-      __pyx_t_4 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 354, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    }
-  }
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_albedo, __pyx_t_1) < 0) __PYX_ERR(0, 355, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
-
-  /* "sgp/stargen.pyx":359
- *         return self._get_planet().albedo
- * 
- *     @view_property             # <<<<<<<<<<<<<<
- *     def exospheric_temp(self) -> double:
- *         """ units of degrees Kelvin """
- */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 359, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-
-  /* "sgp/stargen.pyx":360
- * 
- *     @view_property
- *     def exospheric_temp(self) -> double:             # <<<<<<<<<<<<<<
- *         """ units of degrees Kelvin """
- *         return self._get_planet().exospheric_temp
- */
-  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_exospheric_temp); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 360, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = NULL;
-  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
-    __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_3);
-    if (likely(__pyx_t_4)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-      __Pyx_INCREF(__pyx_t_4);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_3, function);
-    }
-  }
-  if (!__pyx_t_4) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 359, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __Pyx_GOTREF(__pyx_t_1);
-  } else {
-    #if CYTHON_FAST_PYCALL
-    if (PyFunction_Check(__pyx_t_3)) {
-      PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_2};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 359, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    } else
-    #endif
-    #if CYTHON_FAST_PYCCALL
-    if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
-      PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_2};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 359, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    } else
-    #endif
-    {
-      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 359, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_5);
-      __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __pyx_t_4 = NULL;
-      __Pyx_GIVEREF(__pyx_t_2);
-      PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_2);
-      __pyx_t_2 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 359, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    }
-  }
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_exospheric_temp, __pyx_t_1) < 0) __PYX_ERR(0, 360, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
-
-  /* "sgp/stargen.pyx":364
- *         return self._get_planet().exospheric_temp
- * 
- *     @view_property             # <<<<<<<<<<<<<<
- *     def estimated_temp(self) -> double:
- *         """ quick non-iterative estimate (K) """
- */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 364, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-
-  /* "sgp/stargen.pyx":365
- * 
- *     @view_property
- *     def estimated_temp(self) -> double:             # <<<<<<<<<<<<<<
- *         """ quick non-iterative estimate (K) """
- *         return self._get_planet().estimated_temp
- */
-  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_estimated_temp); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 365, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_2 = NULL;
-  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
-    __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_3);
-    if (likely(__pyx_t_2)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-      __Pyx_INCREF(__pyx_t_2);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_3, function);
-    }
-  }
-  if (!__pyx_t_2) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 364, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __Pyx_GOTREF(__pyx_t_1);
-  } else {
-    #if CYTHON_FAST_PYCALL
-    if (PyFunction_Check(__pyx_t_3)) {
-      PyObject *__pyx_temp[2] = {__pyx_t_2, __pyx_t_5};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 364, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    } else
-    #endif
-    #if CYTHON_FAST_PYCCALL
-    if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
-      PyObject *__pyx_temp[2] = {__pyx_t_2, __pyx_t_5};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 364, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    } else
-    #endif
-    {
-      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 364, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      __Pyx_GIVEREF(__pyx_t_2); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2); __pyx_t_2 = NULL;
-      __Pyx_GIVEREF(__pyx_t_5);
-      PyTuple_SET_ITEM(__pyx_t_4, 0+1, __pyx_t_5);
-      __pyx_t_5 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 364, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    }
-  }
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_estimated_temp, __pyx_t_1) < 0) __PYX_ERR(0, 365, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
-
-  /* "sgp/stargen.pyx":369
- *         return self._get_planet().estimated_temp
- * 
- *     @view_property             # <<<<<<<<<<<<<<
- *     def estimated_terr_temp(self) -> double:
- *         """ for terrestrial moons and similar """
- */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 369, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-
-  /* "sgp/stargen.pyx":370
- * 
- *     @view_property
- *     def estimated_terr_temp(self) -> double:             # <<<<<<<<<<<<<<
- *         """ for terrestrial moons and similar """
- *         return self._get_planet().estimated_terr_temp
- */
-  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_estimated_terr_temp); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 370, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = NULL;
-  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
-    __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_3);
-    if (likely(__pyx_t_5)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-      __Pyx_INCREF(__pyx_t_5);
-      __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_3, function);
-    }
-  }
-  if (!__pyx_t_5) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 369, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __Pyx_GOTREF(__pyx_t_1);
-  } else {
-    #if CYTHON_FAST_PYCALL
-    if (PyFunction_Check(__pyx_t_3)) {
-      PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_4};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 369, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    } else
-    #endif
-    #if CYTHON_FAST_PYCCALL
-    if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
-      PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_4};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 369, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    } else
-    #endif
-    {
-      __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 369, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_5); __pyx_t_5 = NULL;
-      __Pyx_GIVEREF(__pyx_t_4);
-      PyTuple_SET_ITEM(__pyx_t_2, 0+1, __pyx_t_4);
-      __pyx_t_4 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 369, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    }
-  }
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_estimated_terr_temp, __pyx_t_1) < 0) __PYX_ERR(0, 370, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
-
-  /* "sgp/stargen.pyx":374
- *         return self._get_planet().estimated_terr_temp
- * 
- *     @view_property             # <<<<<<<<<<<<<<
- *     def surf_temp(self) -> double:
- *         """ surface temperature in Kelvin """
  */
   __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 374, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -13477,11 +13875,11 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
   /* "sgp/stargen.pyx":375
  * 
  *     @view_property
- *     def surf_temp(self) -> double:             # <<<<<<<<<<<<<<
- *         """ surface temperature in Kelvin """
- *         return self._get_planet().surf_temp
+ *     def greenhouse_effect(self) -> bint:             # <<<<<<<<<<<<<<
+ *         """ runaway greenhouse effect? """
+ *         return self._get_planet().greenhouse_effect
  */
-  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_surf_temp); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 375, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_greenhouse_effect); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 375, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -13529,16 +13927,16 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_surf_temp, __pyx_t_1) < 0) __PYX_ERR(0, 375, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_greenhouse_effect, __pyx_t_1) < 0) __PYX_ERR(0, 375, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
   /* "sgp/stargen.pyx":379
- *         return self._get_planet().surf_temp
+ *         return self._get_planet().greenhouse_effect
  * 
  *     @view_property             # <<<<<<<<<<<<<<
- *     def greenhs_rise(self) -> double:
- *         """ Temperature rise due to greenhouse """
+ *     def boil_point(self) -> double:
+ *         """ the boiling point of water (Kelvin) """
  */
   __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 379, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -13546,11 +13944,11 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
   /* "sgp/stargen.pyx":380
  * 
  *     @view_property
- *     def greenhs_rise(self) -> double:             # <<<<<<<<<<<<<<
- *         """ Temperature rise due to greenhouse """
- *         return self._get_planet().greenhs_rise
+ *     def boil_point(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ the boiling point of water (Kelvin) """
+ *         return self._get_planet().boil_point
  */
-  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_greenhs_rise); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 380, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_boil_point); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 380, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_2 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -13598,16 +13996,16 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_greenhs_rise, __pyx_t_1) < 0) __PYX_ERR(0, 380, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_boil_point, __pyx_t_1) < 0) __PYX_ERR(0, 380, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
   /* "sgp/stargen.pyx":384
- *         return self._get_planet().greenhs_rise
+ *         return self._get_planet().boil_point
  * 
  *     @view_property             # <<<<<<<<<<<<<<
- *     def high_temp(self) -> double:
- *         """ Day-time temperature """
+ *     def albedo(self) -> double:
+ *         """ albedo of the planet """
  */
   __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 384, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -13615,11 +14013,11 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
   /* "sgp/stargen.pyx":385
  * 
  *     @view_property
- *     def high_temp(self) -> double:             # <<<<<<<<<<<<<<
- *         """ Day-time temperature """
- *         return self._get_planet().high_temp
+ *     def albedo(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ albedo of the planet """
+ *         return self._get_planet().albedo
  */
-  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_high_temp); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 385, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_albedo); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 385, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -13667,16 +14065,16 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_high_temp, __pyx_t_1) < 0) __PYX_ERR(0, 385, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_albedo, __pyx_t_1) < 0) __PYX_ERR(0, 385, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
   /* "sgp/stargen.pyx":389
- *         return self._get_planet().high_temp
+ *         return self._get_planet().albedo
  * 
  *     @view_property             # <<<<<<<<<<<<<<
- *     def low_temp(self) -> double:
- *         """ Night-time temperature """
+ *     def exospheric_temp(self) -> double:
+ *         """ units of degrees Kelvin """
  */
   __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 389, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -13684,11 +14082,11 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
   /* "sgp/stargen.pyx":390
  * 
  *     @view_property
- *     def low_temp(self) -> double:             # <<<<<<<<<<<<<<
- *         """ Night-time temperature """
- *         return self._get_planet().low_temp
+ *     def exospheric_temp(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ units of degrees Kelvin """
+ *         return self._get_planet().exospheric_temp
  */
-  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_low_temp); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 390, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_exospheric_temp); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 390, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -13736,16 +14134,16 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_low_temp, __pyx_t_1) < 0) __PYX_ERR(0, 390, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_exospheric_temp, __pyx_t_1) < 0) __PYX_ERR(0, 390, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
   /* "sgp/stargen.pyx":394
- *         return self._get_planet().low_temp
+ *         return self._get_planet().exospheric_temp
  * 
  *     @view_property             # <<<<<<<<<<<<<<
- *     def max_temp(self) -> double:
- *         """ Summer/Day """
+ *     def estimated_temp(self) -> double:
+ *         """ quick non-iterative estimate (K) """
  */
   __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 394, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -13753,11 +14151,11 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
   /* "sgp/stargen.pyx":395
  * 
  *     @view_property
- *     def max_temp(self) -> double:             # <<<<<<<<<<<<<<
- *         """ Summer/Day """
- *         return self._get_planet().max_temp
+ *     def estimated_temp(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ quick non-iterative estimate (K) """
+ *         return self._get_planet().estimated_temp
  */
-  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_max_temp); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 395, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_estimated_temp); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 395, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_2 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -13805,16 +14203,16 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_max_temp, __pyx_t_1) < 0) __PYX_ERR(0, 395, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_estimated_temp, __pyx_t_1) < 0) __PYX_ERR(0, 395, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
   /* "sgp/stargen.pyx":399
- *         return self._get_planet().max_temp
+ *         return self._get_planet().estimated_temp
  * 
  *     @view_property             # <<<<<<<<<<<<<<
- *     def min_temp(self) -> double:
- *         """ Winter/Night """
+ *     def estimated_terr_temp(self) -> double:
+ *         """ for terrestrial moons and similar """
  */
   __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 399, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -13822,11 +14220,11 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
   /* "sgp/stargen.pyx":400
  * 
  *     @view_property
- *     def min_temp(self) -> double:             # <<<<<<<<<<<<<<
- *         """ Winter/Night """
- *         return self._get_planet().min_temp
+ *     def estimated_terr_temp(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ for terrestrial moons and similar """
+ *         return self._get_planet().estimated_terr_temp
  */
-  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_min_temp); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 400, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_estimated_terr_temp); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 400, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -13874,16 +14272,16 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_min_temp, __pyx_t_1) < 0) __PYX_ERR(0, 400, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_estimated_terr_temp, __pyx_t_1) < 0) __PYX_ERR(0, 400, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
   /* "sgp/stargen.pyx":404
- *         return self._get_planet().min_temp
+ *         return self._get_planet().estimated_terr_temp
  * 
  *     @view_property             # <<<<<<<<<<<<<<
- *     def hydrosphere(self) -> double:
- *         """ fraction of surface covered """
+ *     def surf_temp(self) -> double:
+ *         """ surface temperature in Kelvin """
  */
   __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 404, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -13891,11 +14289,11 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
   /* "sgp/stargen.pyx":405
  * 
  *     @view_property
- *     def hydrosphere(self) -> double:             # <<<<<<<<<<<<<<
- *         """ fraction of surface covered """
- *         return self._get_planet().hydrosphere
+ *     def surf_temp(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ surface temperature in Kelvin """
+ *         return self._get_planet().surf_temp
  */
-  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_hydrosphere); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 405, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_surf_temp); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 405, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -13943,16 +14341,16 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_hydrosphere, __pyx_t_1) < 0) __PYX_ERR(0, 405, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_surf_temp, __pyx_t_1) < 0) __PYX_ERR(0, 405, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
   /* "sgp/stargen.pyx":409
- *         return self._get_planet().hydrosphere
+ *         return self._get_planet().surf_temp
  * 
  *     @view_property             # <<<<<<<<<<<<<<
- *     def cloud_cover(self) -> double:
- *         """ fraction of surface covered """
+ *     def greenhs_rise(self) -> double:
+ *         """ Temperature rise due to greenhouse """
  */
   __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 409, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -13960,11 +14358,11 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
   /* "sgp/stargen.pyx":410
  * 
  *     @view_property
- *     def cloud_cover(self) -> double:             # <<<<<<<<<<<<<<
- *         """ fraction of surface covered """
- *         return self._get_planet().cloud_cover
+ *     def greenhs_rise(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ Temperature rise due to greenhouse """
+ *         return self._get_planet().greenhs_rise
  */
-  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_cloud_cover); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 410, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_greenhs_rise); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 410, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_2 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -14012,16 +14410,16 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_cloud_cover, __pyx_t_1) < 0) __PYX_ERR(0, 410, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_greenhs_rise, __pyx_t_1) < 0) __PYX_ERR(0, 410, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
   /* "sgp/stargen.pyx":414
- *         return self._get_planet().cloud_cover
+ *         return self._get_planet().greenhs_rise
  * 
  *     @view_property             # <<<<<<<<<<<<<<
- *     def ice_cover(self) -> double:
- *         """ fraction of surface covered """
+ *     def high_temp(self) -> double:
+ *         """ Day-time temperature """
  */
   __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 414, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -14029,11 +14427,11 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
   /* "sgp/stargen.pyx":415
  * 
  *     @view_property
- *     def ice_cover(self) -> double:             # <<<<<<<<<<<<<<
- *         """ fraction of surface covered """
- *         return self._get_planet().ice_cover
+ *     def high_temp(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ Day-time temperature """
+ *         return self._get_planet().high_temp
  */
-  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_ice_cover); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 415, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_high_temp); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 415, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -14081,16 +14479,16 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_ice_cover, __pyx_t_1) < 0) __PYX_ERR(0, 415, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_high_temp, __pyx_t_1) < 0) __PYX_ERR(0, 415, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
   /* "sgp/stargen.pyx":419
- *         return self._get_planet().ice_cover
+ *         return self._get_planet().high_temp
  * 
  *     @view_property             # <<<<<<<<<<<<<<
- *     def sun(self) -> SunView:
- *         return SunView.wrap(self._get_planet().sun, self._system)
+ *     def low_temp(self) -> double:
+ *         """ Night-time temperature """
  */
   __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 419, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
@@ -14098,11 +14496,11 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
   /* "sgp/stargen.pyx":420
  * 
  *     @view_property
- *     def sun(self) -> SunView:             # <<<<<<<<<<<<<<
- *         return SunView.wrap(self._get_planet().sun, self._system)
- * 
+ *     def low_temp(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ Night-time temperature """
+ *         return self._get_planet().low_temp
  */
-  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_sun); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 420, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_low_temp); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 420, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -14150,28 +14548,28 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_sun, __pyx_t_1) < 0) __PYX_ERR(0, 420, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_low_temp, __pyx_t_1) < 0) __PYX_ERR(0, 420, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
-  /* "sgp/stargen.pyx":423
- *         return SunView.wrap(self._get_planet().sun, self._system)
+  /* "sgp/stargen.pyx":424
+ *         return self._get_planet().low_temp
  * 
  *     @view_property             # <<<<<<<<<<<<<<
- *     def gases(self) -> int:
- *         """ Count of gases in the atmosphere: """
+ *     def max_temp(self) -> double:
+ *         """ Summer/Day """
  */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 423, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 424, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "sgp/stargen.pyx":424
+  /* "sgp/stargen.pyx":425
  * 
  *     @view_property
- *     def gases(self) -> int:             # <<<<<<<<<<<<<<
- *         """ Count of gases in the atmosphere: """
- *         return self._get_planet().gases
+ *     def max_temp(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ Summer/Day """
+ *         return self._get_planet().max_temp
  */
-  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_gases); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 424, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_max_temp); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 425, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_2 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -14184,14 +14582,14 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   if (!__pyx_t_2) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 423, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 424, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_2, __pyx_t_5};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 423, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 424, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -14200,47 +14598,47 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_2, __pyx_t_5};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 423, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 424, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     } else
     #endif
     {
-      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 423, __pyx_L1_error)
+      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 424, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_GIVEREF(__pyx_t_2); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2); __pyx_t_2 = NULL;
       __Pyx_GIVEREF(__pyx_t_5);
       PyTuple_SET_ITEM(__pyx_t_4, 0+1, __pyx_t_5);
       __pyx_t_5 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 423, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 424, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_gases, __pyx_t_1) < 0) __PYX_ERR(0, 424, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_max_temp, __pyx_t_1) < 0) __PYX_ERR(0, 425, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
-  /* "sgp/stargen.pyx":428
- *         return self._get_planet().gases
+  /* "sgp/stargen.pyx":429
+ *         return self._get_planet().max_temp
  * 
  *     @view_property             # <<<<<<<<<<<<<<
- *     def planet_type(self) -> planet_type:
- *         """ Type code """
+ *     def min_temp(self) -> double:
+ *         """ Winter/Night """
  */
-  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 428, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 429, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
 
-  /* "sgp/stargen.pyx":429
+  /* "sgp/stargen.pyx":430
  * 
  *     @view_property
- *     def planet_type(self) -> planet_type:             # <<<<<<<<<<<<<<
- *         """ Type code """
- *         return self._get_planet().type
+ *     def min_temp(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ Winter/Night """
+ *         return self._get_planet().min_temp
  */
-  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_planet_type); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 429, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_min_temp); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 430, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -14253,14 +14651,14 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   if (!__pyx_t_5) {
-    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 428, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 429, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else {
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_4};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 428, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 429, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -14269,26 +14667,440 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_4};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 428, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 429, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     } else
     #endif
     {
-      __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 428, __pyx_L1_error)
+      __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 429, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_5); __pyx_t_5 = NULL;
       __Pyx_GIVEREF(__pyx_t_4);
       PyTuple_SET_ITEM(__pyx_t_2, 0+1, __pyx_t_4);
       __pyx_t_4 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 428, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 429, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_planet_type, __pyx_t_1) < 0) __PYX_ERR(0, 429, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_min_temp, __pyx_t_1) < 0) __PYX_ERR(0, 430, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
+
+  /* "sgp/stargen.pyx":434
+ *         return self._get_planet().min_temp
+ * 
+ *     @view_property             # <<<<<<<<<<<<<<
+ *     def hydrosphere(self) -> double:
+ *         """ fraction of surface covered """
+ */
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 434, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+
+  /* "sgp/stargen.pyx":435
+ * 
+ *     @view_property
+ *     def hydrosphere(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ fraction of surface covered """
+ *         return self._get_planet().hydrosphere
+ */
+  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_hydrosphere); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 435, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_4 = NULL;
+  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
+    __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_3);
+    if (likely(__pyx_t_4)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+      __Pyx_INCREF(__pyx_t_4);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_3, function);
+    }
+  }
+  if (!__pyx_t_4) {
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 434, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_GOTREF(__pyx_t_1);
+  } else {
+    #if CYTHON_FAST_PYCALL
+    if (PyFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_2};
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 434, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    } else
+    #endif
+    #if CYTHON_FAST_PYCCALL
+    if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_2};
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 434, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    } else
+    #endif
+    {
+      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 434, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_5);
+      __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __pyx_t_4 = NULL;
+      __Pyx_GIVEREF(__pyx_t_2);
+      PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_2);
+      __pyx_t_2 = 0;
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 434, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    }
+  }
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_hydrosphere, __pyx_t_1) < 0) __PYX_ERR(0, 435, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
+
+  /* "sgp/stargen.pyx":439
+ *         return self._get_planet().hydrosphere
+ * 
+ *     @view_property             # <<<<<<<<<<<<<<
+ *     def cloud_cover(self) -> double:
+ *         """ fraction of surface covered """
+ */
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 439, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+
+  /* "sgp/stargen.pyx":440
+ * 
+ *     @view_property
+ *     def cloud_cover(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ fraction of surface covered """
+ *         return self._get_planet().cloud_cover
+ */
+  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_cloud_cover); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 440, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_2 = NULL;
+  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
+    __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_3);
+    if (likely(__pyx_t_2)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+      __Pyx_INCREF(__pyx_t_2);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_3, function);
+    }
+  }
+  if (!__pyx_t_2) {
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 439, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __Pyx_GOTREF(__pyx_t_1);
+  } else {
+    #if CYTHON_FAST_PYCALL
+    if (PyFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_2, __pyx_t_5};
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 439, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    } else
+    #endif
+    #if CYTHON_FAST_PYCCALL
+    if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_2, __pyx_t_5};
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 439, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    } else
+    #endif
+    {
+      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 439, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_GIVEREF(__pyx_t_2); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2); __pyx_t_2 = NULL;
+      __Pyx_GIVEREF(__pyx_t_5);
+      PyTuple_SET_ITEM(__pyx_t_4, 0+1, __pyx_t_5);
+      __pyx_t_5 = 0;
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 439, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    }
+  }
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_cloud_cover, __pyx_t_1) < 0) __PYX_ERR(0, 440, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
+
+  /* "sgp/stargen.pyx":444
+ *         return self._get_planet().cloud_cover
+ * 
+ *     @view_property             # <<<<<<<<<<<<<<
+ *     def ice_cover(self) -> double:
+ *         """ fraction of surface covered """
+ */
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 444, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+
+  /* "sgp/stargen.pyx":445
+ * 
+ *     @view_property
+ *     def ice_cover(self) -> double:             # <<<<<<<<<<<<<<
+ *         """ fraction of surface covered """
+ *         return self._get_planet().ice_cover
+ */
+  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_ice_cover); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 445, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_5 = NULL;
+  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
+    __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_3);
+    if (likely(__pyx_t_5)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+      __Pyx_INCREF(__pyx_t_5);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_3, function);
+    }
+  }
+  if (!__pyx_t_5) {
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 444, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    __Pyx_GOTREF(__pyx_t_1);
+  } else {
+    #if CYTHON_FAST_PYCALL
+    if (PyFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_4};
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 444, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    } else
+    #endif
+    #if CYTHON_FAST_PYCCALL
+    if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_4};
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 444, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    } else
+    #endif
+    {
+      __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 444, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_5); __pyx_t_5 = NULL;
+      __Pyx_GIVEREF(__pyx_t_4);
+      PyTuple_SET_ITEM(__pyx_t_2, 0+1, __pyx_t_4);
+      __pyx_t_4 = 0;
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 444, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    }
+  }
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_ice_cover, __pyx_t_1) < 0) __PYX_ERR(0, 445, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
+
+  /* "sgp/stargen.pyx":449
+ *         return self._get_planet().ice_cover
+ * 
+ *     @view_property             # <<<<<<<<<<<<<<
+ *     def sun(self) -> SunView:
+ *         return SunView.wrap(self._get_planet().sun, self._system)
+ */
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 449, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+
+  /* "sgp/stargen.pyx":450
+ * 
+ *     @view_property
+ *     def sun(self) -> SunView:             # <<<<<<<<<<<<<<
+ *         return SunView.wrap(self._get_planet().sun, self._system)
+ * 
+ */
+  __pyx_t_2 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_sun); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 450, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_4 = NULL;
+  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
+    __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_3);
+    if (likely(__pyx_t_4)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+      __Pyx_INCREF(__pyx_t_4);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_3, function);
+    }
+  }
+  if (!__pyx_t_4) {
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 449, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_GOTREF(__pyx_t_1);
+  } else {
+    #if CYTHON_FAST_PYCALL
+    if (PyFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_2};
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 449, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    } else
+    #endif
+    #if CYTHON_FAST_PYCCALL
+    if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_4, __pyx_t_2};
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 449, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    } else
+    #endif
+    {
+      __pyx_t_5 = PyTuple_New(1+1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 449, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_5);
+      __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_4); __pyx_t_4 = NULL;
+      __Pyx_GIVEREF(__pyx_t_2);
+      PyTuple_SET_ITEM(__pyx_t_5, 0+1, __pyx_t_2);
+      __pyx_t_2 = 0;
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 449, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    }
+  }
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_sun, __pyx_t_1) < 0) __PYX_ERR(0, 450, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
+
+  /* "sgp/stargen.pyx":453
+ *         return SunView.wrap(self._get_planet().sun, self._system)
+ * 
+ *     @view_property             # <<<<<<<<<<<<<<
+ *     def gases(self) -> int:
+ *         """ Count of gases in the atmosphere: """
+ */
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 453, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+
+  /* "sgp/stargen.pyx":454
+ * 
+ *     @view_property
+ *     def gases(self) -> int:             # <<<<<<<<<<<<<<
+ *         """ Count of gases in the atmosphere: """
+ *         return self._get_planet().gases
+ */
+  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_gases); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 454, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_2 = NULL;
+  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
+    __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_3);
+    if (likely(__pyx_t_2)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+      __Pyx_INCREF(__pyx_t_2);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_3, function);
+    }
+  }
+  if (!__pyx_t_2) {
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 453, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __Pyx_GOTREF(__pyx_t_1);
+  } else {
+    #if CYTHON_FAST_PYCALL
+    if (PyFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_2, __pyx_t_5};
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 453, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    } else
+    #endif
+    #if CYTHON_FAST_PYCCALL
+    if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_2, __pyx_t_5};
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 453, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    } else
+    #endif
+    {
+      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 453, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_GIVEREF(__pyx_t_2); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2); __pyx_t_2 = NULL;
+      __Pyx_GIVEREF(__pyx_t_5);
+      PyTuple_SET_ITEM(__pyx_t_4, 0+1, __pyx_t_5);
+      __pyx_t_5 = 0;
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 453, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    }
+  }
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_gases, __pyx_t_1) < 0) __PYX_ERR(0, 454, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
+
+  /* "sgp/stargen.pyx":458
+ *         return self._get_planet().gases
+ * 
+ *     @view_property             # <<<<<<<<<<<<<<
+ *     def planet_type(self) -> planet_type:
+ *         """ Type code """
+ */
+  __pyx_t_3 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 458, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+
+  /* "sgp/stargen.pyx":459
+ * 
+ *     @view_property
+ *     def planet_type(self) -> planet_type:             # <<<<<<<<<<<<<<
+ *         """ Type code """
+ *         return self._get_planet().type
+ */
+  __pyx_t_4 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_planet_type); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 459, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_5 = NULL;
+  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
+    __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_3);
+    if (likely(__pyx_t_5)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+      __Pyx_INCREF(__pyx_t_5);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_3, function);
+    }
+  }
+  if (!__pyx_t_5) {
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 458, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    __Pyx_GOTREF(__pyx_t_1);
+  } else {
+    #if CYTHON_FAST_PYCALL
+    if (PyFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_4};
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 458, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    } else
+    #endif
+    #if CYTHON_FAST_PYCCALL
+    if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_4};
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 458, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    } else
+    #endif
+    {
+      __pyx_t_2 = PyTuple_New(1+1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 458, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_5); __pyx_t_5 = NULL;
+      __Pyx_GIVEREF(__pyx_t_4);
+      PyTuple_SET_ITEM(__pyx_t_2, 0+1, __pyx_t_4);
+      __pyx_t_4 = 0;
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 458, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    }
+  }
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_planet_type, __pyx_t_1) < 0) __PYX_ERR(0, 459, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 

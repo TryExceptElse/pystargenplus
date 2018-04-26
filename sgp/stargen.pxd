@@ -3,6 +3,10 @@
 #######################################################################
 
 
+cdef extern from "const.h":
+    cdef double SOLAR_MASS_IN_KILOGRAMS
+
+
 cdef extern from "structs.h":
     cdef struct sun:
         long double     luminosity
