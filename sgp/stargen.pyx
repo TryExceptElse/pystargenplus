@@ -12,6 +12,7 @@ class NullPointerException(Exception):
 class InvalidStateException(Exception):
     pass
 
+
 class LockException(Exception):
     pass
 

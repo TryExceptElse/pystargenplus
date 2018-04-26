@@ -23,7 +23,7 @@ Attributes are subject to change until project matures.
 |axial_tilt|Axial tilt in units of degrees|
 |mass|Mass in kg|
 |solar_masses|Mass in solar masses|
-|gas_giant|TRUE if the planet is a gas giant|
+|gas_giant|True if the planet is a gas giant|
 |dust_mass|Mass, ignoring gas (kg)|
 |gas_mass|Mass, ignoring dust (kg)|
 |ice_mass_fraction|
@@ -36,7 +36,7 @@ Attributes are subject to change until project matures.
 |density|Density (in kg/m^3)|
 |orb_period|Length of the local year (seconds) """|
 |day|Length of the local day (seconds)|
-|resonant_period|TRUE if in resonant rotation|
+|resonant_period|True if in resonant rotation|
 |esc_velocity|Units of m/sec """|
 |surf_accel|Units of m/sec2|
 |surf_grav|Units of Earth gravities|
