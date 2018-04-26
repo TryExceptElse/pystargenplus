@@ -85,6 +85,20 @@ cdef extern from "structs.h":
         planets_record *first_moon          # Owning pointer
         planets_record *next_planet         # Owning pointer
 
+
+cdef extern from "display.h":
+    char *type_string(planet_type);
+
+
+cdef extern from "sgp.h":
+    # return codes
+    int sgp_SUCCESS
+    int sgp_INVALID_ARGUMENT
+    int sgp_UNINITIALIZED_INPUT
+    int sgp_NULL_PTR_ERROR
+    int sgp_INVALID_STATE
+    int sgp_LOCK_ERROR
+
     cdef struct sgp_SystemGeneration:
         sun            *sun
         long            rng_seed
@@ -101,16 +115,6 @@ cdef extern from "structs.h":
         int             do_gases               # Calculate atm. gas comp.
         int             do_moons               # Should moons be generated
         bint            generated
-
-
-cdef extern from "sgp.h":
-    # return codes
-    int sgp_SUCCESS
-    int sgp_INVALID_ARGUMENT
-    int sgp_UNINITIALIZED_INPUT
-    int sgp_NULL_PTR_ERROR
-    int sgp_INVALID_STATE
-    int sgp_LOCK_ERROR
 
     # functions
 

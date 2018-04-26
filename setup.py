@@ -33,8 +33,9 @@ def main():
         else:
             for extension in extensions:
                 modified_sources = []
-                for source in extension.sources:
-                    modified_sources.append(source.replace('.pyx', '.c'))
+                for src in extension.sources:
+                    modified_sources.append(
+                        src[:-4] + '.c' if src.endswith('.pyx') else src)
                 extension.sources = modified_sources
             return extensions
 

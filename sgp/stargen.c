@@ -6,10 +6,11 @@
         "depends": [
             "sgp/c/sgp.h",
             "sgp/c/third_party/omega/const.h",
+            "sgp/c/third_party/omega/display.h",
             "sgp/c/third_party/omega/structs.h"
         ],
         "extra_compile_args": [
-            "-g3",
+            "-O3",
             "-std=c99"
         ],
         "include_dirs": [
@@ -551,6 +552,7 @@ static CYTHON_INLINE float __PYX_NAN() {
 #define __PYX_HAVE_API__sgp__stargen
 #include "const.h"
 #include "structs.h"
+#include "display.h"
 #include "sgp.h"
 #include <string.h>
 #include <stdlib.h>
@@ -772,7 +774,7 @@ struct __pyx_obj_3sgp_7stargen___pyx_scope_struct_1_planets;
 struct __pyx_obj_3sgp_7stargen___pyx_scope_struct_2_view_property;
 struct __pyx_obj_3sgp_7stargen___pyx_scope_struct_3_moons;
 
-/* "sgp/stargen.pxd":130
+/* "sgp/stargen.pxd":134
  * 
  * 
  * cdef class System:             # <<<<<<<<<<<<<<
@@ -785,7 +787,7 @@ struct __pyx_obj_3sgp_7stargen_System {
 };
 
 
-/* "sgp/stargen.pxd":134
+/* "sgp/stargen.pxd":138
  * 
  * 
  * cdef class SunConfig:             # <<<<<<<<<<<<<<
@@ -800,7 +802,7 @@ struct __pyx_obj_3sgp_7stargen_SunConfig {
 };
 
 
-/* "sgp/stargen.pxd":144
+/* "sgp/stargen.pxd":148
  * 
  * 
  * cdef class SystemObjectView:             # <<<<<<<<<<<<<<
@@ -815,7 +817,7 @@ struct __pyx_obj_3sgp_7stargen_SystemObjectView {
 };
 
 
-/* "sgp/stargen.pxd":155
+/* "sgp/stargen.pxd":159
  * 
  * 
  * cdef class SunView(SystemObjectView):             # <<<<<<<<<<<<<<
@@ -827,7 +829,7 @@ struct __pyx_obj_3sgp_7stargen_SunView {
 };
 
 
-/* "sgp/stargen.pxd":165
+/* "sgp/stargen.pxd":169
  * 
  * 
  * cdef class PlanetView(SystemObjectView):             # <<<<<<<<<<<<<<
@@ -1362,6 +1364,9 @@ static CYTHON_INLINE long __Pyx_PyInt_As_long(PyObject *);
 /* CIntFromPy.proto */
 static CYTHON_INLINE int __Pyx_PyInt_As_int(PyObject *);
 
+/* CIntFromPy.proto */
+static CYTHON_INLINE enum planet_type __Pyx_PyInt_As_enum__planet_type(PyObject *);
+
 /* FastTypeChecks.proto */
 #if CYTHON_COMPILING_IN_CPYTHON
 #define __Pyx_TypeCheck(obj, type) __Pyx_IsSubtype(Py_TYPE(obj), (PyTypeObject *)type)
@@ -1608,6 +1613,7 @@ static const char __pyx_k_view_property_2[] = "view_property";
 static const char __pyx_k_PlanetView_moons[] = "PlanetView.moons";
 static const char __pyx_k_SystemObjectView[] = "SystemObjectView";
 static const char __pyx_k_inner_dust_limit[] = "inner_dust_limit";
+static const char __pyx_k_planet_type_code[] = "planet_type_code";
 static const char __pyx_k_surf_pressure_mb[] = "surf_pressure_mb";
 static const char __pyx_k_greenhouse_effect[] = "greenhouse_effect";
 static const char __pyx_k_ice_mass_fraction[] = "ice_mass_fraction";
@@ -1719,6 +1725,7 @@ static PyObject *__pyx_n_s_outer_planet_limit;
 static PyObject *__pyx_n_s_pickle;
 static PyObject *__pyx_n_s_planet_no;
 static PyObject *__pyx_n_s_planet_type;
+static PyObject *__pyx_n_s_planet_type_code;
 static PyObject *__pyx_n_s_planets;
 static PyObject *__pyx_n_s_prepare;
 static PyObject *__pyx_n_s_property;
@@ -1855,9 +1862,10 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_103cloud_cover(struct __pyx
 static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_105ice_cover(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
 static struct __pyx_obj_3sgp_7stargen_SunView *__pyx_pf_3sgp_7stargen_10PlanetView_107sun(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_109gases(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_111planet_type(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_113__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_115__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_111planet_type_code(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_113planet_type(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_115__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_117__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state); /* proto */
 static PyObject *__pyx_pf_3sgp_7stargen_2__pyx_unpickle_SunConfig(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v___pyx_type, long __pyx_v___pyx_checksum, PyObject *__pyx_v___pyx_state); /* proto */
 static PyObject *__pyx_tp_new_3sgp_7stargen_System(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
 static PyObject *__pyx_tp_new_3sgp_7stargen_SunConfig(PyTypeObject *t, PyObject *a, PyObject *k); /*proto*/
@@ -8861,37 +8869,37 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_109gases(struct __pyx_obj_3
 /* "sgp/stargen.pyx":488
  * 
  *     @view_property
- *     def planet_type(self) -> planet_type:             # <<<<<<<<<<<<<<
+ *     def planet_type_code(self) -> planet_type:             # <<<<<<<<<<<<<<
  *         """ Type code """
  *         return self._get_planet().type
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_112planet_type(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static char __pyx_doc_3sgp_7stargen_10PlanetView_111planet_type[] = " Type code ";
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_112planet_type(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_112planet_type_code(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_111planet_type_code[] = " Type code ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_112planet_type_code(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("planet_type (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_111planet_type(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __Pyx_RefNannySetupContext("planet_type_code (wrapper)", 0);
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_111planet_type_code(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_111planet_type(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_111planet_type_code(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
-  __Pyx_RefNannySetupContext("planet_type", 0);
+  __Pyx_RefNannySetupContext("planet_type_code", 0);
 
   /* "sgp/stargen.pyx":490
- *     def planet_type(self) -> planet_type:
+ *     def planet_type_code(self) -> planet_type:
  *         """ Type code """
  *         return self._get_planet().type             # <<<<<<<<<<<<<<
  * 
- * 
+ *     @view_property
  */
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_1 = __Pyx_PyInt_From_enum__planet_type(((struct __pyx_vtabstruct_3sgp_7stargen_PlanetView *)__pyx_v_self->__pyx_base.__pyx_vtab)->_get_planet(__pyx_v_self)->type); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 490, __pyx_L1_error)
@@ -8903,7 +8911,7 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_111planet_type(struct __pyx
   /* "sgp/stargen.pyx":488
  * 
  *     @view_property
- *     def planet_type(self) -> planet_type:             # <<<<<<<<<<<<<<
+ *     def planet_type_code(self) -> planet_type:             # <<<<<<<<<<<<<<
  *         """ Type code """
  *         return self._get_planet().type
  */
@@ -8911,6 +8919,86 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_111planet_type(struct __pyx
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_AddTraceback("sgp.stargen.PlanetView.planet_type_code", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __pyx_r = NULL;
+  __pyx_L0:;
+  __Pyx_XGIVEREF(__pyx_r);
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+/* "sgp/stargen.pyx":493
+ * 
+ *     @view_property
+ *     def planet_type(self) -> unicode:             # <<<<<<<<<<<<<<
+ *         """ Gets name of planet type as str """
+ *         return bytes(type_string(self.planet_type_code)).decode()
+ */
+
+/* Python wrapper */
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_114planet_type(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static char __pyx_doc_3sgp_7stargen_10PlanetView_113planet_type[] = " Gets name of planet type as str ";
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_114planet_type(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+  PyObject *__pyx_r = 0;
+  __Pyx_RefNannyDeclarations
+  __Pyx_RefNannySetupContext("planet_type (wrapper)", 0);
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_113planet_type(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+
+  /* function exit code */
+  __Pyx_RefNannyFinishContext();
+  return __pyx_r;
+}
+
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_113planet_type(struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+  PyObject *__pyx_r = NULL;
+  __Pyx_RefNannyDeclarations
+  PyObject *__pyx_t_1 = NULL;
+  enum planet_type __pyx_t_2;
+  PyObject *__pyx_t_3 = NULL;
+  __Pyx_RefNannySetupContext("planet_type", 0);
+
+  /* "sgp/stargen.pyx":495
+ *     def planet_type(self) -> unicode:
+ *         """ Gets name of planet type as str """
+ *         return bytes(type_string(self.planet_type_code)).decode()             # <<<<<<<<<<<<<<
+ * 
+ * 
+ */
+  __Pyx_XDECREF(__pyx_r);
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(((PyObject *)__pyx_v_self), __pyx_n_s_planet_type_code); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 495, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = ((enum planet_type)__Pyx_PyInt_As_enum__planet_type(__pyx_t_1)); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 495, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = __Pyx_PyBytes_FromString(type_string(__pyx_t_2)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 495, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 495, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_GIVEREF(__pyx_t_1);
+  PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
+  __pyx_t_1 = 0;
+  __pyx_t_1 = __Pyx_PyObject_Call(((PyObject *)(&PyBytes_Type)), __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 495, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __pyx_t_3 = __Pyx_decode_bytes(__pyx_t_1, 0, PY_SSIZE_T_MAX, NULL, NULL, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 495, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  if (!(likely(PyUnicode_CheckExact(__pyx_t_3))||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "unicode", Py_TYPE(__pyx_t_3)->tp_name), 0))) __PYX_ERR(0, 495, __pyx_L1_error)
+  __pyx_r = ((PyObject*)__pyx_t_3);
+  __pyx_t_3 = 0;
+  goto __pyx_L0;
+
+  /* "sgp/stargen.pyx":493
+ * 
+ *     @view_property
+ *     def planet_type(self) -> unicode:             # <<<<<<<<<<<<<<
+ *         """ Gets name of planet type as str """
+ *         return bytes(type_string(self.planet_type_code)).decode()
+ */
+
+  /* function exit code */
+  __pyx_L1_error:;
+  __Pyx_XDECREF(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_3);
   __Pyx_AddTraceback("sgp.stargen.PlanetView.planet_type", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
@@ -8926,19 +9014,19 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_111planet_type(struct __pyx
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_114__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_114__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_116__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_116__reduce_cython__(PyObject *__pyx_v_self, CYTHON_UNUSED PyObject *unused) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__reduce_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_113__reduce_cython__(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_115__reduce_cython__(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_113__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_115__reduce_cython__(CYTHON_UNUSED struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -8980,19 +9068,19 @@ static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_113__reduce_cython__(CYTHON
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_116__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
-static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_116__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_118__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state); /*proto*/
+static PyObject *__pyx_pw_3sgp_7stargen_10PlanetView_118__setstate_cython__(PyObject *__pyx_v_self, PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__setstate_cython__ (wrapper)", 0);
-  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_115__setstate_cython__(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
+  __pyx_r = __pyx_pf_3sgp_7stargen_10PlanetView_117__setstate_cython__(((struct __pyx_obj_3sgp_7stargen_PlanetView *)__pyx_v_self), ((PyObject *)__pyx_v___pyx_state));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_115__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
+static PyObject *__pyx_pf_3sgp_7stargen_10PlanetView_117__setstate_cython__(CYTHON_UNUSED struct __pyx_obj_3sgp_7stargen_PlanetView *__pyx_v_self, CYTHON_UNUSED PyObject *__pyx_v___pyx_state) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -10013,9 +10101,10 @@ static PyMethodDef __pyx_methods_3sgp_7stargen_PlanetView[] = {
   {"ice_cover", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_106ice_cover, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_105ice_cover},
   {"sun", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_108sun, METH_NOARGS, 0},
   {"gases", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_110gases, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_109gases},
-  {"planet_type", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_112planet_type, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_111planet_type},
-  {"__reduce_cython__", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_114__reduce_cython__, METH_NOARGS, 0},
-  {"__setstate_cython__", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_116__setstate_cython__, METH_O, 0},
+  {"planet_type_code", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_112planet_type_code, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_111planet_type_code},
+  {"planet_type", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_114planet_type, METH_NOARGS, __pyx_doc_3sgp_7stargen_10PlanetView_113planet_type},
+  {"__reduce_cython__", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_116__reduce_cython__, METH_NOARGS, 0},
+  {"__setstate_cython__", (PyCFunction)__pyx_pw_3sgp_7stargen_10PlanetView_118__setstate_cython__, METH_O, 0},
   {0, 0, 0, 0}
 };
 
@@ -10604,6 +10693,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_pickle, __pyx_k_pickle, sizeof(__pyx_k_pickle), 0, 0, 1, 1},
   {&__pyx_n_s_planet_no, __pyx_k_planet_no, sizeof(__pyx_k_planet_no), 0, 0, 1, 1},
   {&__pyx_n_s_planet_type, __pyx_k_planet_type, sizeof(__pyx_k_planet_type), 0, 0, 1, 1},
+  {&__pyx_n_s_planet_type_code, __pyx_k_planet_type_code, sizeof(__pyx_k_planet_type_code), 0, 0, 1, 1},
   {&__pyx_n_s_planets, __pyx_k_planets, sizeof(__pyx_k_planets), 0, 0, 1, 1},
   {&__pyx_n_s_prepare, __pyx_k_prepare, sizeof(__pyx_k_prepare), 0, 0, 1, 1},
   {&__pyx_n_s_property, __pyx_k_property, sizeof(__pyx_k_property), 0, 0, 1, 1},
@@ -15669,7 +15759,7 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
  *         return self._get_planet().gases
  * 
  *     @view_property             # <<<<<<<<<<<<<<
- *     def planet_type(self) -> planet_type:
+ *     def planet_type_code(self) -> planet_type:
  *         """ Type code """
  */
   __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 487, __pyx_L1_error)
@@ -15678,11 +15768,11 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
   /* "sgp/stargen.pyx":488
  * 
  *     @view_property
- *     def planet_type(self) -> planet_type:             # <<<<<<<<<<<<<<
+ *     def planet_type_code(self) -> planet_type:             # <<<<<<<<<<<<<<
  *         """ Type code """
  *         return self._get_planet().type
  */
-  __pyx_t_3 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_planet_type); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 488, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_planet_type_code); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 488, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_4 = NULL;
   if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
@@ -15730,7 +15820,76 @@ static int __pyx_pymod_exec_stargen(PyObject *__pyx_pyinit_module)
     }
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_planet_type, __pyx_t_1) < 0) __PYX_ERR(0, 488, __pyx_L1_error)
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_planet_type_code, __pyx_t_1) < 0) __PYX_ERR(0, 488, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
+
+  /* "sgp/stargen.pyx":492
+ *         return self._get_planet().type
+ * 
+ *     @view_property             # <<<<<<<<<<<<<<
+ *     def planet_type(self) -> unicode:
+ *         """ Gets name of planet type as str """
+ */
+  __pyx_t_2 = __Pyx_GetModuleGlobalName(__pyx_n_s_view_property_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 492, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+
+  /* "sgp/stargen.pyx":493
+ * 
+ *     @view_property
+ *     def planet_type(self) -> unicode:             # <<<<<<<<<<<<<<
+ *         """ Gets name of planet type as str """
+ *         return bytes(type_string(self.planet_type_code)).decode()
+ */
+  __pyx_t_5 = __Pyx_GetNameInClass((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView, __pyx_n_s_planet_type); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 493, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_3 = NULL;
+  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
+    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
+    if (likely(__pyx_t_3)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+      __Pyx_INCREF(__pyx_t_3);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_2, function);
+    }
+  }
+  if (!__pyx_t_3) {
+    __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 492, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __Pyx_GOTREF(__pyx_t_1);
+  } else {
+    #if CYTHON_FAST_PYCALL
+    if (PyFunction_Check(__pyx_t_2)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_3, __pyx_t_5};
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 492, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    } else
+    #endif
+    #if CYTHON_FAST_PYCCALL
+    if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
+      PyObject *__pyx_temp[2] = {__pyx_t_3, __pyx_t_5};
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 492, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    } else
+    #endif
+    {
+      __pyx_t_4 = PyTuple_New(1+1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 492, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_3); __pyx_t_3 = NULL;
+      __Pyx_GIVEREF(__pyx_t_5);
+      PyTuple_SET_ITEM(__pyx_t_4, 0+1, __pyx_t_5);
+      __pyx_t_5 = 0;
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_4, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 492, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    }
+  }
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  if (PyDict_SetItem((PyObject *)__pyx_ptype_3sgp_7stargen_PlanetView->tp_dict, __pyx_n_s_planet_type, __pyx_t_1) < 0) __PYX_ERR(0, 493, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   PyType_Modified(__pyx_ptype_3sgp_7stargen_PlanetView);
 
@@ -18274,6 +18433,195 @@ raise_neg_overflow:
     PyErr_SetString(PyExc_OverflowError,
         "can't convert negative value to int");
     return (int) -1;
+}
+
+/* CIntFromPy */
+        static CYTHON_INLINE enum planet_type __Pyx_PyInt_As_enum__planet_type(PyObject *x) {
+    const enum planet_type neg_one = (enum planet_type) -1, const_zero = (enum planet_type) 0;
+    const int is_unsigned = neg_one > const_zero;
+#if PY_MAJOR_VERSION < 3
+    if (likely(PyInt_Check(x))) {
+        if (sizeof(enum planet_type) < sizeof(long)) {
+            __PYX_VERIFY_RETURN_INT(enum planet_type, long, PyInt_AS_LONG(x))
+        } else {
+            long val = PyInt_AS_LONG(x);
+            if (is_unsigned && unlikely(val < 0)) {
+                goto raise_neg_overflow;
+            }
+            return (enum planet_type) val;
+        }
+    } else
+#endif
+    if (likely(PyLong_Check(x))) {
+        if (is_unsigned) {
+#if CYTHON_USE_PYLONG_INTERNALS
+            const digit* digits = ((PyLongObject*)x)->ob_digit;
+            switch (Py_SIZE(x)) {
+                case  0: return (enum planet_type) 0;
+                case  1: __PYX_VERIFY_RETURN_INT(enum planet_type, digit, digits[0])
+                case 2:
+                    if (8 * sizeof(enum planet_type) > 1 * PyLong_SHIFT) {
+                        if (8 * sizeof(unsigned long) > 2 * PyLong_SHIFT) {
+                            __PYX_VERIFY_RETURN_INT(enum planet_type, unsigned long, (((((unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                        } else if (8 * sizeof(enum planet_type) >= 2 * PyLong_SHIFT) {
+                            return (enum planet_type) (((((enum planet_type)digits[1]) << PyLong_SHIFT) | (enum planet_type)digits[0]));
+                        }
+                    }
+                    break;
+                case 3:
+                    if (8 * sizeof(enum planet_type) > 2 * PyLong_SHIFT) {
+                        if (8 * sizeof(unsigned long) > 3 * PyLong_SHIFT) {
+                            __PYX_VERIFY_RETURN_INT(enum planet_type, unsigned long, (((((((unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                        } else if (8 * sizeof(enum planet_type) >= 3 * PyLong_SHIFT) {
+                            return (enum planet_type) (((((((enum planet_type)digits[2]) << PyLong_SHIFT) | (enum planet_type)digits[1]) << PyLong_SHIFT) | (enum planet_type)digits[0]));
+                        }
+                    }
+                    break;
+                case 4:
+                    if (8 * sizeof(enum planet_type) > 3 * PyLong_SHIFT) {
+                        if (8 * sizeof(unsigned long) > 4 * PyLong_SHIFT) {
+                            __PYX_VERIFY_RETURN_INT(enum planet_type, unsigned long, (((((((((unsigned long)digits[3]) << PyLong_SHIFT) | (unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                        } else if (8 * sizeof(enum planet_type) >= 4 * PyLong_SHIFT) {
+                            return (enum planet_type) (((((((((enum planet_type)digits[3]) << PyLong_SHIFT) | (enum planet_type)digits[2]) << PyLong_SHIFT) | (enum planet_type)digits[1]) << PyLong_SHIFT) | (enum planet_type)digits[0]));
+                        }
+                    }
+                    break;
+            }
+#endif
+#if CYTHON_COMPILING_IN_CPYTHON
+            if (unlikely(Py_SIZE(x) < 0)) {
+                goto raise_neg_overflow;
+            }
+#else
+            {
+                int result = PyObject_RichCompareBool(x, Py_False, Py_LT);
+                if (unlikely(result < 0))
+                    return (enum planet_type) -1;
+                if (unlikely(result == 1))
+                    goto raise_neg_overflow;
+            }
+#endif
+            if (sizeof(enum planet_type) <= sizeof(unsigned long)) {
+                __PYX_VERIFY_RETURN_INT_EXC(enum planet_type, unsigned long, PyLong_AsUnsignedLong(x))
+#ifdef HAVE_LONG_LONG
+            } else if (sizeof(enum planet_type) <= sizeof(unsigned PY_LONG_LONG)) {
+                __PYX_VERIFY_RETURN_INT_EXC(enum planet_type, unsigned PY_LONG_LONG, PyLong_AsUnsignedLongLong(x))
+#endif
+            }
+        } else {
+#if CYTHON_USE_PYLONG_INTERNALS
+            const digit* digits = ((PyLongObject*)x)->ob_digit;
+            switch (Py_SIZE(x)) {
+                case  0: return (enum planet_type) 0;
+                case -1: __PYX_VERIFY_RETURN_INT(enum planet_type, sdigit, (sdigit) (-(sdigit)digits[0]))
+                case  1: __PYX_VERIFY_RETURN_INT(enum planet_type,  digit, +digits[0])
+                case -2:
+                    if (8 * sizeof(enum planet_type) - 1 > 1 * PyLong_SHIFT) {
+                        if (8 * sizeof(unsigned long) > 2 * PyLong_SHIFT) {
+                            __PYX_VERIFY_RETURN_INT(enum planet_type, long, -(long) (((((unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                        } else if (8 * sizeof(enum planet_type) - 1 > 2 * PyLong_SHIFT) {
+                            return (enum planet_type) (((enum planet_type)-1)*(((((enum planet_type)digits[1]) << PyLong_SHIFT) | (enum planet_type)digits[0])));
+                        }
+                    }
+                    break;
+                case 2:
+                    if (8 * sizeof(enum planet_type) > 1 * PyLong_SHIFT) {
+                        if (8 * sizeof(unsigned long) > 2 * PyLong_SHIFT) {
+                            __PYX_VERIFY_RETURN_INT(enum planet_type, unsigned long, (((((unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                        } else if (8 * sizeof(enum planet_type) - 1 > 2 * PyLong_SHIFT) {
+                            return (enum planet_type) ((((((enum planet_type)digits[1]) << PyLong_SHIFT) | (enum planet_type)digits[0])));
+                        }
+                    }
+                    break;
+                case -3:
+                    if (8 * sizeof(enum planet_type) - 1 > 2 * PyLong_SHIFT) {
+                        if (8 * sizeof(unsigned long) > 3 * PyLong_SHIFT) {
+                            __PYX_VERIFY_RETURN_INT(enum planet_type, long, -(long) (((((((unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                        } else if (8 * sizeof(enum planet_type) - 1 > 3 * PyLong_SHIFT) {
+                            return (enum planet_type) (((enum planet_type)-1)*(((((((enum planet_type)digits[2]) << PyLong_SHIFT) | (enum planet_type)digits[1]) << PyLong_SHIFT) | (enum planet_type)digits[0])));
+                        }
+                    }
+                    break;
+                case 3:
+                    if (8 * sizeof(enum planet_type) > 2 * PyLong_SHIFT) {
+                        if (8 * sizeof(unsigned long) > 3 * PyLong_SHIFT) {
+                            __PYX_VERIFY_RETURN_INT(enum planet_type, unsigned long, (((((((unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                        } else if (8 * sizeof(enum planet_type) - 1 > 3 * PyLong_SHIFT) {
+                            return (enum planet_type) ((((((((enum planet_type)digits[2]) << PyLong_SHIFT) | (enum planet_type)digits[1]) << PyLong_SHIFT) | (enum planet_type)digits[0])));
+                        }
+                    }
+                    break;
+                case -4:
+                    if (8 * sizeof(enum planet_type) - 1 > 3 * PyLong_SHIFT) {
+                        if (8 * sizeof(unsigned long) > 4 * PyLong_SHIFT) {
+                            __PYX_VERIFY_RETURN_INT(enum planet_type, long, -(long) (((((((((unsigned long)digits[3]) << PyLong_SHIFT) | (unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                        } else if (8 * sizeof(enum planet_type) - 1 > 4 * PyLong_SHIFT) {
+                            return (enum planet_type) (((enum planet_type)-1)*(((((((((enum planet_type)digits[3]) << PyLong_SHIFT) | (enum planet_type)digits[2]) << PyLong_SHIFT) | (enum planet_type)digits[1]) << PyLong_SHIFT) | (enum planet_type)digits[0])));
+                        }
+                    }
+                    break;
+                case 4:
+                    if (8 * sizeof(enum planet_type) > 3 * PyLong_SHIFT) {
+                        if (8 * sizeof(unsigned long) > 4 * PyLong_SHIFT) {
+                            __PYX_VERIFY_RETURN_INT(enum planet_type, unsigned long, (((((((((unsigned long)digits[3]) << PyLong_SHIFT) | (unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                        } else if (8 * sizeof(enum planet_type) - 1 > 4 * PyLong_SHIFT) {
+                            return (enum planet_type) ((((((((((enum planet_type)digits[3]) << PyLong_SHIFT) | (enum planet_type)digits[2]) << PyLong_SHIFT) | (enum planet_type)digits[1]) << PyLong_SHIFT) | (enum planet_type)digits[0])));
+                        }
+                    }
+                    break;
+            }
+#endif
+            if (sizeof(enum planet_type) <= sizeof(long)) {
+                __PYX_VERIFY_RETURN_INT_EXC(enum planet_type, long, PyLong_AsLong(x))
+#ifdef HAVE_LONG_LONG
+            } else if (sizeof(enum planet_type) <= sizeof(PY_LONG_LONG)) {
+                __PYX_VERIFY_RETURN_INT_EXC(enum planet_type, PY_LONG_LONG, PyLong_AsLongLong(x))
+#endif
+            }
+        }
+        {
+#if CYTHON_COMPILING_IN_PYPY && !defined(_PyLong_AsByteArray)
+            PyErr_SetString(PyExc_RuntimeError,
+                            "_PyLong_AsByteArray() not available in PyPy, cannot convert large numbers");
+#else
+            enum planet_type val;
+            PyObject *v = __Pyx_PyNumber_IntOrLong(x);
+ #if PY_MAJOR_VERSION < 3
+            if (likely(v) && !PyLong_Check(v)) {
+                PyObject *tmp = v;
+                v = PyNumber_Long(tmp);
+                Py_DECREF(tmp);
+            }
+ #endif
+            if (likely(v)) {
+                int one = 1; int is_little = (int)*(unsigned char *)&one;
+                unsigned char *bytes = (unsigned char *)&val;
+                int ret = _PyLong_AsByteArray((PyLongObject *)v,
+                                              bytes, sizeof(val),
+                                              is_little, !is_unsigned);
+                Py_DECREF(v);
+                if (likely(!ret))
+                    return val;
+            }
+#endif
+            return (enum planet_type) -1;
+        }
+    } else {
+        enum planet_type val;
+        PyObject *tmp = __Pyx_PyNumber_IntOrLong(x);
+        if (!tmp) return (enum planet_type) -1;
+        val = __Pyx_PyInt_As_enum__planet_type(tmp);
+        Py_DECREF(tmp);
+        return val;
+    }
+raise_overflow:
+    PyErr_SetString(PyExc_OverflowError,
+        "value too large to convert to enum planet_type");
+    return (enum planet_type) -1;
+raise_neg_overflow:
+    PyErr_SetString(PyExc_OverflowError,
+        "can't convert negative value to enum planet_type");
+    return (enum planet_type) -1;
 }
 
 /* FastTypeChecks */

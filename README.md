@@ -59,4 +59,4 @@ Attributes are subject to change until project matures.
 |ice_cover|Fraction of surface covered|
 |sun|Returns a new view instance of the planet's sun|
 |gases|Count of gases in the atmosphere|"""|
-|planet_type|Type code
+|planet_type|Planet type as str (eg: 'Terrestrial')|

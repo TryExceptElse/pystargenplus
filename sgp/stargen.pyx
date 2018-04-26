@@ -216,7 +216,7 @@ cdef class PlanetView:
     def planet_no(self) -> int:
         """ Gets index of planet in system """
         return self._get_planet().planet_no
-        
+
     @view_property
     def a(self) -> double:
         """ Gets semi-major-axis of solar orbit """
@@ -485,9 +485,15 @@ cdef class PlanetView:
         return self._get_planet().gases
 
     @view_property
-    def planet_type(self) -> planet_type:
+    def planet_type_code(self) -> planet_type:
         """ Type code """
         return self._get_planet().type
+
+    @view_property
+    def planet_type(self) -> unicode:
+        """ Gets name of planet type as str """
+        return bytes(type_string(self.planet_type_code)).decode()
+
 
 
 """
