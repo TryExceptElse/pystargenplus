@@ -27,10 +27,18 @@ cdef class System:
     def __init__(
             self,
             sun_config: SunConfig=SunConfig(1, 1),
+            inner_dust_limit: double=0.0,       # 0.0 == default / no-limit
+            outer_planet_limit: double=0.0,     # 0.0 == default / no-limit
+            ecc_coef: double=-1.0,              # -1.0 == default
+            inner_planet_factor: double=-1.0,   # -1.0 == default
             do_gases: bool=False,
             do_moons: bool=False):
         self._system_generation.sun.mass = sun_config.mass
         self._system_generation.sun.luminosity = sun_config.luminosity
+        if ecc_coef >= 0:
+            self._system_generation.ecc_coef = ecc_coef
+        if inner_planet_factor >= 0:
+            self._system_generation.inner_planet_factor = ecc_coef
         self._system_generation.do_gases = do_gases
         self._system_generation.do_moons = do_moons
 
