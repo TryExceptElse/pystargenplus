@@ -110,6 +110,7 @@ cdef extern from "sgp.h":
     int sgp_UNINITIALIZED_INPUT
     int sgp_NULL_PTR_ERROR
     int sgp_INVALID_STATE
+    int sgp_LOCK_ERROR
 
     # functions
 

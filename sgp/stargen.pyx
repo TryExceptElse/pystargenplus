@@ -12,6 +12,9 @@ class NullPointerException(Exception):
 class InvalidStateException(Exception):
     pass
 
+class LockException(Exception):
+    pass
+
 
 # Dictionary mapping c return codes to exception classes
 exception_codes = {
@@ -19,7 +22,8 @@ exception_codes = {
     sgp_INVALID_ARGUMENT: ValueError,
     sgp_UNINITIALIZED_INPUT: UninitializedInputException,
     sgp_NULL_PTR_ERROR: NullPointerException,
-    sgp_INVALID_STATE: InvalidStateException
+    sgp_INVALID_STATE: InvalidStateException,
+    sgp_LOCK_ERROR: LockException,
 }
 
 

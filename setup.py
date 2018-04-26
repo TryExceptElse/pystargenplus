@@ -2,7 +2,7 @@ from setuptools import setup, Extension, find_packages
 try:
     from Cython.Build import cythonize
 except ImportError:
-    cythonize = None
+    cythonize = None  # If Cython is missing, pre-existing c files will be used
 
 import sys
 import os
