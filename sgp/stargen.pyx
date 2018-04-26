@@ -210,10 +210,12 @@ cdef class PlanetView:
         
     @view_property
     def planet_no(self) -> int:
+        """ Gets index of planet in system """
         return self._get_planet().planet_no
         
     @view_property
     def a(self) -> double:
+        """ Gets semi-major-axis of solar orbit """
         return self._get_planet().a
         
     @view_property
