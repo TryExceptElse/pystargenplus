@@ -24,9 +24,15 @@ exception_codes = {
 
 
 cdef class System:
-    def __init__(self, sun_config: SunConfig=SunConfig(1, 1)):
+    def __init__(
+            self,
+            sun_config: SunConfig=SunConfig(1, 1),
+            do_gases: bool=False,
+            do_moons: bool=False):
         self._system_generation.sun.mass = sun_config.mass
         self._system_generation.sun.luminosity = sun_config.luminosity
+        self._system_generation.do_gases = do_gases
+        self._system_generation.do_moons = do_moons
 
     def __cinit__(self):
         sgp_SystemGeneration_init(&self._system_generation)
@@ -184,6 +190,13 @@ cdef class PlanetView:
     @view_property
     def next(self) -> PlanetView:
         return PlanetView.wrap(self._get_planet().next_planet, self._system)
+
+    @view_property
+    def moons(self) -> PlanetView:
+        cdef planets_record* moon = self._get_planet().first_moon
+        while (moon != NULL):
+            yield PlanetView.wrap(moon, self._system)
+            moon = moon.next_planet
         
     @view_property
     def planet_no(self) -> int:

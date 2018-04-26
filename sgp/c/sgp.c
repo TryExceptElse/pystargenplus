@@ -94,57 +94,57 @@ void sgp_SystemGeneration_free(sgp_SystemGeneration *generation) {
 int sgp_SystemGeneration_generate(sgp_SystemGeneration *config) {
     if (config->generated) {
         fprintf(stderr, "sgp_SystemGeneration_generate() : "
-            "SystemGeneration has already been generated.");
+            "SystemGeneration has already been generated.\n");
         return sgp_INVALID_STATE;
     }
     if (config->use_seed_system &&
             config->seed_system == NULL) {
         fprintf(stderr, "sgp_SystemGeneration_generate() : "
-            "Passed seed system was NULL.");
+            "Passed seed system was NULL.\n");
         return sgp_NULL_PTR_ERROR;
     }
     if (config->system_name == NULL) {
         fprintf(stderr, "sgp_SystemGeneration_generate() : "
-            "System name was NULL");
+            "System name was NULL.\n");
         return sgp_NULL_PTR_ERROR;
     }
     if (config->sun == NULL) {
         fprintf(stderr, "sgp_SystemGeneration_generate() : "
-            "Passed sun was NULL.");
+            "Passed sun was NULL.\n");
         return sgp_NULL_PTR_ERROR;
     }
     if (config->sun->mass == 0.0 && config->sun->luminosity == 0.0) {
         fprintf(stderr, "sgp_SystemGeneration_generate() : "
             "Either mass or luminosity (or both) must be assigned to sun "
-            "before generation.");
+            "before generation.\n");
         return sgp_INVALID_ARGUMENT;
     }
     if (config->sys_no < 0) {
         fprintf(stderr, "sgp_SystemGeneration_generate() : "
-            "System number was invalid: %d", config->sys_no);
+            "System number was invalid: %d\n", config->sys_no);
         return sgp_INVALID_ARGUMENT;
     }
     if (config->inner_dust_limit < 0.0) {
         fprintf(stderr, "sgp_SystemGeneration_generate() : "
-            "inner_dust_limit was invalid: %f",
+            "inner_dust_limit was invalid: %f\n",
             (double)config->inner_dust_limit);
         return sgp_INVALID_ARGUMENT;
     }
     if (config->outer_planet_limit < 0.0) {
         fprintf(stderr, "sgp_SystemGeneration_generate() : "
-            "outer_dust_limit was invalid: %f",
+            "outer_dust_limit was invalid: %f\n",
             (double)config->outer_planet_limit);
         return sgp_INVALID_ARGUMENT;
     }
     if (config->ecc_coef < 0.0) {
         fprintf(stderr, "sgp_SystemGeneration_generate() : "
-            "ecc_coef was invalid: %f",
+            "ecc_coef was invalid: %f\n",
             (double)config->ecc_coef);
         return sgp_INVALID_ARGUMENT;
     }
     if (config->inner_planet_factor < 0.0) {
         fprintf(stderr, "sgp_SystemGeneration_generate() : "
-            "inner_planet_factor was invalid: %f",
+            "inner_planet_factor was invalid: %f\n",
             (double)config->inner_planet_factor);
         return sgp_INVALID_ARGUMENT;
     }

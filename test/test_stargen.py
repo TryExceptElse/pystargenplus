@@ -1,3 +1,5 @@
+import itertools as itr
+
 from unittest import TestCase
 
 from sgp.stargen import System, SunConfig, InvalidStateException, \
@@ -41,6 +43,13 @@ class TestSystemGeneration(TestCase):
         system.generate()
         planets = [planet for planet in system.planets]
         self.assertGreater(len(planets), 0)
+
+    def test_moons_are_generated(self):
+        system = System(do_moons=True)
+        system.generate()
+        moons = [moon for moon in itr.chain(
+            [[moon for moon in planet.moons] for planet in system.planets])]
+        self.assertGreater(len(moons), 0)
 
 
 class TestSunConfig(TestCase):
