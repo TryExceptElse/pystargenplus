@@ -14,4 +14,4 @@ planet_pointer dist_planetary_masses(long double, long double, long double, long
 void free_dust (dust_pointer);
 void free_planet (planet_pointer);
 void free_atmosphere(planet_pointer);
-void free_generations();
+void free_generations(void);

@@ -24,7 +24,7 @@ volatile int concurrency_lock = 0;
 /* Forward Declarations -------------------------------------------- */
 
 /* Externally declared functions */
-void generate_stellar_system(
+extern void generate_stellar_system(
     planet_pointer *innermost_planet,
     sun            *sun,
     int             use_seed_system,
@@ -39,7 +39,7 @@ void generate_stellar_system(
     int             do_gases,
     int             do_moons);
 
-void init(void);
+extern void init(void);
 
 /* Utility */
 char*   sgp_new_str                     (const char *);

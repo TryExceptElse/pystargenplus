@@ -1843,8 +1843,6 @@ void celestia_describe_world(planet_pointer planet, char* designation, char* sys
 {
 	
   long double tmp,local_inc,mean_long;
-	long double min_r_ecosphere = sqrt( sun->luminosity / 1.51 );
-	long double max_r_ecosphere = sqrt( sun->luminosity / 0.48 );
   char	*typeString = texture_name (planet->type);
 		
 if (!is_moon)		
@@ -2446,7 +2444,6 @@ void celestia_describe_system(planet_pointer innermost_planet, char* designation
 	planet_pointer planet, moon;
 	sun*			sun = innermost_planet->sun;
 	int counter, moons;
-	long double tmp,local_inc,mean_long;
 	long double min_r_ecosphere = sqrt( sun->luminosity / 1.51 );
 	long double max_r_ecosphere = sqrt( sun->luminosity / 0.48 );
 

@@ -1,8 +1,10 @@
 TryExceptElse: The code in this repository has been left as untouched
 as possible, with only the following changes:
     * display.c : minor print changes made to avoid format-security errors
+    * display.c : removed unused variables
     * Unused files removed.
-    * stargen.c changed so that static pointer is no longer used for output.
+    * stargen.c : changed so that static pointer is no longer used for output.
+    * stargen.c : removed unused variables and functions
 
 Original readme is as follows.
 ==============================

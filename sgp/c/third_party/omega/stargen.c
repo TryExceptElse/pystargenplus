@@ -587,7 +587,6 @@ void calculate_gases(sun*, planet_pointer, char*);
 void generate_planet(planet_pointer, int, sun*, int, char*, int, int, int, long double);
 void generate_planets(planet_pointer, sun*, int, char, int, char *, int, int);
 void usage(char *);
-static int diminishing_abundance(const void *xp, const void *yp);
 static int diminishing_pressure(const void *xp, const void *yp);
 long double get_accreated_gas_pressure(planet_pointer);
 int is_gas_giant(planet_pointer);
@@ -989,7 +988,7 @@ void generate_planet(planet_pointer	planet,
 {
   if (planet->a == 0.131833228 && strcmp(sun->name, "RU M0V 30014") == 0)
     planet->gas_giant = FALSE;
-  long double tmp;
+  // long double tmp;
   long double ecc_coef;
   ecc_coef = 0.077; // seb: use dole value for now for moons
 		planet->type = tUnknown;
@@ -1528,9 +1527,6 @@ void generate_planet(planet_pointer	planet,
 					}
 				}
 			}
-
-			tmp = Poisson((planet->mass + moon_mass ) * SUN_MASS_IN_EARTH_MASSES/30.0);
-
 		}
 
 }
@@ -1835,22 +1831,6 @@ void generate_planets(planet_pointer    innermost_planet,
 			check_planet(moon, moon_id, TRUE);
 		}
 	}
-}
-
-/*
- *  Sort a ChemTable by decreasing abundance.
- */
-
-static int diminishing_abundance(const void *xp, const void *yp)
-{
-	const ChemTable *x = (ChemTable *) xp;
-	const ChemTable *y = (ChemTable *) yp;
-	long double    xx = x->abunds * x->abunde;
-	long double    yy = y->abunds * y->abunde;
-
-	if (xx < yy)
-		return +1;
-	return (xx > yy ? -1 : 0);
 }
 
 /*
