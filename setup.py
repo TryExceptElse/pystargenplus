@@ -16,8 +16,8 @@ DEBUG_ARG = '--debug'
 CYTHONIZE_ARG = '--no-cythonize'
 
 build_options_d = {
-    RELEASE_ARG: ('-O3', '-std=c99'),
-    DEBUG_ARG: ('-g3', '-std=c99'),
+    RELEASE_ARG: ('-O2', '-Wall', '-Wextra', '-std=c99', '-g'),
+    DEBUG_ARG: ('-g3', '-Wall', '-Wextra', '-std=c99'),
 }
 
 
@@ -31,12 +31,10 @@ def main():
         if cythonization_option and cythonize:
             return cythonize(extensions)
         else:
-            for extension in extensions:
-                modified_sources = []
-                for src in extension.sources:
-                    modified_sources.append(
-                        src[:-4] + '.c' if src.endswith('.pyx') else src)
-                extension.sources = modified_sources
+            for ext in extensions:
+                ext.sources = [
+                    src[:-4] + '.c' if src.endswith('.pyx') else src
+                    for src in ext.sources]
             return extensions
 
     setup(
