@@ -1,3 +1,5 @@
+#cython: infer_types=True
+
 from libc.stdlib cimport malloc, free
 
 
@@ -58,6 +60,8 @@ cdef class System:
 
         self._system_generation.sun = sun_ptr
 
+        self._planets = None  # list evaluated lazily.
+
     def __dealloc__(self):
         sgp_SystemGeneration_free(&self._system_generation)
 
@@ -89,11 +93,36 @@ cdef class System:
         return SunView.wrap(self._system_generation.sun, self)
 
     @generated_property
-    def planets(self) -> PlanetView:
-        cdef planets_record* planet = self._system_generation.innermost_planet
-        while (planet != NULL):
-            yield PlanetView.wrap(planet, self)
-            planet = planet.next_planet
+    def planets(self) -> list:
+        # if planet list has already been generated, return that.
+        # otherwise, create and populate planets list.
+        cdef planets_record* planet
+        if self._planets is None:  # Don't check if truthy; empty list is falsy
+            planets = []
+            planet = self._system_generation.innermost_planet
+            while (planet != NULL):
+                planets.append(PlanetView.wrap(planet, self))
+                planet = planet.next_planet
+            self._planets = planets
+        return self._planets
+
+    @property
+    def do_gases(self) -> bool:
+        """
+        Returns boolean indicating whether gasses
+        will be or are calculated.
+        Not settable after initialization.
+        """
+        return self._system_generation.do_gases
+
+    @property
+    def do_moons(self) -> bool:
+        """
+        Returns boolean indicating whether moons
+        will be or are calculated.
+        Not settable after initialization.
+        """
+        return self._system_generation.do_moons
 
     @property
     def generated(self) -> bool:
@@ -164,7 +193,7 @@ cdef class SunView(SystemObjectView):
 
     cdef sun* _get_sun(self):
         return <sun *>self._viewed_ptr
-    
+
     @view_property
     def luminosity(self) -> double:
         return self._get_sun().luminosity
@@ -193,6 +222,10 @@ cdef class SunView(SystemObjectView):
 
 cdef class PlanetView:
 
+    def __cinit__(self):
+        self._moons = None
+
+
     @staticmethod
     cdef PlanetView wrap(planets_record *planet, System system):
         view: PlanetView = PlanetView(system)
@@ -207,12 +240,18 @@ cdef class PlanetView:
         return PlanetView.wrap(self._get_planet().next_planet, self._system)
 
     @view_property
-    def moons(self) -> PlanetView:
-        cdef planets_record* moon = self._get_planet().first_moon
-        while (moon != NULL):
-            yield PlanetView.wrap(moon, self._system)
-            moon = moon.next_planet
-        
+    def moons(self) -> list:
+        cdef planets_record* moon
+        if self._moons is None:
+            moons = []
+            moon = self._get_planet().first_moon
+            while (moon != NULL):
+                moons.append(PlanetView.wrap(moon, self._system))
+                moon = moon.next_planet
+            self._moons = moons
+        return self._moons
+
+
     @view_property
     def planet_no(self) -> int:
         """ Gets index of planet in system """
@@ -222,7 +261,7 @@ cdef class PlanetView:
     def a(self) -> double:
         """ Gets semi-major-axis of solar orbit """
         return self._get_planet().a
-        
+
     @view_property
     def e(self) -> double:
         """ eccentricity of solar orbit """
@@ -484,6 +523,14 @@ cdef class PlanetView:
     def gases(self) -> int:
         """ Count of gases in the atmosphere: """
         return self._get_planet().gases
+
+    @view_property
+    def breathability(self) -> unicode:
+        if not self._system.do_gases:
+            raise InvalidStateException(
+                'Gasses not calculated during system generation.')
+        code: uint = breathability(self._get_planet())
+        return bytes(breathability_phrase[code]).decode()
 
     @view_property
     def planet_type_code(self) -> planet_type:

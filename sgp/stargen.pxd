@@ -87,7 +87,12 @@ cdef extern from "structs.h":
 
 
 cdef extern from "display.h":
-    char *type_string(planet_type);
+    char *type_string(planet_type)
+    
+cdef extern from "enviro.h":
+    char* breathability_phrase[4]
+
+    unsigned int breathability(planets_record *planet)
 
 
 cdef extern from "sgp.h":
@@ -133,6 +138,7 @@ cdef extern from "sgp.h":
 
 cdef class System:
     cdef sgp_SystemGeneration _system_generation
+    cdef list                 _planets
 
 
 cdef class SunConfig:
@@ -170,6 +176,8 @@ cdef class PlanetView(SystemObjectView):
     """
     Class providing a view onto a planet in a generated system.
     """
+    cdef list           _moons
+
     @staticmethod
     cdef PlanetView     wrap(planets_record *c_planet, System system)
 
