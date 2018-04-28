@@ -5,18 +5,13 @@ except ImportError:
     cythonize = None  # If Cython is missing, pre-existing c files will be used
 
 import sys
-import os
-
-from settings import ROOT_PATH
-
-STARGEN_C_BUILD_DIR = os.path.join(ROOT_PATH, 'sgp', 'c', 'build')
 
 RELEASE_ARG = '--release'
 DEBUG_ARG = '--debug'
 CYTHONIZE_ARG = '--no-cythonize'
 
 build_options_d = {
-    RELEASE_ARG: ('-O2', '-Wall', '-Wextra', '-std=c99', '-g'),
+    RELEASE_ARG: ('-O2', '-Wall', '-Wextra', '-std=c99'),
     DEBUG_ARG: ('-g3', '-Wall', '-Wextra', '-std=c99'),
 }
 
