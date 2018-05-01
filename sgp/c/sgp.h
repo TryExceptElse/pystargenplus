@@ -6,12 +6,12 @@
 
 /* Return Codes ---------------------------------------------------- */
 
-#define sgp_SUCCESS             0x0000
-#define sgp_INVALID_ARGUMENT    0x0001
-#define sgp_UNINITIALIZED_INPUT 0x0002
-#define sgp_NULL_PTR_ERROR      0x0003
-#define sgp_INVALID_STATE       0x0004
-#define sgp_LOCK_ERROR          0x0005
+#define sgp_SUCCESS             0
+#define sgp_INVALID_ARGUMENT    1
+#define sgp_UNINITIALIZED_INPUT 2
+#define sgp_NULL_PTR_ERROR      3
+#define sgp_INVALID_STATE       4
+#define sgp_LOCK_ERROR          5
 
 
 /* ----------------------------------------------------------------- */
