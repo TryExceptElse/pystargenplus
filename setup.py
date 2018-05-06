@@ -11,7 +11,7 @@ DEBUG_ARG = '--debug'
 CYTHONIZE_ARG = '--no-cythonize'
 
 build_options_d = {
-    RELEASE_ARG: ('-O2', '-Wall', '-Wextra', '-std=c99'),
+    RELEASE_ARG: ('-O2', '-g3', '-Wall', '-Wextra', '-std=c99'),
     DEBUG_ARG: ('-g3', '-Wall', '-Wextra', '-std=c99'),
 }
 
